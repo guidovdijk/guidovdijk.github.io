@@ -1020,9 +1020,9 @@ input:checked+.slider:before {
 }
 
 .bg-werk--tournament {
-    background: linear-gradient(30deg, #045742, #045742);
-    background: -o-linear-gradient(30deg, #045742 0%, #045742 100%);
-    background: linear-gradient(30deg, #045742 0%, #045742 100%);
+    background: linear-gradient(30deg, #000219, #045742);
+    background: -o-linear-gradient(30deg, #000219 0%, #045742 100%);
+    background: linear-gradient(30deg, #000219 0%, #045742 100%);
 }
 
 .bg-werk--festival {
