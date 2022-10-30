@@ -422,7 +422,7 @@ a.noUnderline:visited {
     font-size: 13.5px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    color: darkgray;
+    color: #616161;
     line-height: 1.6;
     margin-bottom: 20px
 }
@@ -430,7 +430,7 @@ a.noUnderline:visited {
 .PostCategorie {
     margin-bottom: 0px;
     margin-top: 5px;
-    color: darkgray;
+    color: #939393;
     float: right;
     font-size: 12px;
     text-transform: uppercase;
@@ -465,6 +465,7 @@ a.bekijkCv {
     background-color: transparent;
     padding: 15px 60px;
     color: #f2f2f2;
+    display: block;
     text-align: center;
     font-family: 'arial', sans-serif;
     text-decoration: none;
@@ -495,8 +496,8 @@ a.bekijkCv {
 }
 
 .fotoMij {
-    min-width: 200px;
-    width: 20%
+    /* min-width: 200px;
+    width: 20% */
 }
 
 .overMijBroodTekst {
@@ -711,7 +712,8 @@ h2.titelProduct {
 .fotoProducten2 {
     width: 100%;
     display: block;
-    margin: 0 auto
+    margin: 0 auto;
+    box-shadow: 0px 10px 18px 0px rgba(217,217,217,0.35);
 }
 
 @media screen and (min-width: 767px) {
