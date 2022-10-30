@@ -355,48 +355,6 @@ h1 {
     transition: .2s linear
 }
 
-.overlayHHH {
-    background: rgba(62, 223, 255, 1)
-}
-
-.overlayBM {
-    background: rgba(255, 243, 189, 1)
-}
-
-.overlayROT {
-    background: rgba(52, 54, 68, 1)
-}
-
-.overlayXEN {
-    background: rgba(222, 0, 110, 1)
-}
-
-.overlayPH {
-    background: rgba(140, 206, 248, 1)
-}
-
-.overlayPokeapi {
-    background: rgba(55, 97, 171, 1)
-}
-
-.overlayAps {
-    background: rgba(91, 171, 38, 1)
-}
-
-.overlayThunder {
-    background: rgba(0, 0, 0, 1)
-}
-
-.overlayNewID {
-    background: rgb(244, 83, 93, 1);
-    /* Old browsers */
-    background: -webkit-linear-gradient(45deg, rgba(244, 83, 93, 1) 0%, rgba(234, 76, 122, 1) 100%);
-    background: -o-linear-gradient(45deg, rgba(244, 83, 93, 1) 0%, rgba(234, 76, 122, 1) 100%);
-    background: linear-gradient(45deg, rgba(244, 83, 93, 1) 0%, rgba(234, 76, 122, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4535d', endColorstr='#ea4c7a', GradientType=0);
-    /* IE6-9 */
-}
-
 a.noUnderline:hover,
 a.noUnderline:focus,
 a.noUnderline:active,
@@ -406,7 +364,7 @@ a.noUnderline:visited {
 }
 
 .text {
-    padding: 35px 40px;
+    padding: 30px 40px;
     padding-bottom: 50px;
     position: relative
 }
@@ -429,9 +387,7 @@ a.noUnderline:visited {
 
 .PostCategorie {
     margin-bottom: 0px;
-    margin-top: 5px;
     color: #939393;
-    float: right;
     font-size: 12px;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
@@ -1056,8 +1012,41 @@ input:checked+.slider:before {
     padding-top: 50%;
     position: relative;
 }
+
 .bg-werk--the-valley {
-    background: linear-gradient(45deg, #520000, #E02C35);
+    background: linear-gradient(30deg, #520000, #E02C35);
+    background: -o-linear-gradient(30deg, #520000 0%, #E02C35 100%);
+    background: linear-gradient(30deg, #520000 0%, #E02C35 100%);
+}
+
+.bg-werk--tournament {
+    background: linear-gradient(30deg, #045742, #045742);
+    background: -o-linear-gradient(30deg, #045742 0%, #045742 100%);
+    background: linear-gradient(30deg, #045742 0%, #045742 100%);
+}
+
+.bg-werk--festival {
+    background: linear-gradient(30deg, #021531, #093A83);
+    background: -o-linear-gradient(30deg, #021531 0%, #093A83 100%);
+    background: linear-gradient(30deg, #021531 0%, #093A83 100%);
+}
+
+.bg-werk--library {
+    background: linear-gradient(30deg, #942C00, #FF832A);
+    background: -o-linear-gradient(30deg, #942C00 0%, #FF832A 100%);
+    background: linear-gradient(30deg, #942C00 0%, #FF832A 100%);
+}
+
+.bg-werk--pokemon {
+    background: linear-gradient(30deg, #4160A6, #47A6EB);
+    background: -o-linear-gradient(30deg, #4160A6 0%, #47A6EB 100%);
+    background: linear-gradient(30deg, #4160A6 0%, #47A6EB 100%);
+}
+
+.bg-werk--inholland {
+    background: linear-gradient(30deg, #CA0088, #FF64CC);
+    background: -o-linear-gradient(30deg, #CA0088 0%, #FF64CC 100%);
+    background: linear-gradient(30deg, #CA0088 0%, #FF64CC 100%);
 }
 
 .bg-werk > div {
