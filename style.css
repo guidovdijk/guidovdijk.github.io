@@ -232,7 +232,7 @@ h1 {
 }
 
 .container .row:not(:last-child){
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -339,7 +339,8 @@ h1 {
     padding: 0;
     margin-bottom: 30px;
     cursor: pointer;
-    z-index: 1000
+    z-index: 1000;
+    display: block;
 }
 
 .full-width-post-kader {
@@ -979,16 +980,17 @@ input:checked+.slider:before {
 }
 
 .skills {
-    margin-top: 50px;
+    margin-top: 16px;
     list-style-type: none;
-    display: inline-flex;
     padding: 0;
+    margin-bottom: 0;
 }
 
 .skills li {
     display: inline-block;
     padding: 5px 12px;
     margin-top: 0px;
+    margin-bottom: 10px;
     font-size: 13px;
     border-radius: 100px;
     background-color: #343644;
@@ -1089,14 +1091,15 @@ input:checked+.slider:before {
         transform: translate(-15%, -15%);
     }
 
-    .infoProduct {
-        margin-top: 50px;
-    }
-
     .kruis {
         fill: white;
         margin-top: 20px;
         margin-right: 0px;
+    }
+
+    .bg-werk img {
+        width: 30vw;
+        min-width: 120px;
     }
 }
 
