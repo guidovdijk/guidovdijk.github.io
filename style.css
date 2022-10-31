@@ -639,20 +639,6 @@ h2.titelProduct {
     box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, .3)
 }
 
-.fotoProductenWrapper2 {
-    background-color: #343644;
-    height: 90%;
-    box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, .3)
-}
-
-.fotoProductenWrapper3 {
-    margin-top: 50px;
-    padding: 60px;
-    background-color: #343644;
-    height: 90%;
-    box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, .3)
-}
-
 .relative {
     position: relative;
     height: 600px;
@@ -700,13 +686,8 @@ h2.titelProduct {
         width: 100%
     }
 
-    .fotoProductenWrapper3 {
-        padding: 50px
-    }
-
     .fotoProductenWrapper {
         padding: 35px;
-        padding-top: 100px
     }
 }
 
