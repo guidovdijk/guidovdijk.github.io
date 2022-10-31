@@ -9,6 +9,10 @@ body {
     position: relative
 }
 
+ul {
+    padding-left: 10px;
+}
+
 [class^="col-"] {
     padding-bottom: 15px;
 }
@@ -154,7 +158,7 @@ h1 {
     cursor: pointer;
     position: fixed;
     z-index: 3;
-    right: 30px;
+    right: 16px;
     text-align: center;
 }
 
@@ -485,9 +489,8 @@ a.bekijkCv {
         display: block;
         margin-right: auto;
         margin-left: auto;
-        max-width: 270px;
-        min-width: 100px;
-        width: 80%
+        width: 100%;
+        max-width: 360px;
     }
 
     .overMijBroodTekst {
@@ -526,7 +529,8 @@ footer span {
     font-size: 40px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #333
+    color: #333;
+    word-break: break-all;
 }
 
 .p2 {
@@ -1110,8 +1114,6 @@ input:checked+.slider:before {
 
     .kruis {
         fill: white;
-        width: 30px;
-        height: 30px;
         margin-top: 20px;
         margin-right: 0px;
     }
