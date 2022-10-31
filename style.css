@@ -9,6 +9,14 @@ body {
     position: relative
 }
 
+[class^="col-"] {
+    padding-bottom: 15px;
+}
+
+.row {
+    margin-bottom: -15px;
+}
+
 .gallery {
     margin-top: 8px;
 }
