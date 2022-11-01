@@ -20,14 +20,14 @@
     <script src='picturefill.min.js' async></script>
 </head>
 
-<body class="styleScrollBar">
-    <a href="index.html" class="kruis">
+<body class="">
+    <a href="index.html" class="button--close">
         <img src="./links/kruis3.svg" alt="Back to homepage"/>
     </a>
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <div class="bg-werk bg-werk--festival">
+                <div class="overlay--hero overlay--festival">
                     <div>
                         <img class="head-image" src="links/work/hero/haarlem-festival.svg" />
                     </div>
@@ -40,20 +40,20 @@
             <div class="col-md-10 col-md-push-1">
                 <div class="row">
                     <div class="col-xs-12">
-                        <ul class="skills">
-                            <li>PHP</li>
-                            <li>JavaScript</li>
-                            <li>HTML</li>
-                            <li>SCSS</li>
-                            <li>Gulp</li>
-                            <li>UX Design</li>
+                        <ul class="badges">
+                            <li class="badge">PHP</li>
+                            <li class="badge">JavaScript</li>
+                            <li class="badge">HTML</li>
+                            <li class="badge">SCSS</li>
+                            <li class="badge">Gulp</li>
+                            <li class="badge">UX Design</li>
                         </ul>
                     </div>
                     <div class="col-xs-12">
-                        <h1 class="titelProduct">The Haarlem Festival</h1>
+                        <h1 class="title--product">The Haarlem Festival</h1>
                     </div>
                     <div class="col-sm-6 col-xs-12">
-                        <p class="infoProduct">
+                        <p class="info--product">
                             The Haarlem Festival was a second year school project where we promoted the city of Haarlem as an equal counter-part to Amsterdam with the use of a festival.
                             The festival had 4 different activities that needed to be promoted: The Cuisine, History, Dance and Jazz event. For these events you should also be able to pay a ticket. All the data for these events need to come from a CMS, which also needed to be designed and created.
 My part in this project was designing the CMS, Homepage, and the reusable components throughout the design (E.g., footer, navigation) and for the development I set up the project files, like Gulp and Webpack, created the base .SCSS files and created the CMS and payment system.
@@ -78,19 +78,19 @@ My part in this project was designing the CMS, Homepage, and the reusable compon
                 <div class="row">
                     <div class="col-md-12">
                         <picture id="visueel">
-                            <img class="fotoProducten2" src="links/work/haarlem-festival/jazz_artists_overview_performance.png" alt=""/> 
+                            <img class="product-photo--secondary" src="links/work/haarlem-festival/jazz_artists_overview_performance.png" alt=""/> 
                         </picture>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <picture id="visueel">
-                            <img class="fotoProducten2" src="links/work/haarlem-festival/jazz_artists_detail.png" alt=""/> 
+                            <img class="product-photo--secondary" src="links/work/haarlem-festival/jazz_artists_detail.png" alt=""/> 
                         </picture>
                     </div>
                     <div class="col-md-6">
                         <picture id="visueel">
-                            <img class="fotoProducten2" src="links/work/haarlem-festival/jazz_artists_performance_detail.png" alt=""/> 
+                            <img class="product-photo--secondary" src="links/work/haarlem-festival/jazz_artists_performance_detail.png" alt=""/> 
                         </picture>
                     </div>
                 </div>
@@ -102,21 +102,21 @@ My part in this project was designing the CMS, Homepage, and the reusable compon
                 <div class="row">
                     <div class="col-md-12">
                         <picture id="visueel">
-                            <img class="fotoProducten2" src="links/work/haarlem-festival/javascript.png" alt=""/> 
+                            <img class="product-photo--secondary" src="links/work/haarlem-festival/javascript.png" alt=""/> 
                         </picture>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <picture id="visueel">
-                            <img class="fotoProducten2" src="links/work/haarlem-festival/scss.png" alt=""/> 
+                            <img class="product-photo--secondary" src="links/work/haarlem-festival/scss.png" alt=""/> 
                         </picture>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <picture id="visueel">
-                            <img class="fotoProducten2" src="links/work/haarlem-festival/cms_html.png" alt=""/> 
+                            <img class="product-photo--secondary" src="links/work/haarlem-festival/cms_html.png" alt=""/> 
                         </picture>
                     </div>
                 </div>
@@ -136,14 +136,14 @@ My part in this project was designing the CMS, Homepage, and the reusable compon
                 <div class="row">
                     <div class="col-md-12">
                         <picture id="visueel">
-                            <img class="fotoProducten2" src="links/work/haarlem-festival/payment.png" alt=""/> 
+                            <img class="product-photo--secondary" src="links/work/haarlem-festival/payment.png" alt=""/> 
                         </picture>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <picture id="visueel">
-                            <img class="fotoProducten2" src="links/work/haarlem-festival/cart_html.png" alt=""/> 
+                            <img class="product-photo--secondary" src="links/work/haarlem-festival/cart_html.png" alt=""/> 
                         </picture>
                     </div>
                 </div>
@@ -151,33 +151,33 @@ My part in this project was designing the CMS, Homepage, and the reusable compon
         </div>
 
         <div class="row">
-            <div class="col-xs-12 col-sm-10 col-sm-push-1 nopadding">
-                <a class="cursorPointer" href="tournament.html">
-                    <img src="links/vorige.svg" class="vorigePijl" alt="vorige pijl" />
-                    <p class="vorigePijlText hidden-sm hidden-xs">previous post</p>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 has-spacing-top">
+                <a class="has-cursor-pointer" href="tournament.html">
+                    <img src="links/vorige.svg" class="arrow arrow--prev" alt="vorige pijl" />
+                    <p class="arrow--prev__text hidden-sm hidden-xs">previous post</p>
                 </a> 
                 
-                <a href="index.html" class="sluiten">Back</a>
-                <a class="cursorPointer2" href="pokemon-app.html">
-                    <img src="links/volgende2.svg" class="volgendePijl" alt="volgende pijl"/>
-                    <p class="volgendePijlText hidden-sm hidden-xs">next post</p>
+                <a href="index.html" class="button--close">Back</a>
+                <a class="has-cursor-pointer" href="pokemon-app.html">
+                    <img src="links/volgende2.svg" class="arrow arrow--next" alt="volgende pijl"/>
+                    <p class="arrow--next__text hidden-sm hidden-xs">next post</p>
                 </a>
             </div>
         </div>
     </div>
     </div>
     <footer id="contact">
-        <p class="p1">Need a helping
+        <p class="footer__subtitle">Need a helping
             <span class="">hand</span>? I got two!
         </p>
-        <a href="mailto:van.guido@hotmail.com" class="p2" rel="noopener">van.guido@hotmail.com</a>
-        <ul class="socialMediaWrapper">
-            <li><a class="socialMediaText" href="https://www.linkedin.com/in/guido-van-dijk-ma/" target="_blank"
+        <a href="mailto:van.guido@hotmail.com" class="footer__title" rel="noopener">van.guido@hotmail.com</a>
+        <ul class="wrapper--social-media">
+            <li><a class="wrapper--social-media__text" href="https://www.linkedin.com/in/guido-van-dijk-ma/" target="_blank"
                     rel="noopener">LinkedIn</a></li>
-            <li><a class="socialMediaText" href="mailto:van.guido@hotmail.com" rel="noopener">E-Mail</a></li>
-            <li><a class="socialMediaText" href="https://www.instagram.com/dv_guido/" target="_blank"
+            <li><a class="wrapper--social-media__text" href="mailto:van.guido@hotmail.com" rel="noopener">E-Mail</a></li>
+            <li><a class="wrapper--social-media__text" href="https://www.instagram.com/dv_guido/" target="_blank"
                     rel="noopener">Instagram</a></li>
-            <li><a class="socialMediaText" href="https://github.com/guidovdijk/" target="_blank" rel="noopener">Github</a>
+            <li><a class="wrapper--social-media__text" href="https://github.com/guidovdijk/" target="_blank" rel="noopener">Github</a>
             </li>
         </ul>
     </footer>
@@ -187,4 +187,3 @@ My part in this project was designing the CMS, Homepage, and the reusable compon
 </body>
 
 </html>
-<!-- <div class="col-md-6 col-md-push-3"> <p class="infoProduct"> <span class="infoProductBold"> Over Thunder: </span> <a href="http://smashthemes.com/thunder-wordpress-theme/" target="_blank">Thunder</a> is de naam van een wordpress template waarvan ik de homepage heb na gebouwd.<br>Ik dit gedaan ter voorbereiding op mijn stage, omdat ik daar ga werken met WordPress. <br><br><span class="infoProductBold">Opdrachtgever:</span> FBI Design<br><br><span class="infoProductBold">Skills:</span> Sass, Wordpress, PHP, JQuery, Javascript, HTML<br><br><span class="infoProductBold">Eigen aandeel:</span> Realisatie<br><br><span class="infoProductBold">Categorie:</span> CMS Website<br></p><div class="buttonWrapperFoo"><!-- <a href="https://github.com/subzkid/thunder" target="_blank" class="col-md-6 col-sm-8 col-xs-12 bekijkInfo">GitHub </a> </div><br><br></div>-->
