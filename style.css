@@ -38,6 +38,11 @@ ul {
     position: absolute
 }
 
+#portfolioWerk {
+    display: flex;
+    flex-flow: wrap;
+}
+
 .BG-letters {
     position: absolute;
     margin: 0;
