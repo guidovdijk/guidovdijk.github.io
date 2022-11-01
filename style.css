@@ -142,7 +142,7 @@ ul {
     }
 }
 
-.button--close {
+.button--cross {
     float: right;
     margin-top: 42px;
     margin-right: 20px;
@@ -156,7 +156,7 @@ ul {
     text-align: center;
 }
 
-.button--close img {
+.button--cross img {
     display: block;
     height: 25px;
 }
@@ -721,7 +721,7 @@ a.button--close {
         color: #333333
     }
 
-    .button--close:hover,
+    .button--cross:hover,
     .cta-show-more a:hover,
     a.button--close:hover {
         background-color: #191919
@@ -855,7 +855,7 @@ a.button--close {
         display: block;
     }
 
-    .button--close {
+    .button--cross {
         fill: white;
         margin-top: 20px;
         margin-right: 0px;
