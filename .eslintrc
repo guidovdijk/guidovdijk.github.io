@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb-typescript"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-pascal-case": 2,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-sort-props": 2,
+    "react/no-array-index-key": 0,
+    "react/no-deprecated": 1,
+    "react/no-did-update-set-state": 0,
+    "react/no-unescaped-entities": 0,
+    "react/no-direct-mutation-state": 1,
+    "react/no-string-refs": 1,
+    "react/no-typos": 2,
+    "react/require-default-props": 0,
+    "react/self-closing-comp": 1,
+    "react/function-component-definition": 0,
+    "@typescript-eslint/semi": [
+      2,
+      "never"
+    ],
+    "import/prefer-default-export": 0,
+    "semi": [
+      2,
+      "never"
+    ],
+    "space-before-function-paren": [
+      2,
+      "never"
+    ],
+    "strict": 0,
+    "unicorn/filename-case": 0,
+    "unicorn/new-for-builtins": 0,
+    "unicorn/no-null": 0,
+    "unicorn/prevent-abbreviations": 0,
+    "use-isnan": 2,
+    "wrap-iife": 2
+  }
+}
