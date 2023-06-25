@@ -2,7 +2,7 @@ import { Button } from './index'
 
 export default {
   component: Button,
-  title: 'Button',
+  title: 'Atoms/Button',
   tags: ['autodocs'],
 }
 
