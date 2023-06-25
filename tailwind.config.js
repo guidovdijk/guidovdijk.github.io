@@ -83,16 +83,18 @@ module.exports = {
         100: '#9FD9FF',
       },
       gradient: {
-        background: 'linear-gradient(180deg, var(--tw-colors-pink-100) 0%, var(--tw-colors-purple-100) 48.96%, var(--tw-colors-blue-100) 100%)',
+        background: 'linear-gradient(180deg, #DD117E 0%, #C079FE 48.96%, #9FD9FF 100%)',
         red: 'linear-gradient(45deg, #520000 0.11%, #E02C35 100%)',
         green: 'linear-gradient(225deg, #045742 0%, #000219 100%)',
         darkblue: 'linear-gradient(45deg, #021531 19.49%, #093A83 100%)',
         lightblue: 'linear-gradient(45deg, #4160A6 0%, #47A6EB 100%)',
         magenta: 'linear-gradient(45deg, #CA0088 0%, #FF64CC 100%)',
         orange: 'linear-gradient(45deg, #942C00 0.11%, #FF832A 100%)',
-        black: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, var(--tw-colors-black-400) 100%)',
+        black: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #0D0D0D 100%)',
       },
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-border-gradients')(),
+  ],
 }
