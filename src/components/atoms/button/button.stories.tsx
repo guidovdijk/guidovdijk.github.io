@@ -11,3 +11,10 @@ export const Default = {
     children: 'Button Title',
   },
 }
+
+export const Secondary = {
+  args: {
+    variation: 'secondary',
+    children: 'Button Title',
+  },
+}
