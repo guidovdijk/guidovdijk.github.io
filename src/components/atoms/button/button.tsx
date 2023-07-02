@@ -11,9 +11,9 @@ export const Button: React.FC<IButtonProps> = ({
   ...props
 }) => {
   const styles = {
-    primary: 'border-gradient-background border border-solid py-4 px-12 text-white-200',
+    primary: 'border-gradient-background text-white-200 border border-solid py-4 px-12',
     secondary: 'text-white-200 divider-gradient-background',
-    teritary: '',
+    teritary: ' py-4 px-12',
   }
   return (
     <button className={`${styles[variation]} rounded text-body-s font-medium relative`} type="button">
