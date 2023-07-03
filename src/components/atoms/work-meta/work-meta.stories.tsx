@@ -1,10 +1,16 @@
-import { WorkMeta } from './index'
+import type { Meta, StoryObj } from '@storybook/react'
+import { WorkMeta, IWorkMetaProps } from './index'
 
-export default {
+const meta: Meta<IWorkMetaProps> = {
   component: WorkMeta,
-  title: 'Atoms/WorkMeta',
 }
 
-export const Default = {
-  args: {},
+export default meta
+type Story = StoryObj<IWorkMetaProps>
+
+export const Primary: Story = {
+  args: {
+    title: 'Made With',
+    items: ['JavaScript', 'Vue', 'MongoDB'],
+  },
 }
