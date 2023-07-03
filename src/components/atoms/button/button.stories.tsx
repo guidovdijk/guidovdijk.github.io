@@ -1,19 +1,29 @@
-import { Button } from './index'
+import type { Meta, StoryObj } from '@storybook/react'
+import { Button, IButtonProps } from './index'
 
-export default {
+const meta: Meta<IButtonProps> = {
   component: Button,
-  title: 'Atoms/Button',
 }
 
-export const Default = {
+export default meta
+type Story = StoryObj<IButtonProps>
+
+export const Primary: Story = {
   args: {
     children: 'Button Title',
   },
 }
 
-export const Secondary = {
+export const Secondary: Story = {
   args: {
+    ...Primary.args,
     variation: 'secondary',
-    children: 'Button Title',
+  },
+}
+
+export const Teritairy: Story = {
+  args: {
+    ...Primary.args,
+    variation: 'teritary',
   },
 }
