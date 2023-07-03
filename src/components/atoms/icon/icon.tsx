@@ -1,11 +1,13 @@
 import * as React from 'react'
 import { Fullscreen } from './icons/Fullscreen'
+import { LinkedIn } from './icons/LinkedIn'
 
 const Components = {
   fullscreen: Fullscreen,
+  linkedin: LinkedIn,
 }
 
-export type IconName = 'fullscreen'
+export type IconName = 'fullscreen' | 'linkedin'
 
 export interface IIconProps {
   name: IconName,

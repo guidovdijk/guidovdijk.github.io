@@ -1,10 +1,16 @@
-import { Link } from './index'
+import type { Meta, StoryObj } from '@storybook/react'
+import { Link, ILinkProps } from './index'
 
-export default {
+const meta: Meta<ILinkProps> = {
   component: Link,
-  title: 'Atoms/Link',
 }
 
-export const Default = {
-  args: {},
+export default meta
+type Story = StoryObj<ILinkProps>
+
+export const Primary: Story = {
+  args: {
+    children: 'Link Title',
+    iconName: 'linkedin',
+  },
 }
