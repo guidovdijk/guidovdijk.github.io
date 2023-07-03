@@ -5,13 +5,13 @@ const Components = {
   fullscreen: Fullscreen,
 }
 
-type IconName = 'fullscreen'
+export type IconName = 'fullscreen'
 
 export interface IIconProps {
   name: IconName,
-  width: number,
-  height: number,
-  className: string
+  width?: number,
+  height?: number,
+  className?: string
 }
 
 export const Icon: React.FC<IIconProps> = ({
