@@ -1,10 +1,16 @@
-import { Icon } from './index'
+import type { Meta, StoryObj } from '@storybook/react'
+import { Icon, IIconProps } from './index'
 
-export default {
+const meta: Meta<IIconProps> = {
   component: Icon,
-  title: 'Atoms/Icon',
 }
 
-export const Default = {
-  args: {},
+export default meta
+type Story = StoryObj<IIconProps>
+
+export const Primary: Story = {
+  args: {
+    name: 'fullscreen',
+    className: 'text-white-200',
+  },
 }
