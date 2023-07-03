@@ -5,16 +5,27 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    {
+      pattern: /grid-cols-/
+    },
+    {
+      pattern: /col-span-/
+    },
+    {
+      pattern: /col-start-/
+    },
+    {
+      pattern: /col-end-/
+    },
+    {
+      pattern: /fill-/
+    },
+  ],
   theme: {
     fontFamily: {
-      heading: [
-        'AvantGarde',
-        'sans-serif'
-      ],
-      base: [
-        'Inter',
-        'sans-serif'
-      ]
+      heading: ['AvantGarde', 'sans-serif'],
+      base: ['Inter', 'sans-serif'],
     },
     fontSize: {
       /* Headings */

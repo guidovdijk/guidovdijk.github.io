@@ -1,3 +1,15 @@
 import * as React from 'react'
+import { HTMLProps } from 'react'
 
-export const Grid: React.FC = () => (<div />)
+export interface IGridProps extends HTMLProps<HTMLDivElement> {
+  cols?: number,
+  children?: React.ReactNode
+}
+
+export const Grid: React.FC<IGridProps> = ({
+  cols = 12,
+  children,
+  ...props
+}) => (
+  <div className={`container mx-auto px-12 grid grid-cols-${cols} gap-6`} {...props}>{children}</div>
+)

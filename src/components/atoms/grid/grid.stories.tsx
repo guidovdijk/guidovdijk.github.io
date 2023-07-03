@@ -1,10 +1,22 @@
-import { Grid } from './index'
+import * as React from 'react'
 
-export default {
+import type { Meta, StoryObj } from '@storybook/react'
+
+import { Grid, Col, IGridProps } from './index'
+
+const meta: Meta<IGridProps> = {
   component: Grid,
-  title: 'Atoms/Grid',
 }
 
-export const Default = {
-  args: {},
+export default meta
+type Story = StoryObj<IGridProps>
+
+export const Default: Story = {
+  render: () => (
+    <Grid>
+      <Col className="bg-white-200" span={3}>Col 1</Col>
+      <Col className="bg-white-200">Col 2</Col>
+      <Col className="bg-white-200" span={3}>Col 3</Col>
+    </Grid>
+  ),
 }
