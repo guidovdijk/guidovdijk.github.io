@@ -23,6 +23,11 @@ module.exports = {
     },
   ],
   theme: {
+    extend: {
+      borderWidth: {
+        16: '16px'
+      },
+    },
     fontFamily: {
       heading: ['AvantGarde', 'sans-serif'],
       base: ['Inter', 'sans-serif'],

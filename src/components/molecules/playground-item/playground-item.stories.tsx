@@ -1,10 +1,31 @@
-import { PlaygroundItem } from './index'
+import * as React from 'react'
 
-export default {
+import type { Meta, StoryObj } from '@storybook/react'
+import { Col, Grid } from '@/components/atoms/grid'
+import { PlaygroundItem, IPlaygroundItemProps } from './index'
+
+const meta: Meta<IPlaygroundItemProps> = {
   component: PlaygroundItem,
-  title: 'Molecules/PlaygroundItem',
 }
 
-export const Default = {
-  args: {},
+export default meta
+type Story = StoryObj<IPlaygroundItemProps>
+
+export const Default: Story = {
+  render: () => (
+    <Grid>
+      <PlaygroundItem
+        description="Lorem ipsum dolor sit amet, consec tetur adipiscing elit."
+        image={{
+          src: '/images/playground/stad-als-spel-stonithe.webp',
+          alt: 'A brown rock monster with glowing eyes',
+          fill: true,
+          style: {
+            objectFit: 'cover',
+          },
+        }}
+        onClick={() => console.log('clicked')}
+      />
+    </Grid>
+  ),
 }

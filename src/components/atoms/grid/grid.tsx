@@ -11,5 +11,5 @@ export const Grid: React.FC<IGridProps> = ({
   children,
   ...props
 }) => (
-  <div className={`container mx-auto px-12 grid grid-cols-${cols} gap-6`} {...props}>{children}</div>
+  <div className={`container mx-auto px-12 grid auto-rows-max grid-cols-${cols} gap-6`} {...props}>{children}</div>
 )
