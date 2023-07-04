@@ -29,8 +29,10 @@ module.exports = {
     },
     fontSize: {
       /* Headings */
-      'heading-l': ['clamp(1.375rem, 1.1228rem + 0.9747vw, 2rem)', 1.25], // Not used yet
       // 65px
+      'heading-xl': ['clamp(1.375rem, 1.1228rem + 0.9747vw, 2rem)', 1.25], // Not used yet
+      // 56px
+      'heading-l': ['clamp(3rem, 2.734rem + 0.8511vw, 3.5rem)'],
       'heading': ['clamp(2.5rem, 2.1443298969072164rem + 1.5463917525773196vw, 4rem)', {
         lineHeight: 1.2,
         fontWeight: '600'
@@ -93,16 +95,16 @@ module.exports = {
       blue: {
         100: '#9FD9FF',
       },
-      gradient: {
-        background: 'linear-gradient(180deg, #DD117E 0%, #C079FE 48.96%, #9FD9FF 100%)',
-        red: 'linear-gradient(45deg, #520000 0.11%, #E02C35 100%)',
-        green: 'linear-gradient(225deg, #045742 0%, #000219 100%)',
-        darkblue: 'linear-gradient(45deg, #021531 19.49%, #093A83 100%)',
-        lightblue: 'linear-gradient(45deg, #4160A6 0%, #47A6EB 100%)',
-        magenta: 'linear-gradient(45deg, #CA0088 0%, #FF64CC 100%)',
-        orange: 'linear-gradient(45deg, #942C00 0.11%, #FF832A 100%)',
-        black: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #0D0D0D 100%)',
-      },
+    },
+    backgroundImage: {
+      background: 'linear-gradient(-90deg, #DD117E 0%, #C079FE 48.96%, #9FD9FF 100%)',
+      red: 'linear-gradient(15deg, #520000 0.11%, #E02C35 115%)',
+      green: 'linear-gradient(225deg, #045742 0%, #000219 100%)',
+      darkblue: 'linear-gradient(45deg, #021531 19.49%, #093A83 100%)',
+      lightblue: 'linear-gradient(45deg, #4160A6 0%, #47A6EB 100%)',
+      magenta: 'linear-gradient(45deg, #CA0088 0%, #FF64CC 100%)',
+      orange: 'linear-gradient(45deg, #942C00 0.11%, #FF832A 100%)',
+      black: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #0D0D0D 100%)',
     }
   },
   plugins: [
