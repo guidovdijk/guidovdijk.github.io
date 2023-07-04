@@ -13,7 +13,7 @@ type Story = StoryObj<ICardProps>
 export const Default: Story = {
   render: () => (
     <Card
-      className="hover:bg-red"
+      className="lg:hover:bg-red"
       description="Some of the work I have done during my four years as a front-end developer."
       image={{
         src: '/images/thevalley.svg',
