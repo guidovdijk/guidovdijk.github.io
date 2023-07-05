@@ -9,27 +9,33 @@ import './assets/styles/globals.css'
 
 const FONT_PATH = './assets/fonts'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
 const avantGarde = localFont({
   variable: '--font-avant',
+  display: 'swap',
   src: [
     {
-      path: `${FONT_PATH}/avant-garde-normal.ttf`,
+      path: `${FONT_PATH}/avant-garde/avant-garde-normal.ttf`,
       weight: '400',
       style: 'normal',
     },
     {
-      path: `${FONT_PATH}/avant-garde-book.ttf`,
+      path: `${FONT_PATH}/avant-garde/avant-garde-book.ttf`,
       weight: '300',
       style: 'normal',
     },
     {
-      path: `${FONT_PATH}/avant-garde-book-oblique.ttf`,
+      path: `${FONT_PATH}/avant-garde/avant-garde-book-oblique.ttf`,
       weight: '300',
       style: 'italic',
     },
     {
-      path: `${FONT_PATH}/avant-garde-demi.ttf`,
+      path: `${FONT_PATH}/avant-garde/avant-garde-demi.ttf`,
       weight: '500',
       style: 'bold',
     },
@@ -47,8 +53,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} ${avantGarde.className}`}>{children}</body>
+    <html className={`${inter.variable} ${avantGarde.variable}`} lang="en">
+      <body>{children}</body>
     </html>
   )
 }
