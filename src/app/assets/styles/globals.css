@@ -6,13 +6,31 @@
 
   html,
   body {
-    color: var(--color-text);
+    color: #FEFEFE;
     background-color: var(--color-background-300);
     scroll-behavior: smooth;
   }
 
   button {
     line-height: 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p.eyebrow {
+    @apply font-heading;
+  }
+
+  ul,
+  li,
+  a,
+  button,
+  p {
+    @apply font-base;
   }
 }
 
@@ -63,25 +81,12 @@
     background: linear-gradient(-90deg, #DD117E 0%, #C079FE 48.96%, #9FD9FF 100%);
   }
 
+  .bg-gradient:hover {
+    background-image: linear-gradient(-90deg, #DD117E 0%, #C079FE 48.96%, #9FD9FF 100%);
+  }
+
   .divider-gradient-background:active::after,
   .divider-gradient-background:active::before {
     transform: translateY(12px);
   }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button,
-a,
-p.eyebrow {
-  font-family: var(--font-avant), sans-serif;
-}
-
-p {
-  font-family: var(--font-inter), sans-serif;
-  font-weight: 400;
 }
