@@ -1,46 +1,5 @@
 import React from 'react'
-
-// Fonts
-import { Inter } from 'next/font/google'
-import localFont from 'next/font/local'
-
-// Style
-import './assets/styles/globals.css'
-
-const FONT_PATH = './assets/fonts'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
-
-const avantGarde = localFont({
-  variable: '--font-avant',
-  display: 'swap',
-  src: [
-    {
-      path: `${FONT_PATH}/avant-garde/avant-garde-normal.ttf`,
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: `${FONT_PATH}/avant-garde/avant-garde-book.ttf`,
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: `${FONT_PATH}/avant-garde/avant-garde-book-oblique.ttf`,
-      weight: '300',
-      style: 'italic',
-    },
-    {
-      path: `${FONT_PATH}/avant-garde/avant-garde-demi.ttf`,
-      weight: '500',
-      style: 'bold',
-    },
-  ],
-})
+import { inter, avantGarde } from './fonts'
 
 export const metadata = {
   title: 'Create Next App',
