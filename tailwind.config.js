@@ -53,7 +53,10 @@ module.exports = {
 
       /* Subtitle */
       // 15px
-      'subtitle': ['0.938rem', 1],
+      'subtitle': ['0.938rem', {
+        lineHeight: 1,
+        fontWeight: '600',
+      }],
 
       /* Callout */
       // 18px
