@@ -35,7 +35,7 @@ module.exports = {
     fontSize: {
       /* Headings */
       // 65px
-      'heading-xl': ['clamp(1.375rem, 1.1228rem + 0.9747vw, 2rem)', 1.25], // Not used yet
+      'heading-xl': ['clamp(2.625rem, 0.9821rem + 3.4226vw, 4.0625rem)', 1.25], // Not used yet
       // 56px
       'heading-l': ['clamp(3rem, 2.734rem + 0.8511vw, 3.5rem)'],
       'heading': ['clamp(2.5rem, 2.1443298969072164rem + 1.5463917525773196vw, 4rem)', {
@@ -113,6 +113,5 @@ module.exports = {
     }
   },
   plugins: [
-    require('tailwindcss-border-gradients')(),
   ],
 }

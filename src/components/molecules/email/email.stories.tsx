@@ -1,10 +1,13 @@
-import { Email } from './index'
+import type { Meta, StoryObj } from '@storybook/react'
+import { Email, IEmailProps } from './index'
 
-export default {
+const meta: Meta<IEmailProps> = {
   component: Email,
-  title: 'Molecules/Email',
 }
 
-export const Default = {
+export default meta
+type Story = StoryObj<IEmailProps>
+
+export const Default: Story = {
   args: {},
 }
