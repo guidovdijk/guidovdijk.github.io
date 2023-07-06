@@ -21,7 +21,8 @@
   h4,
   h5,
   h6,
-  p.eyebrow {
+  p.eyebrow,
+  .text-subtitle {
     @apply font-heading;
   }
 

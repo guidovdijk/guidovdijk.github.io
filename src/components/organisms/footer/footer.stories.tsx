@@ -1,10 +1,17 @@
+import * as React from 'react'
+
+import type { Meta, StoryObj } from '@storybook/react'
 import { Footer } from './index'
 
-export default {
+const meta: Meta = {
   component: Footer,
-  title: 'Organisms/Footer',
 }
 
-export const Default = {
-  args: {},
+export default meta
+type Story = StoryObj
+
+export const Default: Story = {
+  render: () => (
+    <Footer />
+  ),
 }

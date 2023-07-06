@@ -17,13 +17,11 @@ export const FooterItem: React.FC<IFooterItemProps> = ({
   title,
   items,
 }) => (
-  <ul>
-    <span className="text-subtitle uppercase text-white-500 block mb-4">{title}</span>
+  <ul className="flex flex-col gap-y-6">
+    <span className="text-subtitle uppercase text-white-500 block -mb-2">{title}</span>
     {
       items.map((item) => (
-        <li
-          className="mb-6"
-        >
+        <li>
           <Link
             key={`footer-item-${item.text}`}
             className="capitalize"
