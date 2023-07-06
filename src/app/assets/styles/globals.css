@@ -89,4 +89,17 @@
   .divider-gradient-background:active::before {
     transform: translateY(12px);
   }
+  
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 1287.0380859375;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .animation-dash {
+    animation: dash 2500ms linear forwards;
+  }
 }

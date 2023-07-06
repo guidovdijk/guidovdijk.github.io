@@ -1,10 +1,20 @@
-import { Loader } from './index'
+import * as React from 'react'
 
-export default {
+import type { Meta, StoryObj } from '@storybook/react'
+import { Loader, ILoaderProps } from './index'
+
+const meta: Meta<ILoaderProps> = {
   component: Loader,
-  title: 'Molecules/Loader',
 }
 
-export const Default = {
-  args: {},
+export default meta
+type Story = StoryObj<ILoaderProps>
+
+export const Default: Story = {
+  render: () => (
+    <Loader isFinished>
+      What are you looking for in<br />
+      a front-end developer?
+    </Loader>
+  ),
 }
