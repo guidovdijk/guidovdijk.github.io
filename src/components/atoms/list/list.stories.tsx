@@ -10,7 +10,7 @@ type Story = StoryObj<IListProps>
 
 export const Primary: Story = {
   args: {
-    title: 'Made With:',
+    title: 'made with:',
     items: [
       'JavaScript',
       'Vue',

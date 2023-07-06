@@ -12,7 +12,7 @@ export const List: React.FC<IListProps> = ({
   className = '',
   ...props
 }) => (
-  <div>
+  <div className={className}>
     {
       title
       && (
@@ -21,7 +21,7 @@ export const List: React.FC<IListProps> = ({
         </span>
       )
     }
-    <ul className={`items-center flex text-white-200 ${className}`} {...props}>
+    <ul className="items-center flex text-white-200" {...props}>
       {
         items.map((item, i) => (
           <li key={`card-${title}-${i}`} className="inline-flex items-center font-medium capitalize">
