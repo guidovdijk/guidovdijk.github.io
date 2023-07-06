@@ -27,6 +27,9 @@ module.exports = {
       borderWidth: {
         16: '16px'
       },
+      dropShadow: {
+        icon: '0px 2px 7px rgba(192, 121, 254, 0.31)',
+      }
     },
     fontFamily: {
       heading: ['AvantGarde', 'sans-serif'],
