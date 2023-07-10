@@ -14,7 +14,7 @@ export const ImageGrid: React.FC<IImageGridProps> = ({
   const colSize = 12 / childArr.length
 
   return (
-    <div className="image-grid bg-black-300 p-4 relative justify-center grid grid-cols-12 gap-10">
+    <div className="image-grid rounded bg-black-300 p-4 lg:p-6 relative justify-center grid grid-cols-12 gap-10">
       {
         React.Children.map(children, (child, index) => {
           if (!React.isValidElement(child)) return child
