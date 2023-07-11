@@ -57,7 +57,7 @@ module.exports = {
 
       /* Subtitle */
       // 15px
-      'subtitle': ['0.938rem', {
+      'subtitle': ['0.9rem', {
         lineHeight: 1,
         fontWeight: '600',
       }],
