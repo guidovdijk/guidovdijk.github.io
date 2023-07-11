@@ -9,6 +9,8 @@ export interface IClipTextProps {
 }
 
 // TODO: Ensure animation is fired line after line
+// TODO: (try) add ref as a prop and look at the previous ClipText. Fire when that one is finished.
+// INFO: https://youtu.be/Yw7yWHigGKI?t=8817
 // TODO: (optional) Create a provider to use the animation for better re-usability
 export const ClipText: React.FC<IClipTextProps> = ({
   index = 1,
