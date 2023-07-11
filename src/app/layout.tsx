@@ -13,7 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html className={`${inter.variable} ${avantGarde.variable}`} lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="container mx-auto px-12">
+          {children}
+        </div>
+      </body>
     </html>
   )
 }
