@@ -26,7 +26,7 @@ export const Card: React.FC<ICardProps> = ({
       <h3 className="lg:group-hover/card:hidden"><Image {...image} /></h3>
     </div>
     <p className="max-w-md lg:hidden group-hover/card:block mb-8 lg:mb-0">{description}</p>
-    <div className="lg:ml-auto h-full lg:group-hover/card:py-5 justify-between flex shrink-0 items-center gap-x-10">
+    <div className="lg:ml-auto h-full lg:group-hover/card:py-5 justify-between flex shrink-0 items-center md:gap-x-10">
       <ul className="flex items-center">
         {
           subjects.map((subject, i) => (
@@ -36,7 +36,7 @@ export const Card: React.FC<ICardProps> = ({
           ))
         }
       </ul>
-      <div className="bg-black-200 lg:group-hover/card:bg-black-200/10 w-[1px] h-full" />
+      <div className="bg-black-200 lg:group-hover/card:bg-white-200/20 w-[1px] h-full" />
       <Link href={url}>GitHub</Link>
     </div>
   </article>
