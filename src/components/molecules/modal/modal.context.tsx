@@ -1,18 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 interface IModalContextProps {
-  isOpen: boolean,
-  activeItem: React.ReactNode,
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+  isOpen: boolean;
+  activeItem: React.ReactNode;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setActiveItem: React.Dispatch<React.SetStateAction<React.ReactNode>>;
 }
 
 const ModalContext = React.createContext<IModalContextProps | null>(null)
 
-export function useModal() {
-  const context = React.useContext(ModalContext)
+export function useModal(): IModalContextProps {
+  const context = useContext(ModalContext)
 
-  if (context === undefined) {
-    throw new Error('useModal must be used within a Modal component')
+  if (context === null) {
+    throw new Error('useModal must be used within a ModalProvider component')
   }
 
   return context

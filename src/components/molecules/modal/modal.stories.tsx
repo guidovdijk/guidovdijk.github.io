@@ -1,7 +1,6 @@
 import * as React from 'react'
 
 import type { Meta, StoryObj } from '@storybook/react'
-import Image from 'next/image'
 import { Button } from '@/components/atoms/button'
 import {
   Modal, IModalProps, ModalProvider, useModal,
