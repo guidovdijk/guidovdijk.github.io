@@ -3,7 +3,8 @@ import * as React from 'react'
 export interface IButtonProps {
   children: string,
   variation: 'primary' | 'secondary' | 'teritary'
-  onClick: () => void
+  onClick: () => void,
+  className?: string
 }
 
 const styles = {
@@ -14,9 +15,10 @@ const styles = {
 
 export const Button: React.FC<IButtonProps> = ({
   variation = 'primary',
+  className,
   ...props
 }) => (
-  <button className={`${styles[variation]} rounded text-body-s font-medium relative`} type="button">
+  <button className={`${styles[variation]} rounded text-body-s font-medium relative ${className}`} type="button">
     {props.children}
   </button>
 )
