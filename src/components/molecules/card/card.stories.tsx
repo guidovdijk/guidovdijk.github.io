@@ -16,7 +16,7 @@ export const Default: Story = {
       className="lg:hover:bg-red"
       description="Some of the work I have done during my four years as a front-end developer."
       image={{
-        src: '/images/thevalley.svg',
+        src: '/images/logos/thevalley.svg',
         alt: 'The valley',
         width: 175,
         height: 68,
