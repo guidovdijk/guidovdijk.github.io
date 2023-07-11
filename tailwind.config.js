@@ -24,6 +24,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      aspectRatio: {
+        'hero': '2.26 / 1',
+      },
       borderWidth: {
         16: '16px'
       },
