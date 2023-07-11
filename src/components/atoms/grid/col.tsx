@@ -17,10 +17,11 @@ export const Col: React.FC<IColProps> = ({
   <div
     className={`
       ${start ? `col-start-${start}` : ''}
-      ${span ? `col-span-${span}` : 'col-span-12'}
+      ${span ? `col-span-${span}` : ''}
       ${className}
     `}
     {...props}
-  >{children}
+  >
+    {children}
   </div>
 )
