@@ -45,8 +45,10 @@ const companyImages: ImageProps[] = [
 
 export const CompanyRow: React.FC<ICompanyRowProps> = () => (
   <div className="flex sm:flex-row flex-col gap-y-6 items-center">
-    <div className="shrink-0 flex">
-      <p className="text-subtitle uppercase text-white-500 block">Companies who lit<br />up my passion</p>
+    <div className="shrink-0 flex lg:self-center self-start sm:pt-1">
+      <p className="shrink-0 flex text-subtitle uppercase text-white-500">
+        Companies who lit<br />up my passion
+      </p>
       <div className="w-24 h-[1px] bg-white-500 mt-1.5 ml-5 mr-8" />
     </div>
     <div className="flex flex-wrap items-center gap-x-16 gap-y-8">
