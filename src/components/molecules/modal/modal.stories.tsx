@@ -16,11 +16,10 @@ type Story = StoryObj<IModalProps>
 
 const Component: React.FC = () => {
   const {
-    isOpen, setIsOpen, activeItem, setActiveItem,
+    setIsOpen, setActiveItem,
   } = useModal()
 
   const openModal = (text: string) => {
-    console.log('clicked')
     setIsOpen(true)
     setActiveItem(<p>{text}</p>)
   }
