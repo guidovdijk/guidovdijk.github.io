@@ -42,7 +42,7 @@ module.exports = {
       /* Headings */
       // 65px
       'heading-2-xl': ['clamp(2.5rem, 0.7679rem + 3.6607vw, 4.0625rem)', 1.25], // Not used yet
-      'heading-xl': ['clamp(1.5rem, 0.7679rem + 3.6607vw, 4.0625rem)', 1.25], // Not used yet
+      'heading-xl': ['clamp(1.5rem, 0.7679rem + 3.6607vw, 4.0625rem)', 1.2], // Not used yet
       // 56px
       'heading-l': ['clamp(3rem, 2.734rem + 0.8511vw, 3.5rem)'],
       'heading': ['clamp(2.5rem, 2.1443298969072164rem + 1.5463917525773196vw, 4rem)', {
