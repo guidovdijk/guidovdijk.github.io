@@ -126,4 +126,8 @@
   .animation-dash {
     animation: dash 2500ms linear forwards;
   }
+
+  .clip-inset {
+    clip-path: inset(0% var(--clip) 0% 0%)
+  } 
 }
