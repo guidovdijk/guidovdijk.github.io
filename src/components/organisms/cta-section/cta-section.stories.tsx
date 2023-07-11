@@ -12,7 +12,7 @@ type Story = StoryObj
 
 export const Default: Story = {
   render: () => (
-    <div className="container mx-auto px-2 md:px-12">
+    <div className="container mx-auto px-2 lg:px-12">
       <div className="h-screen" />
       <CTASection />
       <div className="h-screen" />

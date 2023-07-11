@@ -6,7 +6,7 @@ import { CompanyRow } from '@/components/molecules/company-row'
 export const CTASection: React.FC = () => (
   <Grid
     as="section"
-    className="items-center flex gap-y-12 md:gap-y-24"
+    className="items-center flex gap-y-12 lg:gap-y-24"
   >
     <Col className="col-span-12">
       <h2
