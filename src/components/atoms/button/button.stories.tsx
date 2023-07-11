@@ -24,6 +24,6 @@ export const Secondary: Story = {
 export const Teritairy: Story = {
   args: {
     ...Primary.args,
-    variation: 'teritary',
+    variation: 'tertiary',
   },
 }
