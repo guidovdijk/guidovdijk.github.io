@@ -40,6 +40,22 @@
     position: relative !important;
     height: unset !important;
   }
+
+  .gradient-shadow::after {
+    --translateX: 10px;
+    --translateY: 10px;
+    --scale: 1;
+  
+    content: "";
+    background: linear-gradient(-90deg,#DD117E 0, #C079FE 48.96%, #9FD9FF 100%);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate3d(var(--translateX),var(--translateY),0) scale(var(--scale))
+  }
 }
 
 @layer utilities {
