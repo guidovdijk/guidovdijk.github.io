@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Fullscreen } from './icons/Fullscreen'
+import { Exitscreen } from './icons/Exitscreen'
 import { LinkedIn } from './icons/LinkedIn'
 import { Triangle } from './icons/Triangle'
 import { Instagram } from './icons/Instagram'
@@ -8,6 +9,7 @@ import { Github } from './icons/Github'
 
 const Components = {
   fullscreen: Fullscreen,
+  exitscreen: Exitscreen,
   linkedin: LinkedIn,
   triangle: Triangle,
   instagram: Instagram,
