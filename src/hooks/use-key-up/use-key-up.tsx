@@ -15,12 +15,11 @@ const useKeyUp = (
 
   useEffect(() => {
     if (typeof window !== 'object') {
-      return
+      return undefined
     }
 
     window.addEventListener('keyup', handleKeyUp)
 
-    // eslint-disable-next-line consistent-return
     return () => {
       window.removeEventListener('keyup', handleKeyUp)
     }
