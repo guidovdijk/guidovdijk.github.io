@@ -6,8 +6,8 @@
 
   html,
   body {
-    color: #FEFEFE;
-    background-color: var(--color-background-300);
+    @apply text-white-200;
+    @apply bg-black-400;
     scroll-behavior: smooth;
   }
 
@@ -41,14 +41,17 @@
     height: unset !important;
   }
 
+  .gradient-shadow img {
+    z-index: 1;
+  }
+
   .gradient-shadow::after {
     --translateX: 10px;
     --translateY: 10px;
     --scale: 1;
   
     content: "";
-    background: linear-gradient(-90deg,#DD117E 0, #C079FE 48.96%, #9FD9FF 100%);
-    z-index: -1;
+    @apply bg-background;
     position: absolute;
     top: 0;
     right: 0;
@@ -102,11 +105,11 @@
   .divider-gradient-background:hover::before {
     z-index: 1;
     width: 100%;
-    background: linear-gradient(-90deg, #DD117E 0%, #C079FE 48.96%, #9FD9FF 100%);
+    @apply bg-background;
   }
-
+  
   .bg-gradient:hover {
-    background-image: linear-gradient(-90deg, #DD117E 0%, #C079FE 48.96%, #9FD9FF 100%);
+    @apply bg-background;
   }
 
   .divider-gradient-background:active::after,
