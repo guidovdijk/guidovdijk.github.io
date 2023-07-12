@@ -16,10 +16,16 @@ const AboutMeSvg: React.FC = () => (
   </svg>
 )
 
-export const AboutMe: React.FC = () => (
+interface IAboutMeProps extends React.HTMLAttributes<HTMLElement> { }
+
+export const AboutMe: React.FC<IAboutMeProps> = ({
+  className,
+  ...props
+}) => (
   <Grid
+    {...props}
     as="section"
-    className="items-center flex"
+    className={`items-center flex ${className}`}
   >
     <Col className="lg:-order-1 order-1 col-span-12 lg:col-span-6 lg:col-start-2">
       <span className="text-subtitle uppercase text-white-500 mb-2">about me</span>

@@ -79,13 +79,16 @@ const work: Omit<ICardProps, 'index'>[] = [
   },
 ]
 
-export const WorkSection: React.FC = () => (
-  <section>
+interface IWorkSectionProps extends React.HTMLAttributes<HTMLElement> { }
+
+export const WorkSection: React.FC<IWorkSectionProps> = ({ ...props }) => (
+  <section {...props}>
     <p className="text-subtitle uppercase text-white-500 mb-4">Selected work ({work.length})</p>
     <div className="flex flex-col gap-y-4 lg:gap-y-0 mb-11">
       {
         work.map((workItem, index) => (
           <Card
+            key={`work-section-${index}`}
             index={index}
             {...workItem}
           />

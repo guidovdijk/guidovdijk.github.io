@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <main>
       <div className="h-screen" />
-      <CTASection />
-      <Divider />
-      <WorkSection />
-      <AboutMe />
+      <CTASection className="mb-28" />
+      <Divider className="mb-24" />
+      <WorkSection className="mb-44" />
+      <AboutMe className="mb-28" />
     </main>
   )
 }

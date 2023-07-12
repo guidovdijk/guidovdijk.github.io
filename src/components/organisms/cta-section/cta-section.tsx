@@ -3,10 +3,16 @@ import { Col, Grid } from '@/components/atoms/grid'
 import { ClipText } from '@/components/molecules/clip-text'
 import { CompanyRow } from '@/components/molecules/company-row'
 
-export const CTASection: React.FC = () => (
+interface ICTASectionProps extends React.HTMLAttributes<HTMLElement> { }
+
+export const CTASection: React.FC<ICTASectionProps> = ({
+  className,
+  ...props
+}) => (
   <Grid
+    {...props}
     as="section"
-    className="items-center flex gap-y-12 lg:gap-y-24"
+    className={`items-center flex gap-y-12 lg:gap-y-24 ${className}`}
   >
     <Col className="col-span-12">
       <h2

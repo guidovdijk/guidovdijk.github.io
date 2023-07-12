@@ -53,9 +53,10 @@ export const CompanyRow: React.FC<ICompanyRowProps> = () => (
     </div>
     <div className="flex flex-wrap items-center gap-x-16 gap-y-8">
       {
-        companyImages.map((img) => (
+        companyImages.map((img, index) => (
           <Image
             {...img}
+            key={`company-row-${index}`}
             style={{ objectFit: 'contain' }}
           />
         ))

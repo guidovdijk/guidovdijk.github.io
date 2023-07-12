@@ -20,8 +20,10 @@ export const FooterItem: React.FC<IFooterItemProps> = ({
   <ul className="flex flex-col gap-y-6">
     <span className="text-subtitle uppercase text-white-500 block -mb-2">{title}</span>
     {
-      items.map((item) => (
-        <li>
+      items.map((item, index) => (
+        <li
+          key={`footer-item-${index}`}
+        >
           <Link
             key={`footer-item-${item.text}`}
             className="capitalize"
