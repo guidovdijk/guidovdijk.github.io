@@ -25,7 +25,7 @@ export const Navigation: React.FC = () => {
       initial={{ opacity: 0, y: 0 }}
       transition={{ duration: 0.3, type: 'tween' }}
     >
-      <ul className="backdrop-blur-lg bg-black-500/[.01] px-4 sm:px-12 mx-auto sm:mr-0 sm:ml-auto justify-center sm:justify-end flex gap-x-11">
+      <ul className="h-full w-full items-center backdrop-blur-md bg-black-500/[.01] px-4 sm:px-12 mx-auto sm:mr-0 sm:ml-auto justify-center sm:justify-end flex gap-x-11">
         <li>
           <NavigationItem
             href="/home"

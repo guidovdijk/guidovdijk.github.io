@@ -43,7 +43,7 @@ export const AboutMe: React.FC = () => (
         alt="Image of Guido van Dijk, the developer of this portfolio"
         className="image-relative max-h-[660px] object-cover lg:object-fill"
         fill
-        src="images/profile.webp"
+        src="/images/profile.webp"
         style={{ objectPosition: 'top' }}
       />
       <div className="absolute w-20 h-20 -top-3 -left-3">
