@@ -16,7 +16,7 @@ export const PlaygroundItem: React.FC<IPlaygroundItemProps> = ({
   onClick,
   ...props
 }) => (
-  <article className={`col-span-4 w-full flex relative aspect-[9/14] overflow-hidden rounded border-16 transition-all group hover:border-none border-black-200 ${className}`} {...props}>
+  <article className={`col-span-12 md:col-span-6 lg:col-span-4 w-full flex relative aspect-[9/14] overflow-hidden rounded border-16 transition-all group hover:border-none border-black-200 ${className}`} {...props}>
     <Image
       {...image}
     />
