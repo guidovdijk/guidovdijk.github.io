@@ -17,6 +17,6 @@ export const Grid: React.FC<IGridProps> = ({
   const Component = as
 
   return (
-    <Component className={`grid auto-rows-max grid-cols-${cols} gap-6 ${className}`} {...props}>{children}</Component>
+    <Component className={`grid grid-cols-${cols} gap-6 ${className}`} {...props}>{children}</Component>
   )
 }
