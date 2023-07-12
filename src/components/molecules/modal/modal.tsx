@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import * as React from 'react'
-import { useEffect } from 'react'
 import { IconButton } from '@/components/atoms/icon-button'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useKeyUp } from '@/hooks/use-key-up'
 import { useModal } from './modal.context'
 
 export interface IModalProps {
@@ -19,24 +19,9 @@ export const Modal: React.FC<IModalProps> = ({
     isOpen, setIsOpen, activeItem,
   } = useModal()
 
-  const handleKeyUp = React.useCallback((event: { key: string }) => {
-    if (isOpen && event.key === 'Escape') {
-      setIsOpen(false)
-    }
-  }, [isOpen, setIsOpen])
-
-  useEffect(() => {
-    if (typeof window !== 'object') {
-      return
-    }
-
-    window.addEventListener('keyup', handleKeyUp)
-
-    // eslint-disable-next-line consistent-return
-    return () => {
-      window.removeEventListener('keyup', handleKeyUp)
-    }
-  }, [handleKeyUp])
+  useKeyUp('Escape', () => {
+    setIsOpen(false)
+  })
 
   return (
     <AnimatePresence>
