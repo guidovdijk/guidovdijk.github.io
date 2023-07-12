@@ -20,7 +20,7 @@ const Component: React.FC = () => {
 
   const openModal = (text: string) => {
     setIsOpen(true)
-    setActiveItem(<p>{text}</p>)
+    setActiveItem(<p className="h-screen">{text}</p>)
   }
 
   return (
