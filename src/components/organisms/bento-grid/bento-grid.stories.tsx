@@ -31,7 +31,7 @@ export const Default: Story = {
   render: () => (
     <div className="container mx-auto px-2 md:px-12">
       <BentoGrid>
-        {[4, 3, 4, 4, 3, 4, 3, 2].map((height, index) => (
+        {[4, 3, 4, 3, 4, 3, 3, 2].map((height, index) => (
           <Item
             key={index}
             className={`h-full row-span-${height}`}
