@@ -12,6 +12,10 @@ type Story = StoryObj
 
 export const Default: Story = {
   render: () => (
-    <Navigation />
+    <>
+      <Navigation />
+      <div className="h-screen" />
+      <div className="h-screen" />
+    </>
   ),
 }

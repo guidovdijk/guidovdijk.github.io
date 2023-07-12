@@ -1,25 +1,48 @@
-import { NavigationItem } from '@/components/atoms/navigation-item'
 import * as React from 'react'
+import { useState } from 'react'
+import { NavigationItem } from '@/components/atoms/navigation-item'
+import { useScroll } from '@/hooks/use-scroll'
+import { motion } from 'framer-motion'
 
-export const Navigation: React.FC = () => (
-  <nav className="flex">
-    <ul className="backdrop-blur-lg bg-black-500/[.01] py-4 px-4 sm:py-8 sm:px-12 mx-auto sm:mr-0 sm:ml-auto justify-center sm:justify-end flex gap-x-11">
-      <li>
-        <NavigationItem
-          href="/home"
-          isActive
-        >
-          Home
-        </NavigationItem>
-      </li>
-      <li>
-        <NavigationItem
-          href="/playground"
-          isActive={false}
-        >
-          Playground
-        </NavigationItem>
-      </li>
-    </ul>
-  </nav>
-)
+export const Navigation: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(true)
+
+  useScroll(({ lastY, y }) => {
+    const isWithinOffsetLimit = y < 100
+    const hasScrolledUp = lastY > y
+
+    const shouldBeVisible = hasScrolledUp || isWithinOffsetLimit
+    setIsVisible(shouldBeVisible)
+  })
+
+  return (
+    <motion.nav
+      animate={{
+        y: isVisible ? '0px' : '-55px',
+        opacity: isVisible ? 1 : 0,
+      }}
+      className="flex fixed w-full items-center top-0 h-20"
+      initial={{ opacity: 0, y: 0 }}
+      transition={{ duration: 0.3, type: 'tween' }}
+    >
+      <ul className="backdrop-blur-lg bg-black-500/[.01] px-4 sm:px-12 mx-auto sm:mr-0 sm:ml-auto justify-center sm:justify-end flex gap-x-11">
+        <li>
+          <NavigationItem
+            href="/home"
+            isActive
+          >
+            Home
+          </NavigationItem>
+        </li>
+        <li>
+          <NavigationItem
+            href="/playground"
+            isActive={false}
+          >
+            Playground
+          </NavigationItem>
+        </li>
+      </ul>
+    </motion.nav>
+  )
+}
