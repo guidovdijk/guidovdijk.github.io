@@ -10,7 +10,7 @@ interface IUseScrollData {
 const useScroll = (
   handler: (data: IUseScrollData) => void,
 ) => {
-  const [data, setData] = useState({
+  const [data, setData] = useState<IUseScrollData>({
     x: 0,
     y: 0,
     lastX: 0,
