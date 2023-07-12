@@ -21,6 +21,10 @@ module.exports = {
     {
       pattern: /fill-/
     },
+    // TODO: Remove in production. This is only used to ensure storybook demo works without having to specify multiple heights
+    {
+      pattern: /row-span-/
+    },
   ],
   theme: {
     extend: {
