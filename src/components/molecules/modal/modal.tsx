@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { useEffect } from 'react'
 import { IconButton } from '@/components/atoms/icon-button'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useModal } from './modal.context'
 
 export interface IModalProps {
@@ -38,23 +39,30 @@ export const Modal: React.FC<IModalProps> = ({
   }, [handleKeyUp])
 
   return (
-    (isOpen
-      && (
-        <>
-          <div
-            {...props}
-            className={`flex justify-center items-center sticky z-20 top-0 left-0 overflow-y-auto ${className}`}
+    <AnimatePresence>
+      {
+        isOpen
+        && (
+          <motion.div
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
           >
-            {activeItem}
+            <div
+              {...props}
+              className={`flex justify-center items-center sticky z-20 top-0 left-0 overflow-y-auto ${className}`}
+            >
+              {activeItem}
 
-            <IconButton className="fixed top-4 right-4" name="exitscreen" onClick={() => { setIsOpen(false) }} />
-          </div>
-          <div
-            className="fixed before:backdrop-blur-sm before:bg-black-500/70 before:w-full before:h-full before:fixed cursor-pointer before:left-0 before:top-0 before:bottom-0"
-            onClick={() => { setIsOpen(false) }}
-          />
-        </>
-      )
-    )
+              <IconButton className="fixed top-4 right-4" name="exitscreen" onClick={() => { setIsOpen(false) }} />
+            </div>
+            <div
+              className="fixed before:backdrop-blur-sm before:bg-black-500/70 before:w-full before:h-full before:fixed cursor-pointer before:left-0 before:top-0 before:bottom-0"
+              onClick={() => { setIsOpen(false) }}
+            />
+          </motion.div>
+        )
+      }
+    </AnimatePresence>
   )
 }
