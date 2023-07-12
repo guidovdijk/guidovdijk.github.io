@@ -3,6 +3,7 @@
 import React from 'react'
 import { Navigation } from '@/components/organisms/navigation'
 import { Footer } from '@/components/organisms/footer'
+import { Container } from '@/components/atoms/grid'
 import { inter, avantGarde } from './fonts'
 
 export const metadata = {
@@ -19,9 +20,9 @@ export default function RootLayout({
     <html className={`${inter.variable} ${avantGarde.variable}`} lang="en">
       <body className="pb-8 relative before:z-20 before:bg-body before:fixed before:w-full before:h-48 before:bottom-0 before:pointer-events-none">
         <Navigation />
-        <div className="container mx-auto px-12">
+        <Container className="px-12">
           {children}
-        </div>
+        </Container>
         <Footer />
       </body>
     </html>
