@@ -64,6 +64,7 @@ module.exports = {
       'subtitle': ['0.9rem', {
         lineHeight: 1,
         fontWeight: '600',
+        letterSpacing: '0.025em'
       }],
 
       /* Callout */
@@ -116,6 +117,7 @@ module.exports = {
       },
     },
     backgroundImage: {
+      body: 'linear-gradient(0deg, #0d0d0d, transparent)',
       background: 'linear-gradient(-90deg, #DD117E 0%, #C079FE 48.96%, #9FD9FF 100%)',
       red: 'linear-gradient(15deg, #520000 0.11%, #E02C35 115%)',
       green: 'linear-gradient(225deg, #045742 0%, #000219 100%)',
