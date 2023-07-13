@@ -44,7 +44,7 @@ export const AboutMe: React.FC<IAboutMeProps> = ({
         </div>
       </div>
     </Col>
-    <Col className="col-span-12 relative gradient-shadow sm:col-span-10 lg:col-span-4">
+    <Col className="col-span-12 relative gradient-shadow sm:col-span-10 md:col-span-8 lg:col-span-4">
       <Image
         alt="Image of Guido van Dijk, the developer of this portfolio"
         className="image-relative max-h-[660px] object-cover lg:object-fill"
