@@ -4,6 +4,7 @@ import React from 'react'
 import { Navigation } from '@/components/organisms/navigation'
 import { Footer } from '@/components/organisms/footer'
 import { Container } from '@/components/atoms/grid'
+import { ModalProvider } from '@/components/molecules/modal'
 import { inter, avantGarde } from './fonts'
 
 export const metadata = {
@@ -21,7 +22,9 @@ export default function RootLayout({
       <body className="pb-8 relative before:z-20 before:bg-body before:fixed before:w-full before:h-48 before:bottom-0 before:pointer-events-none">
         <Navigation />
         <Container className="px-4 lg:px-12">
-          {children}
+          <ModalProvider>
+            {children}
+          </ModalProvider>
         </Container>
         <Footer />
       </body>
