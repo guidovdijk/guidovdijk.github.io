@@ -9517,6 +9517,11 @@ table@^6.0.9:
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
 
+tailwind-scrollbar@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/tailwind-scrollbar/-/tailwind-scrollbar-3.0.4.tgz#a04489b3fdc706ed2ea7d3695df063391b1a9ec5"
+  integrity sha512-X/QBsn/C5u9x6/YvTc1Zo7b09Gqs5BfDe0UK/8LDQUv8IEBKF+p2ISTRwvAr50MH0hn/wTyCEOann7uXoa1/2Q==
+
 tailwindcss-border-gradients@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/tailwindcss-border-gradients/-/tailwindcss-border-gradients-2.0.3.tgz#c07cd44a0dc7c86fe2fa160117f6ac640866bca3"

@@ -49,6 +49,7 @@
     "eslint-plugin-unicorn": "^47.0.0",
     "gts": "^3.1.1",
     "storybook": "^7.0.23",
+    "tailwind-scrollbar": "^3.0.4",
     "tailwindcss-border-gradients": "^2.0.3",
     "tailwindcss-fluid-type": "^2.0.3"
   }

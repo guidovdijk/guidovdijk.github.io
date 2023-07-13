@@ -79,9 +79,9 @@ module.exports = {
 
       /* Body */
       // 21px
-      'body': ['1.3125rem', {
+      'body': ['clamp(1.125rem, 1.0714rem + 0.2679vw, 1.3125rem)', {
         lineHeight: 1.2,
-        fontWeight: '300'
+        fontWeight: '200'
       }],
       // 16px
       'body-s': ['1rem', 1.5],
@@ -122,6 +122,7 @@ module.exports = {
       },
     },
     backgroundImage: {
+      'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       body: 'linear-gradient(0deg, #0d0d0d, transparent)',
       background: 'linear-gradient(-90deg, #DD117E 0%, #C079FE 48.96%, #9FD9FF 100%)',
       red: 'linear-gradient(15deg, #520000 0.11%, #E02C35 115%)',
@@ -134,5 +135,6 @@ module.exports = {
     }
   },
   plugins: [
+    require('tailwind-scrollbar'),
   ],
 }
