@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Link from 'next/link'
 
 export interface INavigationItemProps {
   className?: string
@@ -14,7 +15,7 @@ export const NavigationItem: React.FC<INavigationItemProps> = ({
   className = '',
   ...props
 }) => (
-  <a
+  <Link
     className={`
       relative 
       text-white-200
@@ -26,5 +27,5 @@ export const NavigationItem: React.FC<INavigationItemProps> = ({
     {...props}
   >
     {children}
-  </a>
+  </Link>
 )
