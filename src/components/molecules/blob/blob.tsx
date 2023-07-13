@@ -18,7 +18,7 @@ export const Blob: React.FC<IBlobProps> = ({
   return (
     <motion.div
       {...props}
-      className={`bg-blue-300/80 blur-4xl absolute bottom-0 right-0 w-full h-full max-h-[468px] max-w-[468px] rounded-full ${className}`}
+      className={`from-blue-300 to-transparent bg-gradient-radial blur-4xl absolute bottom-0 right-0 w-full h-full max-h-[468px] max-w-[468px] ${className}`}
       style={{ y }}
     />
   )

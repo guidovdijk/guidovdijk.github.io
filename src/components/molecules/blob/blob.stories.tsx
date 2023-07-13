@@ -12,7 +12,7 @@ type Story = StoryObj
 
 export const Default: Story = {
   render: () => (
-    <>
+    <div className="bg-black-500">
       <div className="h-screen">
         <h2 className="text-heading-xl font-semibold">
           Start
@@ -24,6 +24,6 @@ export const Default: Story = {
           End
         </h2>
       </div>
-    </>
+    </div>
   ),
 }
