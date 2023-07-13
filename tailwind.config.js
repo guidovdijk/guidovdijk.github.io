@@ -28,6 +28,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      blur: {
+        '4xl': '240px',
+      },
       aspectRatio: {
         'hero': '2.26 / 1',
       },
@@ -114,6 +117,8 @@ module.exports = {
       },
       blue: {
         100: '#9FD9FF',
+        200: '#6CE5FF',
+        300: '#000833',
       },
     },
     backgroundImage: {
