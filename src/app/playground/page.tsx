@@ -37,10 +37,11 @@ const Item: React.FC<IItemProps> = ({ className }) => {
       onClick={() => openModal(
         <Image
           alt="A brown rock monster with glowing eyes"
+          className="image-relative"
           fill
           src="/images/playground/stad-als-spel-stonithe.webp"
           style={{
-            objectFit: 'cover',
+            objectFit: 'contain',
           }}
         />,
       )}
@@ -50,27 +51,29 @@ const Item: React.FC<IItemProps> = ({ className }) => {
 
 export default function PlayGround() {
   return (
-    <main>
-      <div className="flex flex-col gap-y-4 mt-40 mb-12">
-        <h2
-          className="text-heading-xl font-semibold"
-        >
-          The Playground
-        </h2>
-        <p className="text-body">
-          For all my illustrations, websites, and programs<br />
-          which I still want to showcase and deserves some spotlight.
-        </p>
-      </div>
-      <BentoGrid className="mb-64">
-        {[4, 3, 4, 3, 4, 3, 3, 2].map((height, index) => (
-          <Item
-            key={index}
-            className={`h-full row-span-${height}`}
-          />
-        ))}
-      </BentoGrid>
+    <>
+      <main>
+        <div className="flex flex-col gap-y-4 mt-40 mb-12">
+          <h2
+            className="text-heading-xl font-semibold"
+          >
+            The Playground
+          </h2>
+          <p className="text-body">
+            For all my illustrations, websites, and programs<br />
+            which I still want to showcase and deserves some spotlight.
+          </p>
+        </div>
+        <BentoGrid className="mb-64">
+          {[4, 3, 4, 3, 4, 3, 3, 2].map((height, index) => (
+            <Item
+              key={index}
+              className={`h-full row-span-${height}`}
+            />
+          ))}
+        </BentoGrid>
+      </main>
       <Modal />
-    </main>
+    </>
   )
 }
