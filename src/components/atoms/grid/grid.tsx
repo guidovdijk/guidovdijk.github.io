@@ -3,6 +3,7 @@ import * as React from 'react'
 export interface IGridProps extends React.HTMLAttributes<HTMLDivElement> {
   cols?: number
   className?: string
+  gap?: string
   as?: React.ElementType
   children?: React.ReactNode
 }
@@ -10,13 +11,14 @@ export interface IGridProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Grid: React.FC<IGridProps> = ({
   cols = 12,
   as = 'div',
+  gap = 'gap-6',
   children,
-  className,
+  className = '',
   ...props
 }) => {
   const Component = as
 
   return (
-    <Component className={`grid grid-cols-${cols} gap-6 ${className}`} {...props}>{children}</Component>
+    <Component className={`grid grid-cols-${cols} ${gap} ${className}`} {...props}>{children}</Component>
   )
 }
