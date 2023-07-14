@@ -4,6 +4,7 @@ import * as React from 'react'
 export interface IWorkHeaderProps {
   index: number
   subtitle: string
+  className?: string
   title: string
   subjects: string[]
   dates: string[]
@@ -17,9 +18,13 @@ export const WorkHeader: React.FC<IWorkHeaderProps> = ({
   subjects,
   dates,
   roles,
+  className = '',
   ...props
 }) => (
-  <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full gap-x-8 gap-y-8 px-6 md:px-12 lg:px-24 mx-auto" {...props}>
+  <div
+    className={`flex flex-col md:flex-row md:items-center md:justify-between w-full gap-x-8 gap-y-8 px-0 sm:px-6 lg:px-12 xl:px-24 mx-auto ${className}`}
+    {...props}
+  >
     <div className="flex flex-col flex-grow">
       <p className="text-subtitle uppercase text-white-500">0{index} / {subtitle}</p>
       <h1 className="text-heading-2-xl font-semibold font-heading w-min">{title}</h1>
