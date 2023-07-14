@@ -1,11 +1,12 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 
 import { PlaygroundItem } from '@/components/molecules/playground-item'
 import { BentoGrid } from '@/components/organisms/bento-grid'
 import { Modal, useModal } from '@/components/molecules/modal'
-import Image from 'next/image'
+import { Container } from '@/components/atoms/grid'
 
 // TODO: Remove placeholders
 interface IItemProps {
@@ -17,7 +18,6 @@ const Item: React.FC<IItemProps> = ({ className }) => {
   } = useModal()
 
   const openModal = (data: React.SetStateAction<React.ReactNode>) => {
-    console.log('test')
     setIsOpen(true)
     setActiveItem(data)
   }
@@ -52,7 +52,7 @@ const Item: React.FC<IItemProps> = ({ className }) => {
 export default function PlayGround() {
   return (
     <>
-      <main>
+      <Container className="px-4 lg:px-12">
         <div className="flex flex-col gap-y-4 mt-40 mb-12">
           <h2
             className="text-heading-xl font-semibold"
@@ -72,7 +72,7 @@ export default function PlayGround() {
             />
           ))}
         </BentoGrid>
-      </main>
+      </Container>
       <Modal />
     </>
   )

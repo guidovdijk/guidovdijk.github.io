@@ -17,15 +17,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // TODO: Figure out if the gradient should be kept, before moving to production
+  const gradient = 'before:z-20 before:bg-body before:fixed before:w-full before:h-48 before:bottom-0 before:pointer-events-none'
   return (
     <html className={`${inter.variable} ${avantGarde.variable}`} lang="en">
-      <body className="pb-8 relative before:z-20 before:bg-body before:fixed before:w-full before:h-48 before:bottom-0 before:pointer-events-none">
+      <body className={`pb-8 relative ${false ? gradient : ''}`}>
         <Navigation />
-        <Container className="px-4 lg:px-12">
-          <ModalProvider>
-            {children}
-          </ModalProvider>
-        </Container>
+        <ModalProvider>
+          {children}
+        </ModalProvider>
         <Footer />
       </body>
     </html>
