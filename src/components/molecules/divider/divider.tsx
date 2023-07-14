@@ -14,7 +14,7 @@ const DividerSvgWhite: React.FC<{ props?: any, style: any, className: string }> 
 
 const DividerBorders: React.FC = () => (
   <div className="w-full flex gap-x-4 justify-between items-center overflow-hidden">
-    {[...Array(10)].map((_x, i) => <motion.div key={`divider-${i}`} className={`bg-white-100/[.075] w-[1px] ${i % 2 === 0 ? 'h-56' : 'h-64'}`} />)}
+    {[...Array(10)].map((_x, i) => <motion.div key={`divider-${i}`} className={`bg-white-100/[.05] w-[1px] ${i % 2 === 0 ? 'h-56' : 'h-64'}`} />)}
   </div>
 )
 
