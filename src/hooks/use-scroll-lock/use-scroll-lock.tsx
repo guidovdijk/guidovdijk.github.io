@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 
 export function useScrollLock(isLocked: boolean) {
   useEffect(() => {
@@ -16,16 +16,4 @@ export function useScrollLock(isLocked: boolean) {
       document.body.style.paddingRight = ''
     }
   }, [isLocked])
-}
-
-export function useScrollUnlock() {
-  useLayoutEffect(() => {
-    document.body.style.overflow = ''
-    document.body.style.paddingRight = ''
-    // eslint-disable-next-line no-return-assign
-    return () => {
-      document.body.style.paddingRight = ''
-      document.body.style.overflow = ''
-    }
-  }, [])
 }
