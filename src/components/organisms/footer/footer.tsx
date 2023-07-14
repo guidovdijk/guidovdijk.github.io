@@ -6,7 +6,7 @@ import * as React from 'react'
 export const Footer: React.FC = () => (
   <footer>
     <div className="mx-auto px-4 lg:px-12">
-      <div className="w-full bg-black-100 h-[1px]" />
+      <div className="w-full bg-black-300 h-[1px]" />
     </div>
     <Container className="px-12">
       <div className="flex flex-col gap-y-16 pt-16 pb-14">
