@@ -8,9 +8,9 @@ export interface IButtonProps {
 }
 
 const styles = {
-  primary: 'border-gradient-background text-white-200 border border-solid py-4 px-12',
-  secondary: 'text-white-200 divider-gradient-background',
-  tertiary: 'bg-white-200/90 hover:bg-white-200 border border-white-200/75 py-3 px-12',
+  primary: 'relative border-gradient-background text-white-200 border border-solid py-4 px-12',
+  secondary: 'relative text-white-200 divider-gradient-background',
+  tertiary: 'bg-white-200/90 hover:bg-white-200 text-black-500 border border-white-200/75 py-3 px-12',
 }
 
 export const Button: React.FC<IButtonProps> = ({
@@ -19,7 +19,7 @@ export const Button: React.FC<IButtonProps> = ({
   children,
   ...props
 }) => (
-  <button {...props} className={`${styles[variation]} rounded text-body-s font-medium relative ${className}`} type="button">
+  <button {...props} className={`${styles[variation]} rounded text-body-s font-medium ${className}`} type="button">
     {children}
   </button>
 )
