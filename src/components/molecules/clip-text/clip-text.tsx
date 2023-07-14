@@ -2,27 +2,21 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import React from 'react'
 
 export interface IClipTextProps {
-  index?: number
   className?: string
   isEnd?: boolean
   children: React.ReactNode
 }
 
-// TODO: Ensure animation is fired line after line
-// TODO: (try) add ref as a prop and look at the previous ClipText. Fire when that one is finished.
-// INFO: https://youtu.be/Yw7yWHigGKI?t=8817
 // TODO: (optional) Create a provider to use the animation for better re-usability
 export const ClipText: React.FC<IClipTextProps> = ({
-  index = 1,
   className = '',
   isEnd = false,
   children,
 }) => {
   const ref = React.useRef(null)
-  const offset = 100 * index
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: [`${offset}px end`, '-200px'],
+    offset: ['center center', `center ${window.innerHeight / 2 - 100}px`],
   })
   const clip = useTransform(
     scrollYProgress,
