@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { PlaygroundItem } from '@/components/molecules/playground-item'
 import { BentoGrid } from '@/components/organisms/bento-grid'
 import { Modal, useModal } from '@/components/molecules/modal'
-import { Container } from '@/components/atoms/grid'
+import { Col, Container, Grid } from '@/components/atoms/grid'
 
 // TODO: Remove placeholders
 interface IItemProps {
@@ -53,25 +53,29 @@ export default function PlayGround() {
   return (
     <>
       <Container className="px-4 lg:px-12">
-        <div className="flex flex-col gap-y-4 mt-40 mb-12">
-          <h2
-            className="text-heading-xl font-semibold"
-          >
-            The Playground
-          </h2>
-          <p className="text-body">
-            For all my illustrations, websites, and programs<br />
-            which I still want to showcase and deserves some spotlight.
-          </p>
-        </div>
-        <BentoGrid className="mb-64">
-          {[4, 3, 4, 3, 4, 3, 3, 2].map((height, index) => (
-            <Item
-              key={index}
-              className={`h-full row-span-${height}`}
-            />
-          ))}
-        </BentoGrid>
+        <Grid>
+          <Col span={12}>
+            <div className="flex flex-col gap-y-4 mt-40 mb-12">
+              <h2
+                className="text-heading-xl font-semibold"
+              >
+                The Playground
+              </h2>
+              <p className="text-body">
+                For all my illustrations, websites, and programs<br />
+                which I still want to showcase and deserves some spotlight.
+              </p>
+            </div>
+            <BentoGrid className="mb-64">
+              {[4, 3, 4, 3, 4, 3, 3, 2].map((height, index) => (
+                <Item
+                  key={index}
+                  className={`h-full row-span-${height}`}
+                />
+              ))}
+            </BentoGrid>
+          </Col>
+        </Grid>
       </Container>
       <Modal />
     </>
