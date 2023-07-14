@@ -14,7 +14,7 @@ export const WorkHero: React.FC<IWorkHeroProps> = ({
   const ref = React.useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['center end', 'center start'],
+    offset: ['center end', 'center center'],
   })
   const y = useTransform(scrollYProgress, [0, 1], ['100%', '0%'])
 
