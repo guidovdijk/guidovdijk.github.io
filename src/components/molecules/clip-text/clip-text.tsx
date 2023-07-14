@@ -16,7 +16,7 @@ export const ClipText: React.FC<IClipTextProps> = ({
   const ref = React.useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['center center', `center ${window.innerHeight / 2 - 100}px`],
+    offset: ['center center', `center ${window.innerHeight / 2 - 105}px`],
   })
   const clip = useTransform(
     scrollYProgress,
