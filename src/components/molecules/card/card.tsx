@@ -20,9 +20,9 @@ export const Card: React.FC<ICardProps> = ({
   className = '',
   ...props
 }) => (
-  <article {...props} className={`rounded border-b border-black-200 lg:h-[118px] gap-x-14 lg:hover:h-[148px] lg:pl-14 lg:pr-10 px-4 lg:pb-0 pb-4 group/card flex flex-col lg:flex-row lg:items-center ${className}`}>
+  <article {...props} className={`rounded transition-all border-b border-black-200 lg:h-[118px] gap-x-14 lg:hover:h-[148px] lg:pl-14 lg:pr-10 px-4 lg:pb-0 pb-4 group/card flex flex-col lg:flex-row lg:items-center ${className}`}>
     <div className="lg:flex shrink-0 gap-x-4 mb-4 lg:mb-0">
-      <span className="font-normal lg:group-hover/card:text-heading-l lg:group-hover/card:-translate-y-1">0{index}</span>
+      <span className="font-normal transition-all lg:group-hover/card:text-heading-l lg:group-hover/card:-translate-y-1">0{index}</span>
       <h3 className="lg:group-hover/card:hidden"><Image {...image} /></h3>
     </div>
     <p className="max-w-md lg:hidden group-hover/card:block mb-8 lg:mb-0">{description}</p>
