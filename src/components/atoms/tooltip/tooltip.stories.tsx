@@ -25,7 +25,7 @@ const Component: React.FC = () => {
   return (
     <div className="p-8 flex">
       <Tooltip
-        className="lg:hover:bg-red"
+        className=""
         isVisible={isVisible}
         text="Tooltip text"
       >
