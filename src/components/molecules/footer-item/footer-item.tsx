@@ -1,16 +1,10 @@
-import { IconName } from '@/components/atoms/icon'
 import { Link } from '@/components/atoms/link'
+import { ISocialItemProps } from '@/helpers/constants/social-data'
 import * as React from 'react'
-
-interface IFooterListItemProps {
-  text: string
-  icon: IconName
-  href: string
-}
 
 export interface IFooterItemProps {
   title: string,
-  items: IFooterListItemProps[]
+  items: ISocialItemProps[]
 }
 
 export const FooterItem: React.FC<IFooterItemProps> = ({

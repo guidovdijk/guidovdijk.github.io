@@ -1,6 +1,7 @@
 import { Container } from '@/components/atoms/grid'
 import { Email } from '@/components/molecules/email'
 import { FooterItem } from '@/components/molecules/footer-item'
+import { socialData } from '@/helpers/constants/social-data'
 import * as React from 'react'
 
 export const Footer: React.FC = () => (
@@ -19,28 +20,7 @@ export const Footer: React.FC = () => (
 
         <div className="flex flex-row">
           <FooterItem
-            items={[
-              {
-                text: 'LinkedIn',
-                icon: 'linkedin',
-                href: '#',
-              },
-              {
-                text: 'GitHub',
-                icon: 'github',
-                href: '#',
-              },
-              {
-                text: 'Email',
-                icon: 'email',
-                href: '#',
-              },
-              {
-                text: 'Instagram',
-                icon: 'instagram',
-                href: '#',
-              },
-            ]}
+            items={socialData}
             title="socials:"
           />
           <p className="flex items-end justify-end flex-grow">@Guido van Dijk - 2023</p>
