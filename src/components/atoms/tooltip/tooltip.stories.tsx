@@ -12,22 +12,17 @@ export default meta
 type Story = StoryObj
 
 const Component: React.FC = () => {
-  const [isVisible, setIsVisible] = React.useState(false)
+  const [tooltipText, setTooltipText] = React.useState('click to copy')
 
   const handleState = () => {
-    setIsVisible(true)
-
-    setTimeout(() => {
-      console.log('clicked')
-      setIsVisible(false)
-    }, 5000)
+    setTooltipText('Copied!')
   }
+
   return (
     <div className="p-8 flex">
       <Tooltip
-        className=""
-        isVisible={isVisible}
-        text="Tooltip text"
+        animationEndHandler={() => { setTooltipText('click to copy') }}
+        text={tooltipText}
       >
         <Button onClick={handleState} variation="secondary">
           Button Text
