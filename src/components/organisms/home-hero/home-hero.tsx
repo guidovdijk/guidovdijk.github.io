@@ -26,10 +26,10 @@ export const HomeHero: React.FC<IHomeHero> = ({
 
   return (
     <section {...props} className="flex h-screen relative pt-20">
-      <div className="flex flex-grow px-4 sm:px-12 pb-6 sm:pb-14">
+      <div className="flex flex-grow px-4 sm:px-10 pb-6 sm:pb-14">
         {children}
       </div>
-      <div className="absolute overflow-hidden w-full flex items-end bottom-0 px-4 sm:px-12 pb-6 sm:pb-14">
+      <div className="absolute overflow-hidden w-full flex items-end bottom-0 px-4 sm:px-10 pb-6 sm:pb-14">
         <motion.div
           animate={{
             x: isVisible ? '0px' : '-200px',
