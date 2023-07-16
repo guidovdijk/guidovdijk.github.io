@@ -15,7 +15,7 @@ export const Footer: React.FC = () => (
           <p className="text-subtitle uppercase text-white-500 block">
             Need a helping hand? I got two!
           </p>
-          <Email onClick={() => { navigator.clipboard.writeText('van.guido@hotmail.com') }} />
+          <Email />
         </div>
 
         <div className="flex flex-row">
