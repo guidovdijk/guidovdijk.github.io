@@ -1,9 +1,8 @@
 import * as React from 'react'
 
 import { isAvailableForHire, socialData } from '@/helpers/constants/social-data'
-import { Button } from '@/components/atoms/button'
 import { HeroSocialLink } from '@/components/atoms/hero-social-link'
-import { Tooltip } from '@/components/atoms/tooltip'
+import { Email } from '@/components/molecules/email'
 
 // TODO: Fadeout the email and social media links when scrolling
 // TODO: Add the Tooltip functionality
@@ -12,15 +11,7 @@ export const HomeHero: React.FC = () => (
     <div className="flex flex-col gap-y-1.5 mr-auto">
       <p className="text-subtitle uppercase text-white-500">{isAvailableForHire ? 'Available for hire' : 'My Email'}</p>
       <div className="flex">
-        <Tooltip
-          className=""
-          isVisible={false}
-          text="Email copied"
-        >
-          <Button onClick={() => { }} variation="secondary">
-            van.guido@hotmail.com
-          </Button>
-        </Tooltip>
+        <Email />
       </div>
     </div>
     <div className="flex ml-auto">
