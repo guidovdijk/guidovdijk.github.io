@@ -12,6 +12,9 @@ type Story = StoryObj
 
 export const Default: Story = {
   render: () => (
-    <HomeHero />
+    <>
+      <HomeHero />
+      <div className="h-screen" />
+    </>
   ),
 }
