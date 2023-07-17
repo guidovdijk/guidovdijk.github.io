@@ -1,4 +1,5 @@
 import { List } from '@/components/atoms/list'
+import { motion } from 'framer-motion'
 import * as React from 'react'
 
 export interface IWorkHeaderProps {
@@ -21,9 +22,22 @@ export const WorkHeader: React.FC<IWorkHeaderProps> = ({
   className = '',
   ...props
 }) => (
-  <div
-    className={`flex flex-col md:flex-row md:items-center md:justify-between w-full gap-x-8 gap-y-8 px-0 sm:px-6 lg:px-12 xl:px-24 mx-auto ${className}`}
+  <motion.div
+    className={`transform-gpu flex flex-col md:flex-row md:items-center md:justify-between w-full gap-x-8 gap-y-8 px-0 sm:px-6 lg:px-12 xl:px-24 mx-auto ${className}`}
     {...props}
+    animate="animate"
+    initial="initial"
+    transition={{ duration: 0.75, type: 'tween' }}
+    variants={{
+      initial: {
+        opacity: 0,
+        y: 48,
+      },
+      animate: {
+        opacity: 1,
+        y: 0,
+      },
+    }}
   >
     <div className="flex flex-col flex-grow">
       <p className="text-subtitle uppercase text-white-500">0{index} / {subtitle}</p>
@@ -47,5 +61,5 @@ export const WorkHeader: React.FC<IWorkHeaderProps> = ({
         />
       </div>
     </div>
-  </div>
+  </motion.div>
 )
