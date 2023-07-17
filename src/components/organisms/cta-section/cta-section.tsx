@@ -19,16 +19,16 @@ export const CTASection: React.FC<ICTASectionProps> = ({
         aria-label="My love for front-end stems from translating great designs into websites and apps that people enjoy to use."
         className="text-heading-xl font-semibold"
       >
-        <ClipText>
+        <ClipText offset={20}>
           My love for front-end stems from
         </ClipText>
-        <ClipText>
+        <ClipText offset={20}>
           translating great designs into
         </ClipText>
-        <ClipText>
+        <ClipText offset={20}>
           websites / apps that people
         </ClipText>
-        <ClipText isEnd>
+        <ClipText isEnd offset={20}>
           enjoy to use
         </ClipText>
       </h2>

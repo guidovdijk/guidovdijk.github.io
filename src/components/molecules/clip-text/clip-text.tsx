@@ -1,7 +1,8 @@
+import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import React from 'react'
 
 export interface IClipTextProps {
+  offset: number
   className?: string
   isEnd?: boolean
   children: React.ReactNode
@@ -11,17 +12,19 @@ export interface IClipTextProps {
 export const ClipText: React.FC<IClipTextProps> = ({
   className = '',
   isEnd = false,
+  offset,
   children,
 }) => {
-  const ref = React.useRef(null)
+  const ref = useRef(null)
+
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['center center', `center ${window.innerHeight / 2 - 105}px`],
+    offset: [`end ${110 - offset}%`, `center ${110 - offset}%`],
   })
   const clip = useTransform(
     scrollYProgress,
     [0, 1],
-    ['100%', '0%'],
+    ['0%', '100%'],
   )
 
   return (

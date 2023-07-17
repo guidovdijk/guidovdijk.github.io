@@ -14,7 +14,7 @@ export const Default: Story = {
   render: () => (
     <div className="text-heading-xl font-semibold">
       <div className="h-screen" />
-      <ClipText>This is the ClipText text</ClipText>
+      <ClipText offset={10}>This is the ClipText text</ClipText>
       <div className="h-screen" />
     </div>
   ),
