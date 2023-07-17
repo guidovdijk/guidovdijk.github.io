@@ -23,7 +23,7 @@ export const Navigation: React.FC = () => {
         y: isVisible ? '0px' : '-55px',
         opacity: isVisible ? 1 : 0,
       }}
-      className="flex z-30 fixed w-full items-center top-0 h-20 backdrop-blur-md bg-black-500/[.01]"
+      className="flex z-[100] fixed w-full items-center top-0 h-20 backdrop-blur-md bg-black-500/[.01]"
       initial={{ opacity: 0, y: 0 }}
       transition={{ duration: 0.3, type: 'tween' }}
     >
