@@ -46,7 +46,6 @@ export const HomeHero: React.FC<IHomeHero> = ({
         </motion.div>
         <HeroSocialList isVisible={isVisible} />
       </div>
-      <div className="absolute -top-1/4 -left-[10%] rounded-full bg-[#05222F] w-6/12 aspect-square blur-[750px]" />
     </section>
   )
 }

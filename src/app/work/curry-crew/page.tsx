@@ -15,7 +15,7 @@ export default function CurryCrew() {
   const data = getWorkData(index)
 
   return (
-    <main className="mt-40 mb-12">
+    <main className="relative z-[1] mt-40 mb-12">
       <Container className="px-4 lg:px-12">
         <WorkHeader
           className="mb-14"

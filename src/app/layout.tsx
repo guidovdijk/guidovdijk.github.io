@@ -26,6 +26,7 @@ export default function RootLayout({
           {children}
         </ModalProvider>
         <Footer />
+        <div className="absolute -top-[200px] z-[0] -left-[10%] rounded-full bg-[#05222F] w-6/12 aspect-square blur-[750px]" />
       </body>
     </html>
   )
