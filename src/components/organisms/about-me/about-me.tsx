@@ -32,8 +32,8 @@ export const AboutMe: React.FC<IAboutMeProps> = ({
       <h2 className="text-heading-s mb-4">Hello! My name is Guido van Dijk.</h2>
       <div className="flex flex-col gap-y-8">
         <p>
-          I am a Dutch Front-end developer with five years of
-          work experience in design and web development.
+          I am a <b>Dutch</b> Front-end developer with five years of
+          work experience in <b>UI/UX design</b> and <b>web development</b>.
           I specialize in Vue.js and JavaScript ES-Next,
           which I use to create optimized, accessible websites and applications,
           in a short amount of time.
