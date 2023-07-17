@@ -18,7 +18,7 @@ export const HomeHero: React.FC<IHomeHero> = ({
   const [isVisible, setIsVisible] = useState(true)
 
   useScroll(({ y }) => {
-    const hasScrolledDown = y < 200
+    const hasScrolledDown = y < 100
 
     const shouldBeVisible = hasScrolledDown
     setIsVisible(shouldBeVisible)
@@ -26,10 +26,10 @@ export const HomeHero: React.FC<IHomeHero> = ({
 
   return (
     <section {...props} className="flex items-center h-screen relative pt-20">
-      <div className="flex flex-grow px-4 sm:px-10 pb-6 sm:pb-14">
+      <div className="z-[1] flex flex-grow h-full items-start px-4 sm:px-10">
         {children}
       </div>
-      <div className="absolute overflow-hidden w-full flex items-end bottom-0 px-4 sm:px-10 pb-6 sm:pb-10">
+      <div className="z-[1] absolute overflow-hidden w-full flex items-end bottom-0 px-4 sm:px-10 pb-6 sm:pb-10">
         <motion.div
           animate={{
             x: isVisible ? '0px' : '-200px',
@@ -46,6 +46,7 @@ export const HomeHero: React.FC<IHomeHero> = ({
         </motion.div>
         <HeroSocialList isVisible={isVisible} />
       </div>
+      <div className="absolute -top-1/4 -left-[10%] rounded-full bg-[#05222F] w-6/12 aspect-square blur-[750px]" />
     </section>
   )
 }
