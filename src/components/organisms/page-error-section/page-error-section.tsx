@@ -10,36 +10,52 @@ export interface IPageErrorSectionProps {
   error: string
 }
 
+// TODO: try putting the mask on the text, so the span tag can be below it
 const PageErrorTitle: React.FC<{ children: string }> = ({
   children,
   ...props
 }) => {
   const { x, y } = useMousePosition()
-  const maxSkew = 30
-  const skewCalc = (maxSkew / 2) - (((y * 100) / maxSkew) * 10)
+
+  /**
+   * when cursor at top of screen:
+   *  - skewCalc == -15
+   *  - cursor == 0%
+   *
+   * when cursor at center of screen:
+   *  - skewCalc == 0
+   *  - cursor == 50%
+  *
+  * when cursor at bottom of screen skew == 15
+   *  - skewCalc == 15
+   *  - cursor == 100%
+  */
+  const maxSkew = 15
+  const perc = (y * 100)
+  const skewCalc = 0.3 * perc - maxSkew
 
   return (
     <div>
       <motion.div
-        className="transform-gpu overflow-hidden transition-all duration-100 max-w-[var(--width)] skew-x-[var(--skew)]"
-        style={{ '--width': `${x * 120}%`, '--skew': `${skewCalc}deg` } as any}
-        transition={{ type: 'tween', duration: 3, delay: 2 }}
+        className="relative transform-gpu"
       >
-        <div className="relative">
-          <motion.h1
-            {...props}
-            aria-label={children}
-            className="transform-gpu font-base text-heading-3-xl mb-4 transition-all duration-100 skew-x-[var(--skew)]"
-            style={{ '--skew': `${skewCalc * -1}deg` } as any}
-          >
-            <span>
-              {children}
-            </span>
-          </motion.h1>
-          <span className="font-base text-heading-3-xl text-black-100">
-            {children}
-          </span>
-        </div>
+        <motion.h1
+          {...props}
+          aria-label={children}
+          className="transform-gpu font-base text-heading-3-xl mb-4 overflow-hidden max-w-[var(--width)] skew-x-[var(--skew)]"
+          style={{ '--width': `${x * 100}%`, '--skew': `${skewCalc}deg` } as any}
+          transition={{ delay: 300, type: 'tween' }}
+        >
+          {children}
+        </motion.h1>
+        <motion.span
+          aria-hidden
+          className="text-stroke block top-0 absolute z-[-1] font-base text-heading-3-xl text-black-100 skew-x-[var(--skew)]"
+          style={{ '--skew': `${skewCalc}deg` } as any}
+          transition={{ delay: 300, type: 'tween' }}
+        >
+          {children}
+        </motion.span>
       </motion.div>
     </div>
   )

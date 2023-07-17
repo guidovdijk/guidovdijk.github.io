@@ -59,6 +59,12 @@
     left: 0;
     transform: translate3d(var(--translateX),var(--translateY),0) scale(var(--scale))
   }
+
+  .text-stroke {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #FEFEFE;
+  }
 }
 
 @layer utilities {
@@ -132,5 +138,5 @@
 
   .clip-inset {
     clip-path: inset(0% var(--clip) 0% 0%)
-  } 
+  }
 }
