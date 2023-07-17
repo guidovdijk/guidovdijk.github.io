@@ -39,7 +39,7 @@ export const Tooltip: React.FC<ITooltipProps> = ({
     <motion.div
       {...props}
       aria-label="click to copy the email address to your clipboard"
-      className={`relative flex ${className}`}
+      className={`relative inline-flex ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTap={onClick}
