@@ -43,7 +43,7 @@ const PageErrorTitle: React.FC<{ children: string }> = ({
           {...props}
           aria-label={children}
           className="transform-gpu font-base text-heading-3-xl mb-4 overflow-hidden max-w-[var(--width)] skew-x-[var(--skew)]"
-          style={{ '--width': `${x * 100}%`, '--skew': `${skewCalc}deg` } as any}
+          style={{ '--width': `${x * 110}%`, '--skew': `${skewCalc}deg` } as any}
           transition={{ delay: 300, type: 'tween' }}
         >
           {children}

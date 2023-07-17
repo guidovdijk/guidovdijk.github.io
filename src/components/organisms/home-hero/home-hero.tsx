@@ -18,18 +18,18 @@ export const HomeHero: React.FC<IHomeHero> = ({
   const [isVisible, setIsVisible] = useState(true)
 
   useScroll(({ y }) => {
-    const hasScrolledDown = y < 100
+    const hasScrolledDown = y < 200
 
     const shouldBeVisible = hasScrolledDown
     setIsVisible(shouldBeVisible)
   })
 
   return (
-    <section {...props} className="flex h-screen relative pt-20">
+    <section {...props} className="flex items-center h-screen relative pt-20">
       <div className="flex flex-grow px-4 sm:px-10 pb-6 sm:pb-14">
         {children}
       </div>
-      <div className="absolute overflow-hidden w-full flex items-end bottom-0 px-4 sm:px-10 pb-6 sm:pb-14">
+      <div className="absolute overflow-hidden w-full flex items-end bottom-0 px-4 sm:px-10 pb-6 sm:pb-10">
         <motion.div
           animate={{
             x: isVisible ? '0px' : '-200px',

@@ -3,7 +3,6 @@
 import React from 'react'
 import { Navigation } from '@/components/organisms/navigation'
 import { Footer } from '@/components/organisms/footer'
-import { Container } from '@/components/atoms/grid'
 import { ModalProvider } from '@/components/molecules/modal'
 import { inter, avantGarde } from './fonts'
 
@@ -21,7 +20,7 @@ export default function RootLayout({
   const gradient = 'before:z-20 before:bg-body before:fixed before:w-full before:h-48 before:bottom-0 before:pointer-events-none'
   return (
     <html className={`${inter.variable} ${avantGarde.variable}`} lang="en">
-      <body className={`pb-8 relative ${false ? gradient : ''}`}>
+      <body className={`relative ${false ? `pb-8 ${gradient}` : ''}`}>
         <Navigation />
         <ModalProvider>
           {children}
