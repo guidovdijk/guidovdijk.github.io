@@ -52,7 +52,7 @@ module.exports = {
     fontSize: {
       /* Headings */
       // 240px - 96px
-      'heading-3-xl': ['clamp(15rem, 17.5714rem + -12.8571vw, 6rem)', {
+      'heading-3-xl': ['clamp(6rem, 3.4286rem + 12.8571vw, 15rem)', {
         lineHeight: 1,
         fontWeight: '600'
       }], // Not used yet
