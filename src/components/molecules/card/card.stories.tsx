@@ -15,6 +15,7 @@ export const Default: Story = {
     <Card
       className="lg:hover:bg-red"
       description="Some of the work I have done during my four years as a front-end developer."
+      href="work/the-valley"
       image={{
         src: '/images/logos/thevalley.svg',
         alt: 'The valley',
