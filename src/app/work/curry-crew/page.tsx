@@ -13,7 +13,7 @@ import { getWorkData } from '@/helpers/utils/getWorkData'
 export default function CurryCrew() {
   const index = 1
   const data = getWorkData(index)
-  console.log(data)
+
   return (
     <main className="mt-40 mb-12">
       <Container className="px-4 lg:px-12">
@@ -135,7 +135,7 @@ export default function CurryCrew() {
             <section className="flex flex-col gap-y-8">
               {
                 data.map((d, i) => (
-                  <div className="flex flex-col gap-y-2">
+                  <div key={`cc-cards-${i}`} className="flex flex-col gap-y-2">
                     <p className="text-subtitle uppercase text-white-500">{i === 0 ? 'Next' : 'Previous'} project</p>
                     <Card {...d} className={`${d.className} border-b-0`} />
                   </div>
