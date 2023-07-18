@@ -41,18 +41,24 @@ const PageErrorTitle: React.FC<{ children: string }> = ({
       >
         <motion.h1
           {...props}
+          animate={{ skewX: skewCalc, maxWidth: `${x * 110}%` }}
           aria-label={children}
-          className="transform-gpu font-base text-heading-3-xl mb-4 overflow-hidden max-w-[var(--width)] skew-x-[var(--skew)]"
-          style={{ '--width': `${x * 110}%`, '--skew': `${skewCalc}deg` } as any}
-          transition={{ delay: 300, type: 'tween' }}
+          className="transform-gpu font-base text-heading-3-xl mb-4 overflow-hidden"
+          transition={{
+            type: 'tween',
+            duration: 0.3,
+          }}
         >
           {children}
         </motion.h1>
         <motion.span
+          animate={{ skewX: skewCalc }}
           aria-hidden
-          className="text-stroke block top-0 absolute z-[-1] font-base text-heading-3-xl text-black-100 skew-x-[var(--skew)]"
-          style={{ '--skew': `${skewCalc}deg` } as any}
-          transition={{ delay: 300, type: 'tween' }}
+          className="text-stroke block top-0 absolute z-[-1] font-base text-heading-3-xl text-black-100"
+          transition={{
+            type: 'tween',
+            duration: 0.3,
+          }}
         >
           {children}
         </motion.span>
