@@ -27,6 +27,7 @@ export const HeroSocialList: React.FC<IHeroSocialListProps> = ({
             key={`hero-social-${index}`}
             href={item.href}
             iconName={item.icon}
+            target="_blank"
           >
             {item.text}
           </HeroSocialLink>
