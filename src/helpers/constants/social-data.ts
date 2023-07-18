@@ -12,21 +12,21 @@ export const socialData: ISocialItemProps[] = [
   {
     text: 'LinkedIn',
     icon: 'linkedin',
-    href: '#',
+    href: 'https://www.linkedin.com/in/guido-van-dijk-ma/',
   },
   {
     text: 'GitHub',
     icon: 'github',
-    href: '#',
+    href: 'https://github.com/guidovdijk',
   },
   {
     text: 'Email',
     icon: 'email',
-    href: '#',
+    href: 'mailto:van.guido@hotmail.com',
   },
   {
     text: 'Instagram',
     icon: 'instagram',
-    href: '#',
+    href: 'https://www.instagram.com/dv_guido/',
   },
 ]

@@ -13,7 +13,7 @@ export const workData: ICardProps[] = [
     },
     href: 'work/the-valley',
     subjects: ['UX', 'Front-end Dev'],
-    url: 'https://github.com/guidovdijk',
+    url: undefined,
   },
   {
     index: 1,
@@ -27,7 +27,7 @@ export const workData: ICardProps[] = [
     },
     href: 'work/curry-crew',
     subjects: ['UI', 'UX', 'Vue.js'],
-    url: 'https://github.com/guidovdijk',
+    url: 'https://github.com/guidovdijk/Tournament-Dashboard',
   },
   {
     index: 2,
@@ -41,7 +41,7 @@ export const workData: ICardProps[] = [
     },
     subjects: ['UI', 'Front-end'],
     href: 'work/component-library',
-    url: 'https://github.com/guidovdijk',
+    url: undefined,
   },
   {
     index: 3,
@@ -55,7 +55,7 @@ export const workData: ICardProps[] = [
     },
     href: 'work/haarlem-festival',
     subjects: ['UI', 'UX', 'Front-end'],
-    url: 'https://github.com/guidovdijk',
+    url: 'https://github.com/guidovdijk/Haarlem-Festival',
   },
   {
     index: 4,
@@ -69,7 +69,7 @@ export const workData: ICardProps[] = [
     },
     href: 'work/pokemon-api',
     subjects: ['UI', 'Swift'],
-    url: 'https://github.com/guidovdijk',
+    url: 'https://github.com/guidovdijk/swift-pokemonapi',
   },
   {
     index: 5,
@@ -83,6 +83,6 @@ export const workData: ICardProps[] = [
     },
     href: 'work/news-app',
     subjects: ['UI', 'Kotlin'],
-    url: 'https://github.com/guidovdijk',
+    url: 'https://github.com/guidovdijk/kotlin-newsapp',
   },
 ]
