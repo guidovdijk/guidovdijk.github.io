@@ -28,11 +28,11 @@ export const Tooltip: React.FC<ITooltipProps> = ({
     setTimeout(() => {
       setIsActive(false)
       setIsHovered(false)
-    }, 3000)
+    }, 2000)
 
     setTimeout(() => {
       animationEndHandler()
-    }, 3500)
+    }, 2500)
   }
 
   return (
