@@ -12,7 +12,7 @@ import { HomeHero } from '@/components/organisms/home-hero'
 export default function Home() {
   return (
     <>
-      <HomeHero />
+      <HomeHero className="sm:mb-48" />
       <Container as="main" className="px-4 lg:px-12">
         <CTASection className="mb-28" />
         <Divider className="mb-24" />
