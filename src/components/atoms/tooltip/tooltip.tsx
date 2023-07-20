@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import {
+  LazyMotion, domAnimation, m,
+} from 'framer-motion'
 
 export interface ITooltipProps {
   children?: React.ReactNode
@@ -36,25 +38,27 @@ export const Tooltip: React.FC<ITooltipProps> = ({
   }
 
   return (
-    <motion.div
-      {...props}
-      aria-label="click to copy the email address to your clipboard"
-      className={`relative inline-flex ${className}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onTap={onClick}
-    >
-      <motion.span
-        animate={{ opacity: isHovered || isActive ? 1 : 0 }}
-        className="absolute pointer-events-none text-[12px] bg-black-300 py-1 px-2 rounded uppercase -top-10 w-max -translate-x-2/4 left-1/2"
-        initial={{ opacity: 0 }}
-        transition={{
-          duration: 0.2, delay: isActive ? 3 : 0, type: 'linear', transitionEnd: { display: 'none' },
-        }}
+    <LazyMotion features={domAnimation}>
+      <m.div
+        {...props}
+        aria-label="click to copy the email address to your clipboard"
+        className={`relative inline-flex ${className}`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onTap={onClick}
       >
-        {text}
-      </motion.span>
-      {children}
-    </motion.div>
+        <m.span
+          animate={{ opacity: isHovered || isActive ? 1 : 0 }}
+          className="absolute pointer-events-none text-[12px] bg-black-300 py-1 px-2 rounded uppercase -top-10 w-max -translate-x-2/4 left-1/2"
+          initial={{ opacity: 0 }}
+          transition={{
+            duration: 0.2, delay: isActive ? 3 : 0, type: 'linear', transitionEnd: { display: 'none' },
+          }}
+        >
+          {text}
+        </m.span>
+        {children}
+      </m.div>
+    </LazyMotion>
   )
 }

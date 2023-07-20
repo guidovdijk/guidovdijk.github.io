@@ -1,5 +1,11 @@
 import React, { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import {
+  LazyMotion,
+  useScroll,
+  useTransform,
+  domAnimation,
+  m,
+} from 'framer-motion'
 
 export interface IClipTextProps {
   offset: number
@@ -29,18 +35,20 @@ export const ClipText: React.FC<IClipTextProps> = ({
 
   return (
     <div className="relative">
-      <motion.span
-        ref={ref}
-        aria-hidden="true"
-        className={`
-          inline-block z-10 clip-inset relative
-          ${isEnd ? 'after:inline-block after:bg-background after:h-2 after:w-2 after:ml-1' : ''} 
-          ${className}
-      `}
-        style={{ '--clip': clip } as any}
-      >
-        {children}
-      </motion.span>
+      <LazyMotion features={domAnimation}>
+        <m.span
+          ref={ref}
+          aria-hidden="true"
+          className={`
+            inline-block z-10 clip-inset relative
+            ${isEnd ? 'after:inline-block after:bg-background after:h-2 after:w-2 after:ml-1' : ''} 
+            ${className}
+        `}
+          style={{ '--clip': clip } as any}
+        >
+          {children}
+        </m.span>
+      </LazyMotion>
       <span
         aria-hidden="true"
         className={`

@@ -1,8 +1,11 @@
 import * as React from 'react'
-
-import { Button } from '@/components/atoms/button'
-import { motion } from 'framer-motion'
+import {
+  LazyMotion,
+  domAnimation,
+  m,
+} from 'framer-motion'
 import { useMousePosition } from '@/hooks/use-mouse-position'
+import { Button } from '@/components/atoms/button'
 
 export interface IPageErrorSectionProps {
   title: React.ReactNode,
@@ -35,33 +38,35 @@ const PageErrorTitle: React.FC<{ children: string }> = ({
 
   return (
     <div>
-      <motion.div
-        className="relative transform-gpu"
-      >
-        <motion.h1
-          {...props}
-          animate={{ skewX: skewCalc, maxWidth: `${x * 110}%` }}
-          aria-label={children}
-          className="transform-gpu font-base text-heading-4-xl mb-4 overflow-hidden"
-          transition={{
-            type: 'tween',
-            duration: 0.3,
-          }}
+      <LazyMotion features={domAnimation}>
+        <m.div
+          className="relative transform-gpu"
         >
-          {children}
-        </motion.h1>
-        <motion.span
-          animate={{ skewX: skewCalc }}
-          aria-hidden
-          className="text-stroke block top-0 absolute z-[-1] font-base text-heading-4-xl text-black-100"
-          transition={{
-            type: 'tween',
-            duration: 0.3,
-          }}
-        >
-          {children}
-        </motion.span>
-      </motion.div>
+          <m.h1
+            {...props}
+            animate={{ skewX: skewCalc, maxWidth: `${x * 110}%` }}
+            aria-label={children}
+            className="transform-gpu font-base text-heading-4-xl mb-4 overflow-hidden"
+            transition={{
+              type: 'tween',
+              duration: 0.3,
+            }}
+          >
+            {children}
+          </m.h1>
+          <m.span
+            animate={{ skewX: skewCalc }}
+            aria-hidden
+            className="text-stroke block top-0 absolute z-[-1] font-base text-heading-4-xl text-black-100"
+            transition={{
+              type: 'tween',
+              duration: 0.3,
+            }}
+          >
+            {children}
+          </m.span>
+        </m.div>
+      </LazyMotion>
     </div>
   )
 }

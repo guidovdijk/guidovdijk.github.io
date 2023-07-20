@@ -1,8 +1,13 @@
 import * as React from 'react'
 
 import Image from 'next/image'
-import { motion, useScroll, useTransform } from 'framer-motion'
-
+import {
+  useTransform,
+  useScroll,
+  LazyMotion,
+  domAnimation,
+  m,
+} from 'framer-motion'
 import { HeroInfo } from '@/components/molecules/hero-info'
 import { Col, Container, Grid } from '@/components/atoms/grid'
 import { LocationInfo } from '@/components/atoms/location-info'
@@ -40,18 +45,19 @@ export const HomeHero: React.FC<IHomeHero> = ({
             </h1>
           </Col>
           <Col className="absolute z-[-1] col-start-7 sm:col-span-6 sm:col-start-6 xl:col-start-7 xl:col-span-4">
-            <motion.div
-              className="transform-gpu"
-              style={{ y }}
-            >
-              <Image
-                alt="Gradient image"
-                blurDataURL="data:image/jpeg;base64,TyMOhV{NxS?JV@SKR$R*oNi{nloJ"
-                className="top-0 max-h-[660px] w-full object-cover lg:object-fill"
-                placeholder="blur"
-                src={GradientImage}
-              />
-            </motion.div>
+            <LazyMotion features={domAnimation}>
+              <m.div
+                className="transform-gpu"
+                style={{ y }}
+              >
+                <Image
+                  alt="Gradient image"
+                  className="top-0 max-h-[660px] w-full object-cover lg:object-fill"
+                  placeholder="blur"
+                  src={GradientImage}
+                />
+              </m.div>
+            </LazyMotion>
           </Col>
           <Col className="col-span-10 lg:col-span-12">
             <LocationInfo>located in the netherlands</LocationInfo>

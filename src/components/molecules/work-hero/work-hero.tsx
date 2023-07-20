@@ -1,5 +1,11 @@
 import * as React from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import {
+  useTransform,
+  useScroll,
+  LazyMotion,
+  domAnimation,
+  m,
+} from 'framer-motion'
 import { ImageProps } from 'next/image'
 
 export interface IWorkHeroProps {
@@ -19,10 +25,12 @@ export const WorkHero: React.FC<IWorkHeroProps> = ({
   const y = useTransform(scrollYProgress, [0, 1], ['100%', '0%'])
 
   return (
-    <div ref={ref} className={`flex rounded-lg aspect-video items-center justify-center lg:aspect-hero ${className}`}>
-      <motion.div style={{ y }}>
-        {children}
-      </motion.div>
-    </div>
+    <LazyMotion features={domAnimation}>
+      <div ref={ref} className={`flex rounded-lg aspect-video items-center justify-center lg:aspect-hero ${className}`}>
+        <m.div style={{ y }}>
+          {children}
+        </m.div>
+      </div>
+    </LazyMotion>
   )
 }
