@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export interface IGridProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IGridProps {
   cols?: number
   className?: string
   gap?: string

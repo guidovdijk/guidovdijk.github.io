@@ -18,7 +18,7 @@ export const HeroInfo: React.FC = () => {
   })
 
   return (
-    <div className="z-[2] absolute overflow-hidden w-full flex items-end bottom-0 px-4 sm:px-10 pb-6 sm:pb-10">
+    <div className="z-[2] absolute overflow-hidden w-full flex items-end bottom-0 px-4 lg:px-12 pb-6 lg:pb-10">
       <motion.div
         animate={{
           x: isVisible ? '0px' : '-200px',

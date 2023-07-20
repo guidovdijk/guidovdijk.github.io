@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { ScrollerMotion } from 'scroller-motion'
 
 import { Navigation } from '@/components/organisms/navigation'
 import { Footer } from '@/components/organisms/footer'
@@ -25,19 +24,10 @@ export default function RootLayout({
       <body className={`relative ${false ? `pb-8 ${gradient}` : ''}`}>
         <Navigation />
         <div className="relative z-[1]">
-          <ScrollerMotion
-            scale={1.2}
-            spring={{
-              damping: 50,
-              mass: 1.25,
-              stiffness: 200,
-            }}
-          >
-            <ModalProvider>
-              {children}
-            </ModalProvider>
-            <Footer />
-          </ScrollerMotion>
+          <ModalProvider>
+            {children}
+          </ModalProvider>
+          <Footer />
         </div>
         <div className="absolute -top-[200px] z-[0] -left-[10%] rounded-full bg-[#05222F] w-6/12 aspect-square blur-[750px]" />
       </body>

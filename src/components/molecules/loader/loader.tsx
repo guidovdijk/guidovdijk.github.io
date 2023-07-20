@@ -9,15 +9,18 @@ const LoaderSvg: React.FC<any> = ({ className }) => (
 
 export interface ILoaderProps {
   children: React.ReactNode
-  isFinished: boolean
+  isFinished?: boolean
 }
 
 export const Loader: React.FC<ILoaderProps> = ({
   children,
   isFinished,
-}) => (
-  <div className="flex items-center justify-center relative w-[514px] h-[290px]">
-    <p className="text-callout text-center font-extralight">{children}</p>
-    <LoaderSvg className="animation-dash" />
-  </div>
-)
+}) => {
+  console.log(isFinished)
+  return (
+    <div className="flex items-center justify-center relative w-[514px] h-[290px]">
+      <p className="text-callout text-center font-extralight">{children}</p>
+      <LoaderSvg className="animation-dash" />
+    </div>
+  )
+}

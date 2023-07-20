@@ -1,18 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  srcDir: 'src/',
-  modulesDir: ['node_modules', 'src/modules'],
-  typescript: {
-    strict: true,
-    typeCheck: true
-  },
-  components: [
-    {
-      path: '~/components',
-      pathPrefix: false
-    }
-  ],
-  css: ['@/assets/css/main.css'],
-}
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+})
 
-module.exports = nextConfig
+
+module.exports = withBundleAnalyzer({})

@@ -41,7 +41,7 @@ export default function CurryCrew() {
 
       <Container className="px-4 lg:px-12">
         <Grid gap="gap-y-20">
-          <Col className="md:col-span-7">
+          <Col className="col-span-12 md:col-span-7">
             <div className="gap-y-4 flex flex-col">
               <h3
                 className="text-heading-s font-semibold"
@@ -62,7 +62,7 @@ export default function CurryCrew() {
             </div>
           </Col>
           <Col span={12}>
-            <ImageGrid autoFill>
+            <ImageGrid autoFill={false}>
               <Image
                 alt="Dashboard where users can check their win ratio and match history"
                 fill
@@ -80,7 +80,7 @@ export default function CurryCrew() {
               />
             </ImageGrid>
           </Col>
-          <Col className="md:col-span-7">
+          <Col className="col-span-12 md:col-span-7">
             <div className="gap-y-4 flex flex-col">
               <h3
                 className="text-heading-s font-semibold"
@@ -122,7 +122,7 @@ export default function CurryCrew() {
         onClick={() => { }}
         variation="tertiary"
       >
-        GitHub
+        GitHub Project
       </Button>
 
       <div className="mx-auto my-32 px-4 lg:px-12">

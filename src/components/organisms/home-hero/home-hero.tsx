@@ -39,14 +39,16 @@ export const HomeHero: React.FC<IHomeHero> = ({
               </Grid>
             </h1>
           </Col>
-          <Col className="absolute z-[-1] col-span-8 col-start-4 sm:col-span-6 sm:col-start-6 xl:col-start-7 xl:col-span-4">
+          <Col className="absolute z-[-1] col-start-7 sm:col-span-6 sm:col-start-6 xl:col-start-7 xl:col-span-4">
             <motion.div
               className="transform-gpu"
               style={{ y }}
             >
               <Image
                 alt="Gradient image"
+                blurDataURL="data:image/jpeg;base64,TyMOhV{NxS?JV@SKR$R*oNi{nloJ"
                 className="top-0 max-h-[660px] w-full object-cover lg:object-fill"
+                placeholder="blur"
                 src={GradientImage}
               />
             </motion.div>

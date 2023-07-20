@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { HTMLProps } from 'react'
 
-export interface IColProps extends HTMLProps<HTMLDivElement> {
+export interface IColProps {
   start?: number,
   span?: number,
   as?: React.ElementType
+  className?: string,
   children: React.ReactNode
 }
 

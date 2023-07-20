@@ -3,7 +3,6 @@ import * as React from 'react'
 import { Button } from '@/components/atoms/button'
 import { motion } from 'framer-motion'
 import { useMousePosition } from '@/hooks/use-mouse-position'
-import { HomeHero } from '../home-hero'
 
 export interface IPageErrorSectionProps {
   title: React.ReactNode,
@@ -43,7 +42,7 @@ const PageErrorTitle: React.FC<{ children: string }> = ({
           {...props}
           animate={{ skewX: skewCalc, maxWidth: `${x * 110}%` }}
           aria-label={children}
-          className="transform-gpu font-base text-heading-3-xl mb-4 overflow-hidden"
+          className="transform-gpu font-base text-heading-4-xl mb-4 overflow-hidden"
           transition={{
             type: 'tween',
             duration: 0.3,
@@ -54,7 +53,7 @@ const PageErrorTitle: React.FC<{ children: string }> = ({
         <motion.span
           animate={{ skewX: skewCalc }}
           aria-hidden
-          className="text-stroke block top-0 absolute z-[-1] font-base text-heading-3-xl text-black-100"
+          className="text-stroke block top-0 absolute z-[-1] font-base text-heading-4-xl text-black-100"
           transition={{
             type: 'tween',
             duration: 0.3,
@@ -66,16 +65,16 @@ const PageErrorTitle: React.FC<{ children: string }> = ({
     </div>
   )
 }
+
+// TODO: Remove HomeHero component
 export const PageErrorSection: React.FC<IPageErrorSectionProps> = ({
   title,
   error,
   ...props
 }) => (
-  <HomeHero {...props} className="h-screen">
-    <div className="flex flex-col h-full w-full items-center text-center mt-24">
-      <h2 className="text-heading-s mb-2">{title}</h2>
-      <PageErrorTitle>{error}</PageErrorTitle>
-      <Button onClick={() => { }} variation="secondary">Return to home</Button>
-    </div>
-  </HomeHero>
+  <div {...props} className="flex flex-col h-full w-full items-center text-center mt-24">
+    <h2 className="text-heading-s mb-2">{title}</h2>
+    <PageErrorTitle>{error}</PageErrorTitle>
+    <Button onClick={() => { }} variation="secondary">Return to home</Button>
+  </div>
 )

@@ -27,7 +27,7 @@ export const Divider: React.FC<IDividerProps> = ({
   const ref = React.useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['center end', 'start start'],
+    offset: ['center end', 'center start'],
   })
   const scale = useTransform(
     scrollYProgress,
@@ -38,13 +38,14 @@ export const Divider: React.FC<IDividerProps> = ({
     scrollYProgress,
     [0, 1],
     ['0deg', '114deg'],
+    { clamp: false },
   )
 
   return (
     <div {...props} ref={ref} className={`flex items-center justify-center relative ${className}`}>
       <div className="absolute flex h-full w-full items-center justify-center">
         <DividerSvgWhite
-          className="rotate-[var(--rotate)]"
+          className="rotate-[var(--rotate)] transition-all"
           style={{ '--rotate': rotateWhite } as any}
         />
       </div>

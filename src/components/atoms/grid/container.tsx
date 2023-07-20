@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export interface IContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface IContainerProps {
   className?: string
   as?: React.ElementType
   children?: React.ReactNode

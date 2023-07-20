@@ -4,7 +4,7 @@ import * as React from 'react'
 import { IconButton } from '@/components/atoms/icon-button'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useKeyUp } from '@/hooks/use-key-up'
-import { useScrollLock, useScrollUnlock } from '@/hooks/use-scroll-lock'
+import { useScrollLock } from '@/hooks/use-scroll-lock'
 import { Col, Grid } from '@/components/atoms/grid'
 import { useModal } from './modal.context'
 
