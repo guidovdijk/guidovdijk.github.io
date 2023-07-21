@@ -64,6 +64,8 @@ export default function PlayGround() {
                 which I still want to showcase and deserves some spotlight.
               </p>
             </div>
+          </Col>
+          <Col className="col-span-12 col-start-1 md:col-span-10 md:col-start-2">
             <BentoGrid className="mb-64">
               {[4, 3, 4, 3, 4, 3, 3, 2].map((height, index) => (
                 <Item key={index} className={`h-full row-span-${height}`} />
