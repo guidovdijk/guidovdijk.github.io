@@ -6,7 +6,7 @@ import { Container } from '@/components/atoms/grid'
 import { Email } from '@/components/molecules/email'
 import { FooterItem } from '@/components/molecules/footer-item'
 
-export const Footer: React.FC = () => (
+const Footer: React.FC = () => (
   <footer>
     <div className="mx-auto px-4 lg:px-12">
       <div className="h-[1px] w-full bg-black-300" />
@@ -30,3 +30,5 @@ export const Footer: React.FC = () => (
     </Container>
   </footer>
 )
+
+export default React.memo(Footer)

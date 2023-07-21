@@ -7,7 +7,7 @@ export interface IImageGridProps {
   autoFill?: boolean
 }
 
-export const ImageGrid: React.FC<IImageGridProps> = ({
+const ImageGrid: React.FC<IImageGridProps> = ({
   children,
   autoFill = true,
 }) => {
@@ -33,3 +33,5 @@ export const ImageGrid: React.FC<IImageGridProps> = ({
     </div>
   )
 }
+
+export default React.memo(ImageGrid)

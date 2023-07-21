@@ -6,10 +6,7 @@ import { CompanyRow } from '@/components/molecules/company-row'
 
 interface ICTASectionProps extends React.HTMLAttributes<HTMLElement> {}
 
-export const CTASection: React.FC<ICTASectionProps> = ({
-  className,
-  ...props
-}) => (
+const CTASection: React.FC<ICTASectionProps> = ({ className, ...props }) => (
   <Grid
     {...props}
     as="section"
@@ -33,3 +30,5 @@ export const CTASection: React.FC<ICTASectionProps> = ({
     </Col>
   </Grid>
 )
+
+export default React.memo(CTASection)

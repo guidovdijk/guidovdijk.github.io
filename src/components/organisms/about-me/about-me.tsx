@@ -27,7 +27,7 @@ const AboutMeSvg: React.FC = () => (
 
 interface IAboutMeProps extends React.HTMLAttributes<HTMLElement> {}
 
-export const AboutMe: React.FC<IAboutMeProps> = ({ className, ...props }) => (
+const AboutMe: React.FC<IAboutMeProps> = ({ className, ...props }) => (
   <Grid {...props} as="section" className={`flex items-center ${className}`}>
     <Col className="order-1 col-span-12 lg:-order-1 lg:col-span-6 lg:col-start-2">
       <span className="mb-2 text-subtitle uppercase text-white-500">
@@ -75,3 +75,5 @@ export const AboutMe: React.FC<IAboutMeProps> = ({ className, ...props }) => (
     </Col>
   </Grid>
 )
+
+export default React.memo(AboutMe)

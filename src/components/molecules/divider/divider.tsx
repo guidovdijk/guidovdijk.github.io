@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { memo } from 'react'
 
 import {
   LazyMotion,
@@ -49,7 +50,7 @@ const DividerBorders: React.FC = () => (
 
 interface IDividerProps extends React.HTMLAttributes<HTMLElement> {}
 
-export const Divider: React.FC<IDividerProps> = ({ className, ...props }) => {
+const Divider: React.FC<IDividerProps> = ({ className, ...props }) => {
   const ref = React.useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -87,3 +88,5 @@ export const Divider: React.FC<IDividerProps> = ({ className, ...props }) => {
     </div>
   )
 }
+
+export default memo(Divider)

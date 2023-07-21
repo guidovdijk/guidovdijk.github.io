@@ -9,7 +9,7 @@ export interface IFooterItemProps {
   items: ISocialItemProps[]
 }
 
-export const FooterItem: React.FC<IFooterItemProps> = ({ title, items }) => (
+const FooterItem: React.FC<IFooterItemProps> = ({ title, items }) => (
   <ul className="flex flex-col gap-y-6">
     <span className="-mb-2 block text-subtitle uppercase text-white-500">
       {title}
@@ -29,3 +29,5 @@ export const FooterItem: React.FC<IFooterItemProps> = ({ title, items }) => (
     ))}
   </ul>
 )
+
+export default React.memo(FooterItem)

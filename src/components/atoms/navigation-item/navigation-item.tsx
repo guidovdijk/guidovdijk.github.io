@@ -9,7 +9,7 @@ export interface INavigationItemProps {
   isActive: boolean
 }
 
-export const NavigationItem: React.FC<INavigationItemProps> = ({
+const NavigationItem: React.FC<INavigationItemProps> = ({
   children,
   href,
   isActive = false,
@@ -34,3 +34,5 @@ export const NavigationItem: React.FC<INavigationItemProps> = ({
     {children}
   </Link>
 )
+
+export default React.memo(NavigationItem)

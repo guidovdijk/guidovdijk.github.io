@@ -21,7 +21,7 @@ const styles = {
     'bg-white-200/90 hover:bg-white-200 text-black-500 border border-white-200/75 py-3 px-12',
 }
 
-export const Button: React.FC<IButtonProps> = ({
+const Button: React.FC<IButtonProps> = ({
   variation = 'primary',
   className,
   children,
@@ -49,3 +49,5 @@ export const Button: React.FC<IButtonProps> = ({
       {children}
     </button>
   )
+
+export default React.memo(Button)

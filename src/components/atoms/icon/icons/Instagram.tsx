@@ -2,11 +2,7 @@ import * as React from 'react'
 
 import { IIconSvgProps } from '../types'
 
-export const Instagram: React.FC<IIconSvgProps> = ({
-  width,
-  height,
-  className,
-}) => (
+const Instagram: React.FC<IIconSvgProps> = ({ width, height, className }) => (
   <svg
     className={className}
     height={height}
@@ -28,3 +24,5 @@ export const Instagram: React.FC<IIconSvgProps> = ({
     />
   </svg>
 )
+
+export default React.memo(Instagram)

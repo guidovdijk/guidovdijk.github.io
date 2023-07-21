@@ -16,7 +16,7 @@ export interface IClipTextProps {
 }
 
 // TODO: (optional) Create a provider to use the animation for better re-usability
-export const ClipText: React.FC<IClipTextProps> = ({
+const ClipText: React.FC<IClipTextProps> = ({
   className = '',
   isEnd = false,
   offset,
@@ -42,7 +42,7 @@ export const ClipText: React.FC<IClipTextProps> = ({
               isEnd
                 ? 'after:ml-1 after:inline-block after:h-2 after:w-2 after:bg-background'
                 : ''
-            } 
+            }
             ${className}
         `}
           style={{ '--clip': clip } as any}
@@ -53,12 +53,12 @@ export const ClipText: React.FC<IClipTextProps> = ({
       <span
         aria-hidden="true"
         className={`
-          absolute left-0 top-0 text-black-100 
+          absolute left-0 top-0 text-black-100
           ${
             isEnd
               ? 'after:ml-1 after:inline-block after:h-2 after:w-2 after:bg-black-100'
               : ''
-          } 
+          }
           ${className}
       `}
       >
@@ -67,3 +67,5 @@ export const ClipText: React.FC<IClipTextProps> = ({
     </div>
   )
 }
+
+export default React.memo(ClipText)

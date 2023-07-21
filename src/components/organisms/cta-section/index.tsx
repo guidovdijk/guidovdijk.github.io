@@ -1,1 +1,1 @@
-export { CTASection } from './cta-section'
+export { default as CTASection } from './cta-section'

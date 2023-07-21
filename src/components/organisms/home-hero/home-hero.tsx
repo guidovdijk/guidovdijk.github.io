@@ -20,7 +20,7 @@ export interface IHomeHero {
   className?: string
 }
 
-export const HomeHero: React.FC<IHomeHero> = ({ className = '' }) => {
+const HomeHero: React.FC<IHomeHero> = ({ className = '' }) => {
   const { scrollYProgress } = useScroll()
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '-50%'])
 
@@ -84,3 +84,5 @@ export const HomeHero: React.FC<IHomeHero> = ({ className = '' }) => {
     </div>
   )
 }
+
+export default React.memo(HomeHero)

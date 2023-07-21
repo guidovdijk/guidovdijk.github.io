@@ -15,7 +15,7 @@ export interface IWorkHeroProps {
   className: string
 }
 
-export const WorkHero: React.FC<IWorkHeroProps> = ({ children, className }) => {
+const WorkHero: React.FC<IWorkHeroProps> = ({ children, className }) => {
   const ref = React.useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -34,3 +34,5 @@ export const WorkHero: React.FC<IWorkHeroProps> = ({ children, className }) => {
     </LazyMotion>
   )
 }
+
+export default React.memo(WorkHero)

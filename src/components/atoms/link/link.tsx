@@ -11,7 +11,7 @@ export interface ILinkProps extends LinkProps {
   target?: string
 }
 
-export const Link: React.FC<ILinkProps> = ({
+const Link: React.FC<ILinkProps> = ({
   iconName,
   children,
   className = '',
@@ -25,3 +25,5 @@ export const Link: React.FC<ILinkProps> = ({
     <span className="group-hover:underline">{children}</span>
   </NLink>
 )
+
+export default React.memo(Link)

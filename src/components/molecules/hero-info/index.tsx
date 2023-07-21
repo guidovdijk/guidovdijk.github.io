@@ -1,1 +1,1 @@
-export { HeroInfo } from './hero-info'
+export { default as HeroInfo } from './hero-info'

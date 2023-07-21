@@ -13,7 +13,7 @@ interface IBlobProps extends MotionProps {
   className?: string
 }
 
-export const Blob: React.FC<IBlobProps> = ({ className = '', ...props }) => {
+const Blob: React.FC<IBlobProps> = ({ className = '', ...props }) => {
   const { scrollYProgress } = useScroll()
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%'])
 
@@ -27,3 +27,5 @@ export const Blob: React.FC<IBlobProps> = ({ className = '', ...props }) => {
     </LazyMotion>
   )
 }
+
+export default React.memo(Blob)

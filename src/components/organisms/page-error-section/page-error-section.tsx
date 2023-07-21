@@ -68,8 +68,8 @@ const PageErrorTitle: React.FC<{ children: string }> = ({
   )
 }
 
-// TODO: Remove HomeHero component
-export const PageErrorSection: React.FC<IPageErrorSectionProps> = ({
+// TODO: Fix alignment and height
+const PageErrorSection: React.FC<IPageErrorSectionProps> = ({
   title,
   error,
   ...props
@@ -85,3 +85,5 @@ export const PageErrorSection: React.FC<IPageErrorSectionProps> = ({
     </Button>
   </div>
 )
+
+export default React.memo(PageErrorSection)

@@ -1,1 +1,1 @@
-export { Blob } from './blob'
+export { default as Blob } from './blob'

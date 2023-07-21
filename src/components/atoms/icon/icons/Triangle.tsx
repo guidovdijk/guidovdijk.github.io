@@ -2,11 +2,7 @@ import * as React from 'react'
 
 import { IIconSvgProps } from '../types'
 
-export const Triangle: React.FC<IIconSvgProps> = ({
-  width,
-  height,
-  className,
-}) => (
+const Triangle: React.FC<IIconSvgProps> = ({ width, height, className }) => (
   <svg
     className={className}
     fill="none"
@@ -35,3 +31,5 @@ export const Triangle: React.FC<IIconSvgProps> = ({
     </defs>
   </svg>
 )
+
+export default React.memo(Triangle)

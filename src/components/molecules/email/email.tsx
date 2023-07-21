@@ -6,7 +6,7 @@ export interface IEmailProps extends React.HTMLAttributes<HTMLButtonElement> {
   type?: 'small' | 'large'
 }
 
-export const Email: React.FC<IEmailProps> = ({ type = 'large', ...props }) => {
+const Email: React.FC<IEmailProps> = ({ type = 'large', ...props }) => {
   const [tooltipText, setTooltipText] = React.useState('click to copy')
 
   const handleClick = () => {
@@ -47,3 +47,5 @@ export const Email: React.FC<IEmailProps> = ({ type = 'large', ...props }) => {
     </Tooltip>
   )
 }
+
+export default React.memo(Email)

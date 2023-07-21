@@ -9,7 +9,7 @@ import { useScroll } from '@/hooks/use-scroll'
 
 import { NavigationItem } from '@/components/atoms/navigation-item'
 
-export const Navigation: React.FC = () => {
+const Navigation: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true)
   const pathname = usePathname()
 
@@ -51,3 +51,5 @@ export const Navigation: React.FC = () => {
     </LazyMotion>
   )
 }
+
+export default React.memo(Navigation)

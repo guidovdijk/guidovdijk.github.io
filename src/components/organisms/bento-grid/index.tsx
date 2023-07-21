@@ -1,1 +1,1 @@
-export { BentoGrid } from './bento-grid'
+export { default as BentoGrid } from './bento-grid'

@@ -43,7 +43,7 @@ const companyImages: ImageProps[] = [
   },
 ]
 
-export const CompanyRow: React.FC<ICompanyRowProps> = () => (
+const CompanyRow: React.FC<ICompanyRowProps> = () => (
   <div className="flex flex-col items-center gap-y-6 sm:flex-row">
     <div className="flex shrink-0 self-start sm:pt-1 xl:self-center">
       <p className="flex shrink-0 text-subtitle uppercase text-white-500">
@@ -64,3 +64,5 @@ export const CompanyRow: React.FC<ICompanyRowProps> = () => (
     </div>
   </div>
 )
+
+export default React.memo(CompanyRow)

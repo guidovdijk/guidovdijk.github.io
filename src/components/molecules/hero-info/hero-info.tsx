@@ -9,7 +9,7 @@ import { useScroll } from '@/hooks/use-scroll'
 import { Email } from '@/components/molecules/email'
 import { HeroSocialList } from '@/components/molecules/hero-social-list'
 
-export const HeroInfo: React.FC = () => {
+const HeroInfo: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true)
 
   useScroll(({ y }) => {
@@ -43,3 +43,5 @@ export const HeroInfo: React.FC = () => {
     </div>
   )
 }
+
+export default React.memo(HeroInfo)

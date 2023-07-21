@@ -12,7 +12,7 @@ export interface ITooltipProps {
 }
 
 // TODO: If time left, use callbacks instead of timeouts to keep the tooltip open
-export const Tooltip: React.FC<ITooltipProps> = ({
+const Tooltip: React.FC<ITooltipProps> = ({
   className = '',
   text = '',
   children = '',
@@ -64,3 +64,5 @@ export const Tooltip: React.FC<ITooltipProps> = ({
     </LazyMotion>
   )
 }
+
+export default React.memo(Tooltip)

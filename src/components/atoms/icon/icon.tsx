@@ -1,12 +1,12 @@
 import * as React from 'react'
 
-import { Email } from './icons/Email'
-import { Exitscreen } from './icons/Exitscreen'
-import { Fullscreen } from './icons/Fullscreen'
-import { Github } from './icons/Github'
-import { Instagram } from './icons/Instagram'
-import { LinkedIn } from './icons/LinkedIn'
-import { Triangle } from './icons/Triangle'
+import Email from './icons/Email'
+import Exitscreen from './icons/Exitscreen'
+import Fullscreen from './icons/Fullscreen'
+import Github from './icons/Github'
+import Instagram from './icons/Instagram'
+import LinkedIn from './icons/LinkedIn'
+import Triangle from './icons/Triangle'
 
 const Components = {
   fullscreen: Fullscreen,

@@ -9,9 +9,7 @@ export interface IHeroSocialListProps {
   isVisible: boolean
 }
 
-export const HeroSocialList: React.FC<IHeroSocialListProps> = ({
-  isVisible,
-}) => (
+const HeroSocialList: React.FC<IHeroSocialListProps> = ({ isVisible }) => (
   <LazyMotion features={domAnimation}>
     <m.div
       animate={{
@@ -37,3 +35,5 @@ export const HeroSocialList: React.FC<IHeroSocialListProps> = ({
     </m.div>
   </LazyMotion>
 )
+
+export default React.memo(HeroSocialList)

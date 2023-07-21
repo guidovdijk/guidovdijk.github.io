@@ -8,7 +8,7 @@ export interface IIconButtonProps {
   onClick: () => void
 }
 
-export const IconButton: React.FC<IIconButtonProps> = ({
+const IconButton: React.FC<IIconButtonProps> = ({
   name,
   className = '',
   onClick,
@@ -21,3 +21,5 @@ export const IconButton: React.FC<IIconButtonProps> = ({
     <Icon name={name} />
   </button>
 )
+
+export default React.memo(IconButton)

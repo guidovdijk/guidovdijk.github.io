@@ -15,7 +15,7 @@ export interface ICardProps {
   className?: string
 }
 
-export const Card: React.FC<ICardProps> = ({
+const Card: React.FC<ICardProps> = ({
   index,
   image,
   description,
@@ -27,10 +27,10 @@ export const Card: React.FC<ICardProps> = ({
 }) => (
   <article
     {...props}
-    className={`group/card flex flex-col rounded border-b border-black-200 px-4 pb-4 transition-all lg:flex-row lg:items-center lg:pb-0 lg:pl-14 lg:pr-10 ${className}`}
+    className={`group/card flex origin-center flex-col rounded border-b border-black-200 px-4 pb-4 transition-all lg:flex-row lg:items-center lg:pb-0 lg:pl-14 lg:pr-10 ${className}`}
   >
     <NLink
-      className="flex flex-grow flex-col transition-all lg:h-[118px] lg:flex-row lg:items-center lg:group-hover/card:h-[148px]"
+      className="flex flex-grow origin-center flex-col transition-all lg:h-[118px] lg:flex-row lg:items-center lg:group-hover/card:h-[148px]"
       href={href}
     >
       <div className="mb-6 shrink-0 gap-x-4 lg:mb-0 lg:flex">
@@ -75,3 +75,5 @@ export const Card: React.FC<ICardProps> = ({
     )}
   </article>
 )
+
+export default React.memo(Card)

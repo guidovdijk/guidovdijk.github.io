@@ -2,11 +2,7 @@ import * as React from 'react'
 
 import { IIconSvgProps } from '../types'
 
-export const Github: React.FC<IIconSvgProps> = ({
-  width,
-  height,
-  className,
-}) => (
+const Github: React.FC<IIconSvgProps> = ({ width, height, className }) => (
   <svg
     className={className}
     height={height}
@@ -20,3 +16,5 @@ export const Github: React.FC<IIconSvgProps> = ({
     />
   </svg>
 )
+
+export default React.memo(Github)

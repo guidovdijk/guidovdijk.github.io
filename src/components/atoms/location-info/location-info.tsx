@@ -5,7 +5,7 @@ export interface ILocationInfoProps {
   children: string
 }
 
-export const LocationInfo: React.FC<ILocationInfoProps> = ({
+const LocationInfo: React.FC<ILocationInfoProps> = ({
   children,
   className = '',
   ...props
@@ -17,3 +17,5 @@ export const LocationInfo: React.FC<ILocationInfoProps> = ({
     </p>
   </div>
 )
+
+export default React.memo(LocationInfo)

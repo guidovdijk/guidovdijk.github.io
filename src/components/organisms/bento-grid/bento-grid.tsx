@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { Grid } from '@/components/atoms/grid'
 
-export const BentoGrid: React.FC<{
+const BentoGrid: React.FC<{
   className?: string
   children: React.ReactNode
 }> = ({ className = '', children }) => (
@@ -13,3 +13,5 @@ export const BentoGrid: React.FC<{
     {children}
   </Grid>
 )
+
+export default React.memo(BentoGrid)

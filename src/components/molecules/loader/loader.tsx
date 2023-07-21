@@ -33,12 +33,11 @@ export interface ILoaderProps {
   isFinished?: boolean
 }
 
-export const Loader: React.FC<ILoaderProps> = ({ children, isFinished }) => {
-  console.log(isFinished)
-  return (
-    <div className="relative flex h-[290px] w-[514px] items-center justify-center">
-      <p className="text-center text-callout font-extralight">{children}</p>
-      <LoaderSvg className="animation-dash" />
-    </div>
-  )
-}
+const Loader: React.FC<ILoaderProps> = ({ children, isFinished }) => (
+  <div className="relative flex h-[290px] w-[514px] items-center justify-center">
+    <p className="text-center text-callout font-extralight">{children}</p>
+    <LoaderSvg className="animation-dash" />
+  </div>
+)
+
+export default React.memo(Loader)
