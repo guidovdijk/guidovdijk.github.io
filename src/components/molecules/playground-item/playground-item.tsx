@@ -19,10 +19,10 @@ export const PlaygroundItem: React.FC<IPlaygroundItemProps> = ({
   ...props
 }) => (
   <article
-    className={`group relative col-span-12 flex aspect-[9/14] w-full overflow-hidden rounded border-16 border-black-200 transition-all hover:border-none md:col-span-6 lg:col-span-4 ${className}`}
+    className={`group relative col-span-12 flex aspect-[9/14] w-full overflow-hidden rounded md:col-span-6 lg:col-span-4 ${className}`}
     {...props}
   >
-    <Image {...image} />
+    <Image {...image} className="transition-all group-hover:scale-110" />
     <div className="z-10 flex items-end gap-x-6 bg-black p-6 opacity-0 transition-all group-hover:opacity-100">
       <p className="text-body-s">{description}</p>
       <IconButton className="shrink-0" name="fullscreen" onClick={onClick} />
