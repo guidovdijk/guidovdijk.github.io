@@ -5,6 +5,7 @@ import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { useMousePosition } from '@/hooks/use-mouse-position'
 
 import { Button } from '@/components/atoms/button'
+import { HeroInfo } from '@/components/molecules/hero-info'
 
 export interface IPageErrorSectionProps {
   title: React.ReactNode
@@ -74,15 +75,17 @@ const PageErrorSection: React.FC<IPageErrorSectionProps> = ({
   error,
   ...props
 }) => (
-  <div
-    {...props}
-    className="mt-24 flex h-full w-full flex-col items-center text-center"
-  >
-    <h2 className="mb-2 text-heading-s">{title}</h2>
-    <PageErrorTitle>{error}</PageErrorTitle>
-    <Button href="/" variation="secondary">
-      Return to home
-    </Button>
+  <div className="relative flex h-screen items-center">
+    <div className="absolute h-screen w-full">
+      <HeroInfo />
+    </div>
+    <div {...props} className="flex w-full flex-col items-center text-center">
+      <h2 className="mb-2 text-heading-s">{title}</h2>
+      <PageErrorTitle>{error}</PageErrorTitle>
+      <Button href="/" variation="secondary">
+        Return to home
+      </Button>
+    </div>
   </div>
 )
 
