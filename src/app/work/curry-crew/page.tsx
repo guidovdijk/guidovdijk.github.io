@@ -109,13 +109,16 @@ export default function CurryCrew() {
       </Container>
 
       {current.url && (
-        <Button
-          className="sticky bottom-8 z-50 -mb-6 ml-auto mr-4 mt-6 flex lg:mr-10"
-          href={current.url}
-          variation="tertiary"
-        >
-          GitHub Project
-        </Button>
+        <div className="sticky bottom-8 flex w-full justify-end">
+          <Button
+            className="sticky z-50 ml-auto mr-4 mt-6 flex lg:mr-10"
+            href={current.url}
+            target="_blank"
+            variation="tertiary"
+          >
+            GitHub Project
+          </Button>
+        </div>
       )}
       <div className="mx-auto my-32 px-4 lg:px-12">
         <div className="h-[1px] w-full bg-black-300" />
