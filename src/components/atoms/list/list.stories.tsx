@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { List, IListProps } from './index'
+
+import { IListProps, List } from './index'
 
 const meta: Meta<IListProps> = {
   component: List,
@@ -11,10 +12,6 @@ type Story = StoryObj<IListProps>
 export const Primary: Story = {
   args: {
     title: 'made with:',
-    items: [
-      'JavaScript',
-      'Vue',
-      'MongoDB',
-    ],
+    items: ['JavaScript', 'Vue', 'MongoDB'],
   },
 }

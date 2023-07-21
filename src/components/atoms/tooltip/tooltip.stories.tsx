@@ -1,8 +1,9 @@
 import * as React from 'react'
 
 import type { Meta, StoryObj } from '@storybook/react'
-import { Tooltip } from './index'
+
 import { Button } from '../button'
+import { Tooltip } from './index'
 
 const meta: Meta = {
   component: Tooltip,
@@ -19,9 +20,11 @@ const Component: React.FC = () => {
   }
 
   return (
-    <div className="p-8 flex">
+    <div className="flex p-8">
       <Tooltip
-        animationEndHandler={() => { setTooltipText('click to copy') }}
+        animationEndHandler={() => {
+          setTooltipText('click to copy')
+        }}
         text={tooltipText}
       >
         <Button onClick={handleState} variation="secondary">

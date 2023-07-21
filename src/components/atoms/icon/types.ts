@@ -1,5 +1,5 @@
 export interface IIconSvgProps {
-  width: number,
-  height: number,
+  width: number
+  height: number
   className: string
 }

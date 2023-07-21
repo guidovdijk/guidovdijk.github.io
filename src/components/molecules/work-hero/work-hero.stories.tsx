@@ -1,8 +1,10 @@
 import * as React from 'react'
 
-import type { Meta, StoryObj } from '@storybook/react'
 import Image from 'next/image'
-import { WorkHero, IWorkHeroProps } from './index'
+
+import type { Meta, StoryObj } from '@storybook/react'
+
+import { IWorkHeroProps, WorkHero } from './index'
 
 const meta: Meta<IWorkHeroProps> = {
   component: WorkHero,
@@ -16,9 +18,7 @@ export const Default: Story = {
     <>
       <div className="h-screen" />
 
-      <WorkHero
-        className="bg-green"
-      >
+      <WorkHero className="bg-green">
         <Image
           alt="Logo of the tournament dashboard"
           height={150}

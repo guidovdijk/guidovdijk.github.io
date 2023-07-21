@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { useState } from 'react'
-import {
-  LazyMotion, domAnimation, m,
-} from 'framer-motion'
+
+import { LazyMotion, domAnimation, m } from 'framer-motion'
 
 export interface ITooltipProps {
   children?: React.ReactNode
@@ -49,10 +48,13 @@ export const Tooltip: React.FC<ITooltipProps> = ({
       >
         <m.span
           animate={{ opacity: isHovered || isActive ? 1 : 0 }}
-          className="absolute pointer-events-none text-[12px] bg-black-300 py-1 px-2 rounded uppercase -top-10 w-max -translate-x-2/4 left-1/2"
+          className="pointer-events-none absolute -top-10 left-1/2 w-max -translate-x-2/4 rounded bg-black-300 px-2 py-1 text-[12px] uppercase"
           initial={{ opacity: 0 }}
           transition={{
-            duration: 0.2, delay: isActive ? 3 : 0, type: 'linear', transitionEnd: { display: 'none' },
+            duration: 0.2,
+            delay: isActive ? 3 : 0,
+            type: 'linear',
+            transitionEnd: { display: 'none' },
           }}
         >
           {text}

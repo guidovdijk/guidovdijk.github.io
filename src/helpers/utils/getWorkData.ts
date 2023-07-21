@@ -1,4 +1,5 @@
 import { ICardProps } from '@/components/molecules/card'
+
 import { workData } from '../constants/work-data'
 
 const getPreviousIndex = (maxItems: number, index: number): number => {

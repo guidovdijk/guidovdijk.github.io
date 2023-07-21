@@ -1,6 +1,8 @@
-import { IconButton } from '@/components/atoms/icon-button'
-import Image, { ImageProps } from 'next/image'
 import * as React from 'react'
+
+import Image, { ImageProps } from 'next/image'
+
+import { IconButton } from '@/components/atoms/icon-button'
 
 export interface IPlaygroundItemProps {
   image: ImageProps
@@ -16,11 +18,12 @@ export const PlaygroundItem: React.FC<IPlaygroundItemProps> = ({
   onClick,
   ...props
 }) => (
-  <article className={`col-span-12 md:col-span-6 lg:col-span-4 w-full flex relative aspect-[9/14] overflow-hidden rounded border-16 transition-all group hover:border-none border-black-200 ${className}`} {...props}>
-    <Image
-      {...image}
-    />
-    <div className="bg-black group-hover:opacity-100 transition-all flex z-10 gap-x-6 p-6 items-end opacity-0">
+  <article
+    className={`group relative col-span-12 flex aspect-[9/14] w-full overflow-hidden rounded border-16 border-black-200 transition-all hover:border-none md:col-span-6 lg:col-span-4 ${className}`}
+    {...props}
+  >
+    <Image {...image} />
+    <div className="z-10 flex items-end gap-x-6 bg-black p-6 opacity-0 transition-all group-hover:opacity-100">
       <p className="text-body-s">{description}</p>
       <IconButton className="shrink-0" name="fullscreen" onClick={onClick} />
     </div>

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { NavigationItem, INavigationItemProps } from './index'
+
+import { INavigationItemProps, NavigationItem } from './index'
 
 const meta: Meta<INavigationItemProps> = {
   component: NavigationItem,

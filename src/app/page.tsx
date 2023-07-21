@@ -2,12 +2,12 @@
 
 import React from 'react'
 
+import { Container } from '@/components/atoms/grid'
 import { Divider } from '@/components/molecules/divider'
 import { AboutMe } from '@/components/organisms/about-me'
 import { CTASection } from '@/components/organisms/cta-section'
-import { WorkSection } from '@/components/organisms/work-section'
-import { Container } from '@/components/atoms/grid'
 import { HomeHero } from '@/components/organisms/home-hero'
+import { WorkSection } from '@/components/organisms/work-section'
 
 export default function Home() {
   return (

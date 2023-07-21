@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { IconButton, IIconButtonProps } from './index'
+
+import { IIconButtonProps, IconButton } from './index'
 
 const meta: Meta<IIconButtonProps> = {
   component: IconButton,

@@ -1,7 +1,9 @@
 import * as React from 'react'
 
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { PlaygroundItem } from '@/components/molecules/playground-item'
+
 import { BentoGrid } from './bento-grid'
 
 const meta: Meta = {
@@ -32,12 +34,8 @@ export const Default: Story = {
     <div className="container mx-auto px-2 md:px-12">
       <BentoGrid>
         {[4, 3, 4, 3, 4, 3, 3, 2].map((height, index) => (
-          <Item
-            key={index}
-            className={`h-full row-span-${height}`}
-          />
+          <Item key={index} className={`h-full row-span-${height}`} />
         ))}
-
       </BentoGrid>
     </div>
   ),

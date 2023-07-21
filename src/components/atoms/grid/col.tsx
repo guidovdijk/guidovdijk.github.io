@@ -1,10 +1,10 @@
 import * as React from 'react'
 
 export interface IColProps {
-  start?: number,
-  span?: number,
+  start?: number
+  span?: number
   as?: React.ElementType
-  className?: string,
+  className?: string
   children: React.ReactNode
 }
 

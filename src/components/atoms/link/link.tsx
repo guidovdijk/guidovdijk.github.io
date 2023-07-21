@@ -1,5 +1,7 @@
 import * as React from 'react'
+
 import NLink, { LinkProps } from 'next/link'
+
 import { Icon, IconName } from '../icon'
 
 export interface ILinkProps extends LinkProps {
@@ -16,7 +18,7 @@ export const Link: React.FC<ILinkProps> = ({
   ...props
 }) => (
   <NLink
-    className={`inline-flex align-middle text-white-200 text-body-s font-medium items-center gap-x-2 group hover:cursor-pointer ${className}`}
+    className={`group inline-flex items-center gap-x-2 align-middle text-body-s font-medium text-white-200 hover:cursor-pointer ${className}`}
     {...props}
   >
     {iconName && <Icon name={iconName} />}

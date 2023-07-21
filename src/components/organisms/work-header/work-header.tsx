@@ -1,9 +1,7 @@
 import * as React from 'react'
-import {
-  LazyMotion,
-  domAnimation,
-  m,
-} from 'framer-motion'
+
+import { LazyMotion, domAnimation, m } from 'framer-motion'
+
 import { List } from '@/components/atoms/list'
 
 export interface IWorkHeaderProps {
@@ -28,7 +26,7 @@ export const WorkHeader: React.FC<IWorkHeaderProps> = ({
 }) => (
   <LazyMotion features={domAnimation}>
     <m.div
-      className={`transform-gpu flex flex-col md:flex-row md:items-center md:justify-between w-full gap-x-8 gap-y-8 px-0 sm:px-6 lg:px-12 xl:px-24 mx-auto ${className}`}
+      className={`mx-auto flex w-full transform-gpu flex-col gap-x-8 gap-y-8 px-0 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-12 xl:px-24 ${className}`}
       {...props}
       animate="animate"
       initial="initial"
@@ -44,26 +42,21 @@ export const WorkHeader: React.FC<IWorkHeaderProps> = ({
         },
       }}
     >
-      <div className="flex flex-col flex-grow">
-        <p className="text-subtitle uppercase text-white-500">0{index} / {subtitle}</p>
-        <h1 className="text-heading-2-xl font-semibold font-heading w-min">{title}</h1>
+      <div className="flex flex-grow flex-col">
+        <p className="text-subtitle uppercase text-white-500">
+          0{index} / {subtitle}
+        </p>
+        <h1 className="w-min font-heading text-heading-2-xl font-semibold">
+          {title}
+        </h1>
       </div>
-      <div className="md:hidden h-[1px] w-full bg-black-200" />
-      <div className="flex md:ml-auto items-center md:justify-end">
-        <div className="mr-10 h-44 w-[1px] bg-black-200 hidden md:block" />
-        <div className="flex flex-wrap gap-y-4 gap-x-12">
-          <List
-            items={subjects}
-            title="made with"
-          />
-          <List
-            items={dates}
-            title="when"
-          />
-          <List
-            items={roles}
-            title="role"
-          />
+      <div className="h-[1px] w-full bg-black-200 md:hidden" />
+      <div className="flex items-center md:ml-auto md:justify-end">
+        <div className="mr-10 hidden h-44 w-[1px] bg-black-200 md:block" />
+        <div className="flex flex-wrap gap-x-12 gap-y-4">
+          <List items={subjects} title="made with" />
+          <List items={dates} title="when" />
+          <List items={roles} title="role" />
         </div>
       </div>
     </m.div>

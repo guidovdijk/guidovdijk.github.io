@@ -1,10 +1,10 @@
 'use client'
 
 // Fonts
+// Style
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 
-// Style
 import './assets/styles/globals.css'
 
 const inter = Inter({

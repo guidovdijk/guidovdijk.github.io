@@ -1,9 +1,6 @@
-import { useEffect, useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 
-const useKeyUp = (
-  targetKey: KeyboardEvent['key'],
-  handler: () => void,
-) => {
+const useKeyUp = (targetKey: KeyboardEvent['key'], handler: () => void) => {
   const handleKeyUp = useCallback(
     ({ key }: { key: string }) => {
       if (key === targetKey) {

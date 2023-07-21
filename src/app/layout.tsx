@@ -2,10 +2,11 @@
 
 import React from 'react'
 
-import { Navigation } from '@/components/organisms/navigation'
-import { Footer } from '@/components/organisms/footer'
 import { ModalProvider } from '@/components/molecules/modal'
-import { inter, avantGarde } from './fonts'
+import { Footer } from '@/components/organisms/footer'
+import { Navigation } from '@/components/organisms/navigation'
+
+import { avantGarde, inter } from './fonts'
 
 export const metadata = {
   title: 'Create Next App',
@@ -18,18 +19,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   // TODO: Figure out if the gradient should be kept, before moving to production
-  const gradient = 'before:z-20 before:bg-body before:fixed before:w-full before:h-48 before:bottom-0 before:pointer-events-none'
+  const gradient =
+    'before:z-20 before:bg-body before:fixed before:w-full before:h-48 before:bottom-0 before:pointer-events-none'
   return (
     <html className={`${inter.variable} ${avantGarde.variable}`} lang="en">
       <body className={`relative ${false ? `pb-8 ${gradient}` : ''}`}>
         <Navigation />
         <div className="relative z-[1]">
-          <ModalProvider>
-            {children}
-          </ModalProvider>
+          <ModalProvider>{children}</ModalProvider>
           <Footer />
         </div>
-        <div className="absolute -top-[200px] z-[0] -left-[10%] rounded-full bg-[#05222F] w-6/12 aspect-square blur-[750px]" />
+        <div className="absolute -left-[10%] -top-[200px] z-[0] aspect-square w-6/12 rounded-full bg-[#05222F] blur-[750px]" />
       </body>
     </html>
   )

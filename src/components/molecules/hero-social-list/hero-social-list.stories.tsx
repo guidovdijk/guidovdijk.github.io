@@ -4,6 +4,7 @@ import { useState } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { useScroll } from '@/hooks/use-scroll'
+
 import { HeroSocialList, IHeroSocialListProps } from './index'
 
 const meta: Meta<IHeroSocialListProps> = {
@@ -23,15 +24,13 @@ const Component: React.FC = () => {
     setIsVisible(shouldBeVisible)
   })
 
-  return (
-    <HeroSocialList isVisible={isVisible} />
-  )
+  return <HeroSocialList isVisible={isVisible} />
 }
 
 export const Default: Story = {
   render: () => (
     <>
-      <div className="h-screen overflow-hidden relative px-4 sm:px-12 flex items-end pt-20 pb-6 sm:pb-14">
+      <div className="relative flex h-screen items-end overflow-hidden px-4 pb-6 pt-20 sm:px-12 sm:pb-14">
         <Component />
       </div>
       <div className="h-screen" />

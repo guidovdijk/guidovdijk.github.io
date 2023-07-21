@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
 export default function useWindowHeight() {
   const [height, setHeight] = useState(0)

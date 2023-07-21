@@ -1,21 +1,20 @@
 'use client'
 
 import React from 'react'
+
 import Image from 'next/image'
 
+import { Col, Container, Grid } from '@/components/atoms/grid'
+import { Modal, useModal } from '@/components/molecules/modal'
 import { PlaygroundItem } from '@/components/molecules/playground-item'
 import { BentoGrid } from '@/components/organisms/bento-grid'
-import { Modal, useModal } from '@/components/molecules/modal'
-import { Col, Container, Grid } from '@/components/atoms/grid'
 
 // TODO: Remove placeholders
 interface IItemProps {
   className: string
 }
 const Item: React.FC<IItemProps> = ({ className }) => {
-  const {
-    setIsOpen, setActiveItem,
-  } = useModal()
+  const { setIsOpen, setActiveItem } = useModal()
 
   const openModal = (data: React.SetStateAction<React.ReactNode>) => {
     setIsOpen(true)
@@ -34,17 +33,19 @@ const Item: React.FC<IItemProps> = ({ className }) => {
           objectFit: 'cover',
         },
       }}
-      onClick={() => openModal(
-        <Image
-          alt="A brown rock monster with glowing eyes"
-          className="image-relative"
-          fill
-          src="/images/playground/stad-als-spel-stonithe.webp"
-          style={{
-            objectFit: 'contain',
-          }}
-        />,
-      )}
+      onClick={() =>
+        openModal(
+          <Image
+            alt="A brown rock monster with glowing eyes"
+            className="image-relative"
+            fill
+            src="/images/playground/stad-als-spel-stonithe.webp"
+            style={{
+              objectFit: 'contain',
+            }}
+          />,
+        )
+      }
     />
   )
 }
@@ -55,23 +56,17 @@ export default function PlayGround() {
       <Container className="px-4 lg:px-12">
         <Grid>
           <Col span={12}>
-            <div className="flex flex-col gap-y-4 mt-40 mb-12">
-              <h2
-                className="text-heading-xl font-semibold"
-              >
-                The Playground
-              </h2>
+            <div className="mb-12 mt-40 flex flex-col gap-y-4">
+              <h2 className="text-heading-xl font-semibold">The Playground</h2>
               <p className="text-body">
-                For all my illustrations, websites, and programs<br />
+                For all my illustrations, websites, and programs
+                <br />
                 which I still want to showcase and deserves some spotlight.
               </p>
             </div>
             <BentoGrid className="mb-64">
               {[4, 3, 4, 3, 4, 3, 3, 2].map((height, index) => (
-                <Item
-                  key={index}
-                  className={`h-full row-span-${height}`}
-                />
+                <Item key={index} className={`h-full row-span-${height}`} />
               ))}
             </BentoGrid>
           </Col>

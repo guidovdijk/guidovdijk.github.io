@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function useMousePosition() {
   const [mousePosition, setMousePosition] = useState({
@@ -9,8 +9,8 @@ export default function useMousePosition() {
   useEffect(() => {
     const mouseMove = (e: MouseEvent) => {
       setMousePosition({
-        x: (e.clientX / window.innerWidth),
-        y: (e.clientY / window.innerHeight),
+        x: e.clientX / window.innerWidth,
+        y: e.clientY / window.innerHeight,
       })
     }
 

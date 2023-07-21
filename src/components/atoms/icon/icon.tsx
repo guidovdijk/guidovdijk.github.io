@@ -1,11 +1,12 @@
 import * as React from 'react'
-import { Fullscreen } from './icons/Fullscreen'
+
+import { Email } from './icons/Email'
 import { Exitscreen } from './icons/Exitscreen'
+import { Fullscreen } from './icons/Fullscreen'
+import { Github } from './icons/Github'
+import { Instagram } from './icons/Instagram'
 import { LinkedIn } from './icons/LinkedIn'
 import { Triangle } from './icons/Triangle'
-import { Instagram } from './icons/Instagram'
-import { Email } from './icons/Email'
-import { Github } from './icons/Github'
 
 const Components = {
   fullscreen: Fullscreen,
@@ -20,9 +21,9 @@ const Components = {
 export type IconName = keyof typeof Components
 
 export interface IIconProps {
-  name: IconName,
-  width?: number,
-  height?: number,
+  name: IconName
+  width?: number
+  height?: number
   className?: string
 }
 

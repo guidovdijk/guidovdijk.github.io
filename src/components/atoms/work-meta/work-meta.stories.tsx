@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { WorkMeta, IWorkMetaProps } from './index'
+
+import { IWorkMetaProps, WorkMeta } from './index'
 
 const meta: Meta<IWorkMetaProps> = {
   component: WorkMeta,

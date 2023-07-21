@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Link, ILinkProps } from './index'
+
+import { ILinkProps, Link } from './index'
 
 const meta: Meta<ILinkProps> = {
   component: Link,

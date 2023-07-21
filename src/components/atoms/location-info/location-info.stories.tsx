@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { LocationInfo, ILocationInfoProps } from './index'
+
+import { ILocationInfoProps, LocationInfo } from './index'
 
 const meta: Meta<ILocationInfoProps> = {
   component: LocationInfo,

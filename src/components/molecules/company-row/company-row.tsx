@@ -1,8 +1,8 @@
-import Image, { ImageProps } from 'next/image'
 import React from 'react'
 
-export interface ICompanyRowProps {
-}
+import Image, { ImageProps } from 'next/image'
+
+export interface ICompanyRowProps {}
 
 const companyImages: ImageProps[] = [
   {
@@ -44,23 +44,23 @@ const companyImages: ImageProps[] = [
 ]
 
 export const CompanyRow: React.FC<ICompanyRowProps> = () => (
-  <div className="flex sm:flex-row flex-col gap-y-6 items-center">
-    <div className="shrink-0 flex xl:self-center self-start sm:pt-1">
-      <p className="shrink-0 flex text-subtitle uppercase text-white-500">
-        Companies who lit<br />up my passion
+  <div className="flex flex-col items-center gap-y-6 sm:flex-row">
+    <div className="flex shrink-0 self-start sm:pt-1 xl:self-center">
+      <p className="flex shrink-0 text-subtitle uppercase text-white-500">
+        Companies who lit
+        <br />
+        up my passion
       </p>
-      <div className="w-24 h-[1px] bg-white-500 mt-1.5 ml-5 mr-8" />
+      <div className="ml-5 mr-8 mt-1.5 h-[1px] w-24 bg-white-500" />
     </div>
     <div className="flex flex-wrap items-center gap-x-16 gap-y-8">
-      {
-        companyImages.map((img, index) => (
-          <Image
-            {...img}
-            key={`company-row-${index}`}
-            style={{ objectFit: 'contain' }}
-          />
-        ))
-      }
+      {companyImages.map((img, index) => (
+        <Image
+          {...img}
+          key={`company-row-${index}`}
+          style={{ objectFit: 'contain' }}
+        />
+      ))}
     </div>
   </div>
 )

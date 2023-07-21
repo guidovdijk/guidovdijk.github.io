@@ -19,6 +19,11 @@ export const Grid: React.FC<IGridProps> = ({
   const Component = as
 
   return (
-    <Component className={`grid grid-cols-${cols} ${gap} ${className}`} {...props}>{children}</Component>
+    <Component
+      className={`grid grid-cols-${cols} ${gap} ${className}`}
+      {...props}
+    >
+      {children}
+    </Component>
   )
 }

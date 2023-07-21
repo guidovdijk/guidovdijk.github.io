@@ -1,7 +1,8 @@
 import * as React from 'react'
 
 import type { Meta, StoryObj } from '@storybook/react'
-import { TimeLineItem, ITimeLineItemProps } from './index'
+
+import { ITimeLineItemProps, TimeLineItem } from './index'
 
 const meta: Meta<ITimeLineItemProps> = {
   component: TimeLineItem,

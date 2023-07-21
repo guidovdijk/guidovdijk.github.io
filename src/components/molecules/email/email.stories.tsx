@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { Email, IEmailProps } from './index'
 
 const meta: Meta<IEmailProps> = {
@@ -12,7 +13,7 @@ type Story = StoryObj<IEmailProps>
 
 export const Large: Story = {
   render: () => (
-    <div className="p-12 flex">
+    <div className="flex p-12">
       <Email />
     </div>
   ),
@@ -20,7 +21,7 @@ export const Large: Story = {
 
 export const Small: Story = {
   render: () => (
-    <div className="p-12 flex">
+    <div className="flex p-12">
       <Email type="small" />
     </div>
   ),

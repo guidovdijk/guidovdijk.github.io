@@ -1,10 +1,10 @@
 import * as React from 'react'
 
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { Button } from '@/components/atoms/button'
-import {
-  Modal, IModalProps, ModalProvider, useModal,
-} from './index'
+
+import { IModalProps, Modal, ModalProvider, useModal } from './index'
 
 const meta: Meta<IModalProps> = {
   component: Modal,
@@ -14,9 +14,7 @@ export default meta
 type Story = StoryObj<IModalProps>
 
 const Component: React.FC = () => {
-  const {
-    setIsOpen, setActiveItem,
-  } = useModal()
+  const { setIsOpen, setActiveItem } = useModal()
 
   const openModal = (text: string) => {
     setIsOpen(true)
@@ -25,8 +23,22 @@ const Component: React.FC = () => {
 
   return (
     <>
-      <Button onClick={() => { openModal('Modal Text One') }} variation="primary">Open Modal One</Button>
-      <Button onClick={() => { openModal('Modal Text Two') }} variation="primary">Open Modal Two</Button>
+      <Button
+        onClick={() => {
+          openModal('Modal Text One')
+        }}
+        variation="primary"
+      >
+        Open Modal One
+      </Button>
+      <Button
+        onClick={() => {
+          openModal('Modal Text Two')
+        }}
+        variation="primary"
+      >
+        Open Modal Two
+      </Button>
       <Modal />
     </>
   )

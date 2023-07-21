@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { Blob } from './index'
 
 const meta: Meta = {
@@ -14,15 +15,11 @@ export const Default: Story = {
   render: () => (
     <div className="bg-black-600 relative overflow-hidden">
       <div className="h-screen">
-        <h2 className="text-heading-xl font-semibold">
-          Start
-        </h2>
+        <h2 className="text-heading-xl font-semibold">Start</h2>
       </div>
       <Blob />
       <div className="h-screen">
-        <h2 className="text-heading-xl font-semibold">
-          End
-        </h2>
+        <h2 className="text-heading-xl font-semibold">End</h2>
       </div>
     </div>
   ),

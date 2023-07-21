@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 
 interface IModalContextProps {
-  isOpen: boolean;
-  activeItem: React.ReactNode;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  setActiveItem: React.Dispatch<React.SetStateAction<React.ReactNode>>;
+  isOpen: boolean
+  activeItem: React.ReactNode
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+  setActiveItem: React.Dispatch<React.SetStateAction<React.ReactNode>>
 }
 
 const ModalContext = React.createContext<IModalContextProps | null>(null)
@@ -27,16 +27,15 @@ const ModalProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const value = React.useMemo(
     () => ({
-      isOpen, setIsOpen, activeItem, setActiveItem,
+      isOpen,
+      setIsOpen,
+      activeItem,
+      setActiveItem,
     }),
     [isOpen, setIsOpen, activeItem, setActiveItem],
   )
 
-  return (
-    <ModalContext.Provider value={value}>
-      {children}
-    </ModalContext.Provider>
-  )
+  return <ModalContext.Provider value={value}>{children}</ModalContext.Provider>
 }
 
 export default ModalProvider
