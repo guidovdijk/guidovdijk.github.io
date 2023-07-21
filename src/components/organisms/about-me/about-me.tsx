@@ -66,6 +66,7 @@ const AboutMe: React.FC<IAboutMeProps> = ({ className, ...props }) => (
         alt="Image of Guido van Dijk, the developer of this portfolio"
         className="image-relative max-h-[660px] object-cover lg:object-fill"
         fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         src="/images/profile.webp"
         style={{ objectPosition: 'top' }}
       />
