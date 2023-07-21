@@ -30,7 +30,7 @@ export const Button: React.FC<IButtonProps> = ({
   target = '_self',
   type = 'button',
   ...props
-}) => (
+}) =>
   href ? (
     <Link
       {...props}
@@ -49,4 +49,3 @@ export const Button: React.FC<IButtonProps> = ({
       {children}
     </button>
   )
-)
