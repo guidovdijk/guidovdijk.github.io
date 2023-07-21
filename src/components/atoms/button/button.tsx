@@ -1,10 +1,14 @@
+import Link, { LinkProps } from 'next/link'
 import * as React from 'react'
 
-export interface IButtonProps {
+export interface IButtonProps extends Omit<LinkProps, 'href' | 'as'> {
   children: string,
   variation: 'primary' | 'secondary' | 'tertiary'
-  onClick: () => void,
+  onClick?: () => void,
   className?: string
+  href?: string
+  target?: string
+  type?: HTMLButtonElement['type']
 }
 
 const styles = {
@@ -17,9 +21,20 @@ export const Button: React.FC<IButtonProps> = ({
   variation = 'primary',
   className,
   children,
+  onClick,
+  href,
+  target = '_self',
+  type = 'button',
   ...props
 }) => (
-  <button {...props} className={`${styles[variation]} rounded text-body-s font-medium ${className}`} type="button">
-    {children}
-  </button>
+  href ? (
+    <Link {...props} className={`${styles[variation]} rounded text-body-s font-medium ${className}`} href={href} target={target}>
+      {children}
+    </Link>
+  ) : (
+    // eslint-disable-next-line react/button-has-type
+    <button className={`${styles[variation]} rounded text-body-s font-medium ${className}`} onClick={onClick} type={type}>
+      {children}
+    </button>
+  )
 )

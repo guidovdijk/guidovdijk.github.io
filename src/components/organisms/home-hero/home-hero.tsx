@@ -13,6 +13,7 @@ import { Col, Container, Grid } from '@/components/atoms/grid'
 import { LocationInfo } from '@/components/atoms/location-info'
 
 import GradientImage from 'public/images/gradient-hero.webp'
+import { Blob } from '@/components/molecules/blob'
 
 export interface IHomeHero {
   className?: string
@@ -25,14 +26,14 @@ export const HomeHero: React.FC<IHomeHero> = ({
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '-50%'])
 
   return (
-    <>
+    <div className="relative overflow-y-visible overflow-x-clip">
       <div className="h-screen w-full absolute">
         <HeroInfo />
       </div>
-      <Container as="section" className={`px-4 lg:px-12 flex flex-col z-[1] min-h-screen overflow-hidden relative pt-20 ${className}`}>
+      <Container as="section" className={`px-4 lg:px-12 flex flex-col z-[1] min-h-screen xl:min-h-0 overflow-hidden relative pt-20 ${className}`}>
         <Grid className="mt-8 lg:mt-16 xl:mt-28 relative" gap="gap-0">
           <Col span={12}>
-            <p className="pl-4 text-body">Hello There! I am...</p>
+            <p className="pl-1 sm:pl-2 md:pl-4 text-body">Hello There! I am...</p>
           </Col>
           <Col span={12}>
             <h1 className="mb-4 lg:mb-14 font-heading font-bold uppercase text-heading-3-xl flex flex-col col-span-12">
@@ -64,6 +65,7 @@ export const HomeHero: React.FC<IHomeHero> = ({
           </Col>
         </Grid>
       </Container>
-    </>
+      <Blob />
+    </div>
   )
 }

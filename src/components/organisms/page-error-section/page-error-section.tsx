@@ -80,6 +80,6 @@ export const PageErrorSection: React.FC<IPageErrorSectionProps> = ({
   <div {...props} className="flex flex-col h-full w-full items-center text-center mt-24">
     <h2 className="text-heading-s mb-2">{title}</h2>
     <PageErrorTitle>{error}</PageErrorTitle>
-    <Button onClick={() => { }} variation="secondary">Return to home</Button>
+    <Button href="/" variation="secondary">Return to home</Button>
   </div>
 )

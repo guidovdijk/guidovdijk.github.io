@@ -13,13 +13,20 @@ const getNextIndex = (maxItems: number, index: number): number => {
   return next > maxItems ? 0 : next
 }
 
-export const getWorkData = (index: number): ICardProps[] => {
+interface IDataProps {
+  current: ICardProps
+  prev: ICardProps
+  next: ICardProps
+}
+
+export const getWorkData = (index: number): IDataProps => {
   const maxItems = workData.length
   const prev = getPreviousIndex(maxItems, index)
   const next = getNextIndex(maxItems, index)
 
-  return [
-    workData[prev],
-    workData[next],
-  ]
+  return {
+    current: workData[index],
+    prev: workData[prev],
+    next: workData[next],
+  }
 }

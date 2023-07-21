@@ -1,6 +1,6 @@
-import { Link } from '@/components/atoms/link'
-import { ISocialItemProps } from '@/helpers/constants/social-data'
 import * as React from 'react'
+import { ISocialItemProps } from '@/helpers/constants/social-data'
+import { Link } from '@/components/atoms/link'
 
 export interface IFooterItemProps {
   title: string,

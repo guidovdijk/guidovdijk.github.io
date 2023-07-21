@@ -12,7 +12,7 @@ import { getWorkData } from '@/helpers/utils/getWorkData'
 
 export default function CurryCrew() {
   const index = 1
-  const data = getWorkData(index)
+  const { current, prev, next } = getWorkData(index)
 
   return (
     <main className="relative z-[1] mt-40 mb-12">
@@ -117,14 +117,17 @@ export default function CurryCrew() {
         </Grid>
       </Container>
 
-      <Button
-        className="sticky z-50 ml-auto mr-4 mt-6 -mb-6 lg:mr-10 flex bottom-8"
-        onClick={() => { }}
-        variation="tertiary"
-      >
-        GitHub Project
-      </Button>
-
+      {
+        current.url && (
+          <Button
+            className="sticky z-50 ml-auto mr-4 mt-6 -mb-6 lg:mr-10 flex bottom-8"
+            href={current.url}
+            variation="tertiary"
+          >
+            GitHub Project
+          </Button>
+        )
+      }
       <div className="mx-auto my-32 px-4 lg:px-12">
         <div className="w-full bg-black-300 h-[1px]" />
       </div>
@@ -133,14 +136,14 @@ export default function CurryCrew() {
         <Grid gap="gap-y-20">
           <Col span={12}>
             <section className="flex flex-col gap-y-8">
-              {
-                data.map((d, i) => (
-                  <div key={`cc-cards-${i}`} className="flex flex-col gap-y-2">
-                    <p className="text-subtitle uppercase text-white-500">{i === 0 ? 'Next' : 'Previous'} project</p>
-                    <Card {...d} className={`${d.className} border-b-0`} />
-                  </div>
-                ))
-              }
+              <div className="flex flex-col gap-y-2">
+                <p className="text-subtitle uppercase text-white-500">Next project</p>
+                <Card {...next} className={`${next.className} border-b-0`} />
+              </div>
+              <div className="flex flex-col gap-y-2">
+                <p className="text-subtitle uppercase text-white-500">Previous project</p>
+                <Card {...prev} className={`${prev.className} border-b-0`} />
+              </div>
             </section>
           </Col>
         </Grid>

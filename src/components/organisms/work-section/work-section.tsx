@@ -22,10 +22,10 @@ export const WorkSection: React.FC<IWorkSectionProps> = ({ ...props }) => (
       }
     </div>
     <div className="lg:pl-12 flex flex-col gap-y-2">
-      <p className="text-body">Want so see more?</p>
+      <p className="text-body">Want to see more?</p>
       <List className="flex flex-row md:flex-col">
-        <Button onClick={() => { }} variation="secondary">Checkout my GitHub</Button>
-        <Button onClick={() => { }} variation="secondary">See the playground</Button>
+        <Button href="https://github.com/guidovdijk" target="_blank" variation="secondary">Checkout my GitHub</Button>
+        <Button href="/playground" variation="secondary">See the playground</Button>
       </List>
     </div>
   </section>

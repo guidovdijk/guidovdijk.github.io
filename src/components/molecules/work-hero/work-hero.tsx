@@ -20,9 +20,9 @@ export const WorkHero: React.FC<IWorkHeroProps> = ({
   const ref = React.useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['center end', 'center center'],
+    offset: ['start end', 'end start'],
   })
-  const y = useTransform(scrollYProgress, [0, 1], ['100%', '0%'])
+  const y = useTransform(scrollYProgress, [0, 1], ['95%', '-25%'])
 
   return (
     <LazyMotion features={domAnimation}>

@@ -39,8 +39,8 @@ export const AboutMe: React.FC<IAboutMeProps> = ({
           in a short amount of time.
         </p>
         <div className="flex sm:flex-row flex-col items-center gap-6">
-          <Button className="sm:w-auto w-full" onClick={() => { }} variation="primary">My resume</Button>
-          <Button onClick={() => { }} variation="secondary">My GitHub profile</Button>
+          <Button className="sm:w-auto w-full" href="/Guido_van_Dijk_Resume.pdf" target="_blank" variation="primary">My resume</Button>
+          <Button href="https://github.com/guidovdijk" target="_blank" variation="secondary">My GitHub profile</Button>
         </div>
       </div>
     </Col>
