@@ -8,9 +8,9 @@ import { getWorkData } from '@/helpers/utils/getWorkData'
 
 import { Button } from '@/components/atoms/button'
 import { Col, Container, Grid } from '@/components/atoms/grid'
-import { Card } from '@/components/molecules/card'
 import { ImageGrid } from '@/components/molecules/image-grid'
 import { WorkHero } from '@/components/molecules/work-hero'
+import { NextPrevProject } from '@/components/organisms/next-prev-project'
 import { WorkHeader } from '@/components/organisms/work-header'
 
 export default function CurryCrew() {
@@ -124,26 +124,7 @@ export default function CurryCrew() {
         <div className="h-[1px] w-full bg-black-300" />
       </div>
 
-      <Container className="mb-28 px-4 lg:px-12">
-        <Grid gap="gap-y-20">
-          <Col span={12}>
-            <section className="flex flex-col gap-y-8">
-              <div className="flex flex-col gap-y-2">
-                <p className="text-subtitle uppercase text-white-500">
-                  Next project
-                </p>
-                <Card {...next} className={`${next.className} border-b-0`} />
-              </div>
-              <div className="flex flex-col gap-y-2">
-                <p className="text-subtitle uppercase text-white-500">
-                  Previous project
-                </p>
-                <Card {...prev} className={`${prev.className} border-b-0`} />
-              </div>
-            </section>
-          </Col>
-        </Grid>
-      </Container>
+      <NextPrevProject next={next} prev={prev} />
     </main>
   )
 }
