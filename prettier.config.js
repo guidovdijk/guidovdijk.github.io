@@ -7,7 +7,7 @@ module.exports = {
     '^react$',
     '^next/(.*)$',
     '<THIRD_PARTY_MODULES>',
-    '^@helpers/(.*)$',
+    '^@/helpers/(.*)$',
     '^@/hooks/(.*)$',
     '^@/components/(.*)$',
     '^[./]',
