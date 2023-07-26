@@ -21,6 +21,8 @@ const Navigation: React.FC = () => {
     setIsVisible(shouldBeVisible)
   })
 
+  // TODO: Add back to home link when on work pages
+  // TODO: Change nav item color to black, when navbar goes over light images
   return (
     <LazyMotion features={domAnimation}>
       <m.nav
