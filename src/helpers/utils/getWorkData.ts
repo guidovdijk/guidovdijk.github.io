@@ -11,7 +11,7 @@ const getPreviousIndex = (maxItems: number, index: number): number => {
 const getNextIndex = (maxItems: number, index: number): number => {
   const next = index + 1
   // Get next index or 0 if `next` > maxItems
-  return next > maxItems ? 0 : next
+  return next >= maxItems ? 0 : next
 }
 
 interface IDataProps {
