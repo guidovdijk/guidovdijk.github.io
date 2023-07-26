@@ -3,7 +3,7 @@ import React, { Children } from 'react'
 import { ImageProps } from 'next/image'
 
 export interface IImageGridProps {
-  children: React.ReactElement<ImageProps>[]
+  children: React.ReactElement<ImageProps>[] | React.ReactElement<ImageProps>
   autoFill?: boolean
 }
 
