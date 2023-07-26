@@ -179,9 +179,6 @@ export default function ComponentLibrary() {
           </Button>
         </div>
       )}
-      <div className="mx-auto my-32 px-4 lg:px-12">
-        <div className="h-[1px] w-full bg-black-300" />
-      </div>
 
       <NextPrevProject next={next} prev={prev} />
     </main>
