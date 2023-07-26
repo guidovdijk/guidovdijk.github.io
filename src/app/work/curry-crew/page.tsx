@@ -44,31 +44,18 @@ export default function CurryCrew() {
         <Grid gap="gap-y-20">
           <Col className="col-span-12 md:col-span-7">
             <div className="flex flex-col gap-y-4">
-              <h3 className="text-heading-s font-semibold">The Playground</h3>
+              <h3 className="text-heading-s font-semibold">Introduction</h3>
               <p className="text-body">
-                Vestibulum gravida nisl et mauris finibus feugiat. Nulla
-                tincidunt convallis libero ut posuere. Praesent sed sem sed mi
-                vehicula volutpat. Mauris posuere justo non quam ultricies
-                molestie. Nunc porta, odio sed consequat auctor, metus ex
-                venenatis lorem, eget suscipit dui sem vitae leo. Nunc ac
-                sagittis erat. Phasellus velit purus, efficitur a tellus id,
-                consequat porta lectus. In eu mi gravida urna aliquet gravida
-                eget non justo.
+                A few years ago, some friends and I started to organize League
+                of Legends tournaments for around 150 to 200 players. We wanted
+                to make a fair and automatic way of creating the teams, give
+                participants an overview against who they play with / against,
+                and be able to join teams that still miss players.
               </p>
             </div>
           </Col>
           <Col span={12}>
-            <ImageGrid autoFill={false}>
-              <Image
-                alt="Dashboard where users can check their win ratio and match history"
-                fill
-                src="/images/work/tournament/dashboard_home.webp"
-              />
-              <Image
-                alt="Dashboard where users can check their win ratio and match history"
-                fill
-                src="/images/work/tournament/dashboard_home.webp"
-              />
+            <ImageGrid autoFill>
               <Image
                 alt="Dashboard where users can check their win ratio and match history"
                 fill
@@ -78,16 +65,50 @@ export default function CurryCrew() {
           </Col>
           <Col className="col-span-12 md:col-span-7">
             <div className="flex flex-col gap-y-4">
-              <h3 className="text-heading-s font-semibold">Approach</h3>
+              <h3 className="text-heading-s font-semibold">
+                The Design and Needed Functionality
+              </h3>
               <p className="text-body">
-                Vestibulum gravida nisl et mauris finibus feugiat. Nulla
-                tincidunt convallis libero ut posuere. Praesent sed sem sed mi
-                vehicula volutpat. Mauris posuere justo non quam ultricies
-                molestie. Nunc porta, odio sed consequat auctor, metus ex
-                venenatis lorem, eget suscipit dui sem vitae leo. Nunc ac
-                sagittis erat. Phasellus velit purus, efficitur a tellus id,
-                consequat porta lectus. In eu mi gravida urna aliquet gravida
-                eget non justo.
+                The dashboard is created in Vue.js with Buefy as component
+                library. The database used is MongoDB, because looking at what
+                kind of data I would be working with NoSQL was the best options.
+                Mongoose is used to connect to the database and setup the API
+                calls. The dashboard design is also in the style of our Discord
+                and YouTube branding, with a logo that should resemble a Raptor
+                creature from League of Legends (which I made both). I spent my
+                summer vacation working on this dashboard, but shamefully I
+                could not complete it due to time constraints.
+              </p>
+            </div>
+          </Col>
+          <Col span={12}>
+            <ImageGrid autoFill>
+              <Image
+                alt="Dashboard where users can check their win ratio and match history"
+                fill
+                src="/images/work/tournament/dashboard_home.webp"
+              />
+            </ImageGrid>
+          </Col>
+          <Col className="col-span-12 md:col-span-7">
+            <div className="flex flex-col gap-y-4">
+              <h3 className="text-heading-s font-semibold">User Screens</h3>
+              <p className="text-body">
+                The user screens consist out of a homepage with their win rate,
+                match history, and points / experience earned. We wanted the
+                homepage to feel like an achievement page, where the user would
+                feel proud of his accomplishments, for example: “My win ratio is
+                better than half of the other players” or “I am in the top 10 of
+                points earned”. In the future we wanted to tie rewards to these
+                accomplishments, like creating custom profile images, reduced
+                costs for paid tournaments. But we had left those features out,
+                because we wanted to focus on the main parts first.
+              </p>
+              <p className="text-body">
+                The user can also navigate to the tournament page where the user
+                has an overview of upcoming tournaments with a sign-up deadline
+                and start date / time. The user can sign up for a tournament,
+                pick his team or get assigned a random team.
               </p>
             </div>
           </Col>
@@ -96,12 +117,29 @@ export default function CurryCrew() {
               <Image
                 alt="Dashboard where users can check their win ratio and match history"
                 fill
-                src="/images/work/tournament/dashboard_home.webp"
+                src="/images/work/tournament/dashboard_tournament_empty.webp"
               />
               <Image
                 alt="Dashboard where users can check their win ratio and match history"
                 fill
-                src="/images/work/tournament/dashboard_home.webp"
+                src="/images/work/tournament/dashboard_tournament_list.webp"
+              />
+            </ImageGrid>
+          </Col>
+          <Col className="col-span-12 md:col-span-7">
+            <div className="flex flex-col gap-y-4">
+              <p className="text-body">
+                If the user is an admin they can also update the tournament
+                rules / date, remove users from teams, and change team sizes
+              </p>
+            </div>
+          </Col>
+          <Col span={12}>
+            <ImageGrid autoFill={false}>
+              <Image
+                alt="Dashboard where users can check their win ratio and match history"
+                fill
+                src="/images/work/tournament/dashboard_tournament_with_people.webp"
               />
             </ImageGrid>
           </Col>
