@@ -32,18 +32,20 @@ export const Modal: React.FC<IModalProps> = ({ className = '', ...props }) => {
         {isOpen && (
           <m.div
             animate={{ opacity: 1 }}
-            className="fixed left-0 right-0 top-0 z-[101] h-full min-h-screen overflow-y-scroll"
+            className="fixed left-0 right-0 top-0 z-[101] flex h-full min-h-screen overflow-y-scroll"
             exit={{ opacity: 0 }}
             initial={{ opacity: 0 }}
           >
             <div
               {...props}
-              className={`relative left-0 top-0 z-20 flex cursor-pointer items-center justify-center px-6 py-6 ${className}`}
+              className={`relative left-0 top-0 z-20 m-auto flex cursor-pointer items-center justify-center px-6 py-6 ${className}`}
               onClick={() => {
                 setIsOpen(false)
               }}
             >
-              <div className="max-h-[1200px] max-w-[1200px]">{activeItem}</div>
+              <div className="h-full max-h-[1200px] w-full max-w-[1200px]">
+                {activeItem}
+              </div>
             </div>
             <IconButton
               className="fixed right-8 top-4 z-[200]"
