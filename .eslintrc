@@ -33,7 +33,7 @@
     "unicorn/new-for-builtins": 0,
     "unicorn/no-null": 0,
     "unicorn/prevent-abbreviations": 0,
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": ["error", "unix"],
     "use-isnan": 2,
     "wrap-iife": 2
   }
