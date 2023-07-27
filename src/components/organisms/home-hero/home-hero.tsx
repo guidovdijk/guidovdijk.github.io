@@ -35,7 +35,7 @@ const HomeHero: React.FC<IHomeHero> = ({ className = '' }) => {
       >
         <Grid className="relative mt-8 lg:mt-16 xl:mt-28" gap="gap-0">
           <Col span={12}>
-            <p className="pl-1 text-body sm:pl-2 md:pl-4">
+            <p className="pl-1 text-body font-normal sm:pl-2 md:pl-4">
               Hello There! I am...
             </p>
           </Col>

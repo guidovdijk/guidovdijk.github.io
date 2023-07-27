@@ -19,7 +19,7 @@ export const WorkSection: React.FC<IWorkSectionProps> = ({ ...props }) => (
       ))}
     </div>
     <div className="flex flex-col gap-y-2 lg:pl-12">
-      <p className="text-body">Want to see more?</p>
+      <p className="text-body font-normal">Want to see more?</p>
       <List className="flex flex-row md:flex-col">
         <Button
           href="https://github.com/guidovdijk"

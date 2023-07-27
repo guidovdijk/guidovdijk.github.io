@@ -56,8 +56,8 @@ export default function ComponentLibrary() {
                 these components.
                 <br />
                 <br />
-                <span className="font-bold">Disclaimer</span>: Due to the fact I
-                made this project for a company I am not comfortable by making
+                <span className="font-normal">Disclaimer</span>: Due to the fact
+                I made this project for a company I am not comfortable by making
                 the GitHub repository public. I did however add a few code
                 snippets on this page.
               </p>

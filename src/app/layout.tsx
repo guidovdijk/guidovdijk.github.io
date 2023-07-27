@@ -23,8 +23,12 @@ export default function RootLayout({
     'before:z-20 before:bg-body before:fixed before:w-full before:h-48 before:bottom-0 before:pointer-events-none'
 
   return (
-    <html className={`${inter.variable} ${avantGarde.variable}`} lang="en">
-      <body className={`relative ${false ? `pb-8 ${gradient}` : ''}`}>
+    <html lang="en">
+      <body
+        className={`relative ${inter.variable} ${avantGarde.variable} ${
+          false ? `pb-8 ${gradient}` : ''
+        }`}
+      >
         <Navigation />
         <div className="relative z-[1]">
           <ModalProvider>{children}</ModalProvider>

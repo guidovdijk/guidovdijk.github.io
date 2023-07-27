@@ -11,23 +11,23 @@ module.exports = {
       variants: ['lg:hover'],
     },
     {
-      pattern: /grid-cols-/
+      pattern: /grid-cols-/,
     },
     {
-      pattern: /col-span-/
+      pattern: /col-span-/,
     },
     {
-      pattern: /col-start-/
+      pattern: /col-start-/,
     },
     {
-      pattern: /col-end-/
+      pattern: /col-end-/,
     },
     {
-      pattern: /fill-/
+      pattern: /fill-/,
     },
     // TODO: Remove in production. This is only used to ensure storybook demo works without having to specify multiple heights
     {
-      pattern: /row-span-/
+      pattern: /row-span-/,
     },
   ],
   theme: {
@@ -36,67 +36,88 @@ module.exports = {
         '4xl': '240px',
       },
       aspectRatio: {
-        'hero': '2.26 / 1',
+        hero: '2.26 / 1',
       },
       borderWidth: {
-        16: '16px'
+        16: '16px',
       },
       dropShadow: {
         icon: '0px 2px 7px rgba(192, 121, 254, 0.31)',
-      }
+      },
     },
     fontFamily: {
-      heading: ['AvantGarde', 'sans-serif'],
-      base: ['Inter', 'sans-serif'],
+      heading: ['var(--font-avant)', 'sans-serif'],
+      base: ['var(--font-inter)', 'sans-serif'],
     },
     fontSize: {
       /* Headings */
       // 240px - 96px
-      'heading-4-xl': ['clamp(6rem, 3.4286rem + 12.8571vw, 15rem)', {
-        lineHeight: 1,
-        fontWeight: '600'
-      }],
+      'heading-4-xl': [
+        'clamp(6rem, 3.4286rem + 12.8571vw, 15rem)',
+        {
+          lineHeight: 1,
+          fontWeight: '600',
+        },
+      ],
       // 164px - 55px
-      'heading-3-xl': ['clamp(3.4375rem, 1.4911rem + 9.7321vw, 10.25rem)', {
-        lineHeight: 1,
-        fontWeight: '500'
-      }],
+      'heading-3-xl': [
+        'clamp(3.4375rem, 1.4911rem + 9.7321vw, 10.25rem)',
+        {
+          lineHeight: 1,
+          fontWeight: '500',
+        },
+      ],
       // 65px
       'heading-2-xl': ['clamp(2.5rem, 0.7679rem + 3.6607vw, 4.0625rem)', 1.25], // Not used yet
       'heading-xl': ['clamp(1.5rem, 0.7679rem + 3.6607vw, 4.0625rem)', 1.2], // Not used yet
       // 56px
       'heading-l': ['clamp(3rem, 2.734rem + 0.8511vw, 3.5rem)'],
-      'heading': ['clamp(2.5rem, 2.1443298969072164rem + 1.5463917525773196vw, 4rem)', {
-        lineHeight: 1.2,
-        fontWeight: '600'
-      }],
+      heading: [
+        'clamp(2.5rem, 2.1443298969072164rem + 1.5463917525773196vw, 4rem)',
+        {
+          lineHeight: 1.2,
+          fontWeight: '600',
+        },
+      ],
       // 28px
-      'heading-s': ['clamp(1.5rem, 1.440721649484536rem + 0.25773195876288657vw, 1.75rem)', {
-        lineHeight: 1,
-        fontWeight: '600'
-      }],
+      'heading-s': [
+        'clamp(1.5rem, 1.440721649484536rem + 0.25773195876288657vw, 1.75rem)',
+        {
+          lineHeight: 1,
+          fontWeight: '600',
+        },
+      ],
 
       /* Subtitle */
       // 15px
-      'subtitle': ['0.9rem', {
-        lineHeight: 1,
-        fontWeight: '600',
-        letterSpacing: '0.025em'
-      }],
+      subtitle: [
+        '0.9rem',
+        {
+          lineHeight: 1,
+          fontWeight: '600',
+          letterSpacing: '0.025em',
+        },
+      ],
 
       /* Callout */
       // 18px
-      'callout': ['clamp(1.125rem, 1.0746rem + 0.1949vw, 1.25rem)', {
-        lineHeight: 1.5,
-        fontWeight: '500'
-      }],
+      callout: [
+        'clamp(1.125rem, 1.0746rem + 0.1949vw, 1.25rem)',
+        {
+          lineHeight: 1.5,
+          fontWeight: '500',
+        },
+      ],
 
       /* Body */
       // 21px
-      'body': ['clamp(1.125rem, 1.0714rem + 0.2679vw, 1.3125rem)', {
-        lineHeight: 1.2,
-        fontWeight: '200'
-      }],
+      body: [
+        'clamp(1.125rem, 1.0714rem + 0.2679vw, 1.3125rem)',
+        {
+          lineHeight: 1.385,
+          fontWeight: '200',
+        },
+      ],
       // 16px
       'body-s': ['1rem', 1.5],
     },
@@ -138,7 +159,8 @@ module.exports = {
     backgroundImage: {
       'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       body: 'linear-gradient(0deg, #0d0d0d, transparent)',
-      background: 'linear-gradient(-90deg, #DD117E 0%, #C079FE 48.96%, #9FD9FF 100%)',
+      background:
+        'linear-gradient(-90deg, #DD117E 0%, #C079FE 48.96%, #9FD9FF 100%)',
       red: 'linear-gradient(15deg, #520000 0.11%, #E02C35 115%)',
       green: 'linear-gradient(225deg, #045742 0%, #000219 100%)',
       darkblue: 'linear-gradient(45deg, #021531 19.49%, #093A83 100%)',
@@ -146,9 +168,7 @@ module.exports = {
       magenta: 'linear-gradient(45deg, #CA0088 0%, #FF64CC 100%)',
       orange: 'linear-gradient(45deg, #942C00 0.11%, #FF832A 100%)',
       black: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #0D0D0D 100%)',
-    }
+    },
   },
-  plugins: [
-    require('tailwind-scrollbar'),
-  ],
+  plugins: [require('tailwind-scrollbar')],
 }
