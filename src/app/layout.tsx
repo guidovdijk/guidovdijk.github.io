@@ -30,7 +30,7 @@ export default function RootLayout({
         }`}
       >
         <Navigation />
-        <div className="relative z-[1]">
+        <div className="relative">
           <ModalProvider>{children}</ModalProvider>
           <Footer />
         </div>
