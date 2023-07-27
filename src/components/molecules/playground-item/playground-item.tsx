@@ -23,7 +23,7 @@ export const PlaygroundItem: React.FC<IPlaygroundItemProps> = ({
     {...props}
   >
     <Image {...image} className="transition-all group-hover:scale-110" />
-    <div className="z-10 flex items-end gap-x-6 bg-black p-6 opacity-0 transition-all group-hover:opacity-100">
+    <div className="z-10 flex items-end gap-x-6 bg-black p-6 opacity-100 transition-all group-hover:opacity-100 sm:opacity-0">
       <p className="text-body-s">{description}</p>
       <IconButton className="shrink-0" name="fullscreen" onClick={onClick} />
     </div>
