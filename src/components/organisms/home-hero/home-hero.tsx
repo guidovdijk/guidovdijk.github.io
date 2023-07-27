@@ -20,6 +20,7 @@ export interface IHomeHero {
   className?: string
 }
 
+// TODO: Fix the white space at the bottom of the screen on small devices, it just does not look good
 const HomeHero: React.FC<IHomeHero> = ({ className = '' }) => {
   const { scrollYProgress } = useScroll()
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '-50%'])

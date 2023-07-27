@@ -6,6 +6,7 @@ import { Container } from '@/components/atoms/grid'
 import { Email } from '@/components/molecules/email'
 import { FooterItem } from '@/components/molecules/footer-item'
 
+// TODO: Reduces margin/padding on mobile devices. The email does not fit the screen of phones
 const Footer: React.FC = () => (
   <footer>
     <div className="mx-auto px-4 lg:px-12">

@@ -8,6 +8,7 @@ export interface INextPrevProjectProps {
   prev: ICardProps
 }
 
+// TODO: Reduces padding on mobile devices
 const NextPrevProject: React.FC<INextPrevProjectProps> = ({ next, prev }) => (
   <>
     <div className="mx-auto my-32 px-4 lg:px-12">

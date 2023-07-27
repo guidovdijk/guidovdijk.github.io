@@ -9,6 +9,9 @@ import { useScroll } from '@/hooks/use-scroll'
 
 import { NavigationItem } from '@/components/atoms/navigation-item'
 
+// TODO: Add back to home link when on work pages
+// TODO: Change nav item color to black, when navbar goes over light images
+// TODO: Ensure when a user navigates to the next page, the navigation is visible
 const Navigation: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true)
   const pathname = usePathname()
@@ -21,8 +24,6 @@ const Navigation: React.FC = () => {
     setIsVisible(shouldBeVisible)
   })
 
-  // TODO: Add back to home link when on work pages
-  // TODO: Change nav item color to black, when navbar goes over light images
   return (
     <LazyMotion features={domAnimation}>
       <m.nav
