@@ -13,7 +13,7 @@ type Story = StoryObj<ILoaderProps>
 
 export const Default: Story = {
   render: () => (
-    <Loader isFinished>
+    <Loader>
       What are you looking for in
       <br />a front-end developer?
     </Loader>

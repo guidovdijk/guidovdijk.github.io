@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { PlaygroundItem } from '@/components/molecules/playground-item'
 
-import { BentoGrid } from './bento-grid'
+import { BentoGrid } from './index'
 
 const meta: Meta = {
   component: BentoGrid,
