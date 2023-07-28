@@ -34,7 +34,11 @@ const Navigation: React.FC = () => {
         initial={{ opacity: 0, y: 0 }}
         transition={{ duration: 0.3, type: 'tween' }}
       >
-        {pathname.includes('work') ? <Link href="/">Go back</Link> : null}
+        {pathname.includes('work') ? (
+          <Link href="/" iconName="back">
+            Go back
+          </Link>
+        ) : null}
         <ul className="ml-auto flex h-full items-center justify-center gap-x-11 sm:justify-end">
           <li>
             <NavigationItem href="/" isActive={pathname === '/'}>
