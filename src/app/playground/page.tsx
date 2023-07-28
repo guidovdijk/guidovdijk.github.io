@@ -9,7 +9,6 @@ import { Modal, useModal } from '@/components/molecules/modal'
 import { PlaygroundItem } from '@/components/molecules/playground-item'
 import { BentoGrid } from '@/components/organisms/bento-grid'
 
-// TODO: Remove placeholders
 interface IItemProps {
   className: string
   alt: string

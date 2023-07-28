@@ -30,7 +30,7 @@ interface IAboutMeProps extends React.HTMLAttributes<HTMLElement> {}
 const AboutMe: React.FC<IAboutMeProps> = ({ className, ...props }) => (
   <Grid {...props} as="section" className={`flex items-center ${className}`}>
     <Col className="order-1 col-span-12 lg:-order-1 lg:col-span-6 lg:col-start-2">
-      <span className="mb-2 text-subtitle uppercase text-white-500">
+      <span className="mb-2 block text-subtitle uppercase text-white-500">
         about me
       </span>
       <h2 className="mb-4 text-heading-s">Hello! My name is Guido van Dijk.</h2>
