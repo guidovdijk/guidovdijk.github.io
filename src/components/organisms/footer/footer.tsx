@@ -12,7 +12,7 @@ const Footer: React.FC = () => (
       <div className="h-[1px] w-full bg-black-300" />
     </div>
     <Container className="px-4 lg:px-12">
-      <div className="flex flex-col gap-y-16 pb-14 pt-16">
+      <div className="flex flex-col gap-y-8 pb-7 pt-8 sm:gap-y-16 sm:pb-14 sm:pt-16">
         <div className="block">
           <p className="block text-subtitle uppercase text-white-500">
             Need a helping hand? I got two!
