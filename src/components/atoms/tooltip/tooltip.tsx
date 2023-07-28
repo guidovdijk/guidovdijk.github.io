@@ -11,7 +11,6 @@ export interface ITooltipProps {
   isVisible?: boolean
 }
 
-// TODO: If time left, use callbacks instead of timeouts to keep the tooltip open
 const Tooltip: React.FC<ITooltipProps> = ({
   className = '',
   text = '',
