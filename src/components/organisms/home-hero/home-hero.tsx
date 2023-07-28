@@ -31,7 +31,7 @@ const HomeHero: React.FC<IHomeHero> = ({ className = '' }) => {
       </div>
       <Container
         as="section"
-        className={`relative z-[1] flex min-h-screen flex-col overflow-hidden px-4 pt-20 lg:px-12 xl:min-h-0 ${className}`}
+        className={`relative z-[1] flex min-h-screen flex-col overflow-hidden px-4 pt-36 sm:pt-20 lg:px-12 xl:min-h-0 ${className}`}
       >
         <Grid className="relative mt-8 lg:mt-16 xl:mt-28" gap="gap-0">
           <Col span={12}>
@@ -42,21 +42,21 @@ const HomeHero: React.FC<IHomeHero> = ({ className = '' }) => {
           <Col span={12}>
             <h1 className="col-span-12 mb-4 flex flex-col font-heading text-heading-3-xl font-bold uppercase lg:mb-14">
               <Grid as="span" gap="gap-0">
-                <Col as="span" className="col-span-12 block">
+                <Col as="span" className="col-span-12 mb-2 block sm:mb-0">
                   Guido
                 </Col>
-                <Col as="span" className="col-span-12 block">
+                <Col as="span" className="col-span-12 mb-2 block sm:mb-0">
                   van Dijk
                 </Col>
                 <Col
                   as="span"
-                  className="col-span-11 block lg:col-start-2 xl:col-span-10 xl:col-start-3"
+                  className="col-span-11 mb-2 block sm:mb-0 lg:col-start-2 xl:col-span-10 xl:col-start-3"
                 >
                   Developer
                 </Col>
                 <Col
                   as="span"
-                  className="col-span-11 block lg:col-start-4 xl:col-span-10 xl:col-start-3"
+                  className="col-span-11 mb-2 block sm:mb-0 lg:col-start-4 xl:col-span-10 xl:col-start-3"
                 >
                   Designer
                 </Col>

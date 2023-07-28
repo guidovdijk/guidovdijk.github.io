@@ -46,7 +46,7 @@ export const WorkHeader: React.FC<IWorkHeaderProps> = ({
         <p className="text-subtitle uppercase text-white-500">
           0{index} / {subtitle}
         </p>
-        <h1 className="w-min font-heading text-heading-2-xl font-semibold">
+        <h1 className="font-heading text-heading-2-xl font-semibold">
           {title}
         </h1>
       </div>

@@ -15,7 +15,6 @@ export interface IClipTextProps {
   children: React.ReactNode
 }
 
-// TODO: (optional) Create a provider to use the animation for better re-usability
 const ClipText: React.FC<IClipTextProps> = ({
   className = '',
   isEnd = false,

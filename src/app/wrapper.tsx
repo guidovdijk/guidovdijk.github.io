@@ -9,16 +9,8 @@ import { Navigation } from '@/components/organisms/navigation'
 import { avantGarde, inter } from './fonts'
 
 export default function Wrapper({ children }: { children: React.ReactNode }) {
-  // TODO: Figure out if the gradient should be kept, before moving to production
-  const gradient =
-    'before:z-20 before:bg-body before:fixed before:w-full before:h-48 before:bottom-0 before:pointer-events-none'
-
   return (
-    <body
-      className={`relative ${inter.variable} ${avantGarde.variable} ${
-        false ? `pb-8 ${gradient}` : ''
-      }`}
-    >
+    <body className={`relative ${inter.variable} ${avantGarde.variable}`}>
       <Navigation />
       <div className="relative">
         <ModalProvider>{children}</ModalProvider>

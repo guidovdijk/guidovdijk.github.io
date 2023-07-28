@@ -31,12 +31,14 @@ const useScroll = (handler: (data: IUseScrollData) => void) => {
       return undefined
     }
 
+    handler(data)
+
     window.addEventListener('scroll', handleScroll)
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [handleScroll])
+  }, [data, handleScroll, handler])
 
   return data
 }

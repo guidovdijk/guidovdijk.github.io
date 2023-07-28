@@ -12,7 +12,6 @@ export interface IPageErrorSectionProps {
   error: string
 }
 
-// TODO: try putting the mask on the text, so the span tag can be below it
 const PageErrorTitle: React.FC<{ children: string }> = ({
   children,
   ...props
@@ -69,7 +68,6 @@ const PageErrorTitle: React.FC<{ children: string }> = ({
   )
 }
 
-// TODO: Fix alignment and height
 const PageErrorSection: React.FC<IPageErrorSectionProps> = ({
   title,
   error,

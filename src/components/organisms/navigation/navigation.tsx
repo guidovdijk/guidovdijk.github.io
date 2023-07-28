@@ -7,8 +7,10 @@ import { LazyMotion, domAnimation, m } from 'framer-motion'
 
 import { useScroll } from '@/hooks/use-scroll'
 
+import { Link } from '@/components/atoms/link'
 import { NavigationItem } from '@/components/atoms/navigation-item'
 
+// TODO: Change nav item color to black, when navbar goes over light images
 const Navigation: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true)
   const pathname = usePathname()
@@ -21,8 +23,6 @@ const Navigation: React.FC = () => {
     setIsVisible(shouldBeVisible)
   })
 
-  // TODO: Add back to home link when on work pages
-  // TODO: Change nav item color to black, when navbar goes over light images
   return (
     <LazyMotion features={domAnimation}>
       <m.nav
@@ -34,6 +34,11 @@ const Navigation: React.FC = () => {
         initial={{ opacity: 0, y: 0 }}
         transition={{ duration: 0.3, type: 'tween' }}
       >
+        {pathname.includes('work') ? (
+          <Link href="/" iconName="back">
+            Go back
+          </Link>
+        ) : null}
         <ul className="ml-auto flex h-full items-center justify-center gap-x-11 sm:justify-end">
           <li>
             <NavigationItem href="/" isActive={pathname === '/'}>

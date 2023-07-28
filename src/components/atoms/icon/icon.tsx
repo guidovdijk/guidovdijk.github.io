@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+import Back from './icons/Back'
 import Email from './icons/Email'
 import Exitscreen from './icons/Exitscreen'
 import Fullscreen from './icons/Fullscreen'
@@ -15,6 +16,7 @@ const Components = {
   triangle: Triangle,
   instagram: Instagram,
   email: Email,
+  back: Back,
   github: Github,
 }
 
