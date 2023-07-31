@@ -6,8 +6,7 @@ import Wrapper from './wrapper'
 
 export const metadata: Metadata = {
   title: 'Guido van Dijk | Portfolio',
-  description:
-    'A Front-end portfolio created by Guido van Dijk to showcase his work',
+  description: 'Front-end developer portfolio created by Guido van Dijk',
 }
 
 export default function RootLayout({

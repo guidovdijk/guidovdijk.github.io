@@ -31,17 +31,18 @@ export default function TheValley() {
         />
       </Container>
 
-      <WorkHero className="mx-4 mb-24 bg-red lg:mx-10">
+      <WorkHero className="bg-red">
         <Image
           alt="Logo of The Valley"
           height={150}
+          priority
           src="/images/logos/thevalley.svg"
           width={200}
         />
       </WorkHero>
 
       <Container className="px-4 lg:px-12">
-        <Grid gap="gap-y-20">
+        <Grid gap="gap-y-12 sm:gap-y-20">
           <Col className="col-span-12 md:col-span-7">
             <div className="flex flex-col gap-y-4">
               <h3 className="text-heading-s font-semibold">Introduction</h3>
@@ -148,7 +149,7 @@ export default function TheValley() {
       </Container>
 
       {current.url && (
-        <div className="sticky bottom-8 flex w-full justify-end">
+        <div className="sticky bottom-6 flex w-full justify-end sm:bottom-8">
           <Button
             className="sticky z-50 ml-auto mr-4 mt-6 flex lg:mr-10"
             href={current.url}

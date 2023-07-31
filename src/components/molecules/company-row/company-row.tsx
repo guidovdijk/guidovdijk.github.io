@@ -7,13 +7,13 @@ export interface ICompanyRowProps {}
 const companyImages: ImageProps[][] = [
   [
     {
-      src: 'images/companies/nike.svg',
+      src: '/images/companies/nike.svg',
       alt: '',
       width: 80,
       height: 41,
     },
     {
-      src: 'images/companies/tommy_hilfiger.svg',
+      src: '/images/companies/tommy_hilfiger.svg',
       alt: '',
       width: 70,
       height: 50,
@@ -21,13 +21,13 @@ const companyImages: ImageProps[][] = [
   ],
   [
     {
-      src: 'images/companies/postcode_loterij.svg',
+      src: '/images/companies/postcode_loterij.svg',
       alt: '',
       width: 75,
       height: 50,
     },
     {
-      src: 'images/companies/leenbakker.svg',
+      src: '/images/companies/leenbakker.svg',
       alt: '',
       width: 95,
       height: 50,
@@ -35,13 +35,13 @@ const companyImages: ImageProps[][] = [
   ],
   [
     {
-      src: 'images/companies/fc_utrecht.svg',
+      src: '/images/companies/fc_utrecht.svg',
       alt: 'Logo of FC Utrecht, a Dutch soccer-club',
       width: 50,
       height: 54,
     },
     {
-      src: 'images/companies/intertoys.svg',
+      src: '/images/companies/intertoys.svg',
       alt: '',
       width: 101,
       height: 24,

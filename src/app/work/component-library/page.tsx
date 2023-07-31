@@ -35,13 +35,14 @@ export default function ComponentLibrary() {
         <Image
           alt="Logo of the component library"
           height={150}
+          priority
           src="/images/logos/cbl.svg"
           width={160}
         />
       </WorkHero>
 
       <Container className="px-4 lg:px-12">
-        <Grid gap="gap-y-20">
+        <Grid gap="gap-y-12 sm:gap-y-20">
           <Col className="col-span-12 md:col-span-7">
             <div className="flex flex-col gap-y-4">
               <h3 className="text-heading-s font-semibold">Introduction</h3>
