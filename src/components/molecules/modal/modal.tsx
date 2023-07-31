@@ -38,10 +38,7 @@ export const Modal: React.FC<IModalProps> = ({ className = '', ...props }) => {
           >
             <div
               {...props}
-              className={`relative left-0 top-0 z-20 m-auto flex cursor-pointer items-center justify-center px-6 py-6 ${className}`}
-              onClick={() => {
-                setIsOpen(false)
-              }}
+              className={`relative left-0 top-0 z-20 m-auto flex items-center justify-center px-6 py-6 ${className}`}
             >
               <div className="h-full max-h-[1200px] w-full max-w-[1200px]">
                 {activeItem}
@@ -55,7 +52,12 @@ export const Modal: React.FC<IModalProps> = ({ className = '', ...props }) => {
               }}
             />
 
-            <div className="fixed cursor-pointer before:fixed before:bottom-0 before:right-4 before:top-0 before:h-full before:w-full before:bg-black-500/70 before:backdrop-blur-sm" />
+            <div
+              className="fixed cursor-pointer before:fixed before:bottom-0 before:right-4 before:top-0 before:h-full before:w-full before:bg-black-500/70 before:backdrop-blur-sm"
+              onClick={() => {
+                setIsOpen(false)
+              }}
+            />
           </m.div>
         )}
       </AnimatePresence>

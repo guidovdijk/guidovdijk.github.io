@@ -56,6 +56,8 @@ const Item: React.FC<IItemProps> = ({
             placeholder="blur"
             src={src}
             style={{
+              maxHeight: 1200,
+              maxWidth: 1200,
               objectFit: 'contain',
             }}
           />,
