@@ -31,13 +31,13 @@ export default function CurryCrew() {
         />
       </Container>
 
-      <WorkHero className="mx-4 mb-24 bg-green lg:mx-10">
+      <WorkHero className="bg-green">
         <Image
           alt="Logo of the tournament dashboard"
-          height={150}
+          fill
           priority
           src="/images/logos/currycrew.svg"
-          width={160}
+          style={{ objectFit: 'contain' }}
         />
       </WorkHero>
 
@@ -148,7 +148,7 @@ export default function CurryCrew() {
       </Container>
 
       {current.url && (
-        <div className="sticky bottom-8 flex w-full justify-end">
+        <div className="sticky bottom-6 flex w-full justify-end sm:bottom-8">
           <Button
             className="sticky z-50 ml-auto mr-4 mt-6 flex lg:mr-10"
             href={current.url}

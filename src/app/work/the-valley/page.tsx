@@ -31,7 +31,7 @@ export default function TheValley() {
         />
       </Container>
 
-      <WorkHero className="mx-4 mb-24 bg-red lg:mx-10">
+      <WorkHero className="bg-red">
         <Image
           alt="Logo of The Valley"
           height={150}
@@ -149,7 +149,7 @@ export default function TheValley() {
       </Container>
 
       {current.url && (
-        <div className="sticky bottom-8 flex w-full justify-end">
+        <div className="sticky bottom-6 flex w-full justify-end sm:bottom-8">
           <Button
             className="sticky z-50 ml-auto mr-4 mt-6 flex lg:mr-10"
             href={current.url}

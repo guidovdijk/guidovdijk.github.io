@@ -31,7 +31,7 @@ export default function NewsApp() {
         />
       </Container>
 
-      <WorkHero className="mx-4 mb-24 bg-magenta lg:mx-10">
+      <WorkHero className="bg-magenta">
         <Image
           alt="Logo of InHolland"
           height={150}
@@ -94,7 +94,7 @@ export default function NewsApp() {
       </Container>
 
       {current.url && (
-        <div className="sticky bottom-8 flex w-full justify-end">
+        <div className="sticky bottom-6 flex w-full justify-end sm:bottom-8">
           <Button
             className="sticky z-50 ml-auto mr-4 mt-6 flex lg:mr-10"
             href={current.url}
