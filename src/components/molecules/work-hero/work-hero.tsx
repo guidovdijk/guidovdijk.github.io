@@ -27,9 +27,14 @@ const WorkHero: React.FC<IWorkHeroProps> = ({ children, className }) => {
     <LazyMotion features={domAnimation}>
       <div
         ref={ref}
-        className={`flex aspect-video items-center justify-center rounded-lg lg:aspect-hero ${className}`}
+        className={`mx-4 mb-12 flex aspect-square items-center justify-center rounded-lg sm:mb-24 sm:aspect-video lg:mx-10 lg:aspect-hero ${className}`}
       >
-        <m.div style={{ y }}>{children}</m.div>
+        <m.div
+          className="h-full max-h-[8rem] w-full max-w-[12rem]"
+          style={{ y }}
+        >
+          {children}
+        </m.div>
       </div>
     </LazyMotion>
   )
