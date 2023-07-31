@@ -15,7 +15,7 @@ const ImageGrid: React.FC<IImageGridProps> = ({
   const colSize = autoFill ? 12 / childArr.length - 1 : 12 / childArr.length
 
   return (
-    <div className="image-grid relative grid grid-cols-12 justify-center gap-10 rounded bg-black-400 p-4 lg:p-6">
+    <div className="image-grid relative flex grid-cols-12 flex-col justify-center gap-y-6 rounded bg-black-400 p-4 sm:grid sm:flex-none sm:gap-10 lg:p-6">
       {React.Children.map(children, (child, index) => {
         if (!React.isValidElement(child)) return child
         const fullColNr = `${
