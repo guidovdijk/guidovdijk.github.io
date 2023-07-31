@@ -35,6 +35,7 @@ export default function CurryCrew() {
         <Image
           alt="Logo of the tournament dashboard"
           height={150}
+          priority
           src="/images/logos/currycrew.svg"
           width={160}
         />

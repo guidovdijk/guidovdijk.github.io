@@ -35,6 +35,7 @@ export default function ComponentLibrary() {
         <Image
           alt="Logo of the component library"
           height={150}
+          priority
           src="/images/logos/cbl.svg"
           width={160}
         />

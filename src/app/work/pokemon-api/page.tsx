@@ -35,6 +35,7 @@ export default function Pokemon() {
         <Image
           alt="Logo of Pokemon"
           height={150}
+          priority
           src="/images/logos/pokemon.svg"
           width={200}
         />

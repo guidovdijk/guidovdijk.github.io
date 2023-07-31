@@ -35,6 +35,7 @@ export default function NewsApp() {
         <Image
           alt="Logo of InHolland"
           height={150}
+          priority
           src="/images/logos/inholland.svg"
           width={200}
         />

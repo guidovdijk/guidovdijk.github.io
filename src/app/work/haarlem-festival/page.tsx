@@ -35,6 +35,7 @@ export default function HaarlemFestival() {
         <Image
           alt="Logo of the Haarlem Festival"
           height={150}
+          priority
           src="/images/logos/haarlem_festival.svg"
           width={200}
         />

@@ -35,6 +35,7 @@ export default function TheValley() {
         <Image
           alt="Logo of The Valley"
           height={150}
+          priority
           src="/images/logos/thevalley.svg"
           width={200}
         />
